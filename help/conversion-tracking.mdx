@@ -1,0 +1,36 @@
+---
+title: "Conversion tracking"
+description: "How Dub attributes sign-ups and purchases to your partners—and what your developer needs to do."
+og:title: "Conversion tracking for partner programs | Dub Help Center"
+---
+
+Dub needs to know when someone who clicked a partner link signs up or buys. That's conversion tracking. This page explains how it works and what to do next.
+
+## How it works
+
+1. **Visitor clicks a partner link** – Dub stores an ID (cookie) on their device.
+2. **Visitor signs up or purchases** – Your app sends that ID to Dub.
+3. **Dub attributes the conversion** – The partner gets credit and a commission.
+
+Without this, Dub can't connect a sale to the right partner.
+
+## What your developer needs to do
+
+Two things:
+
+1. **Capture clicks** – Add the `@dub/analytics` script so partner links set the cookie.
+2. **Send conversions** – When a user signs up (lead) or buys (sale), call Dub's API with that cookie or customer ID.
+
+## Easiest paths
+
+| Your setup | What to use |
+|------------|-------------|
+| **Stripe** | [Stripe integration](/conversions/sales/stripe) – tracks sales automatically |
+| **Clerk, Auth0, NextAuth, etc.** | [Auth integrations](/conversions/leads/clerk) – track sign-ups |
+| **Custom** | [Server-side SDKs](/sdks/overview) – call `track.lead()` and `track.sale()` |
+
+## Full guides
+
+- [Partners quickstart](/partners/quickstart) – End-to-end setup for partner programs
+- [Conversion tracking quickstart](/conversions/quickstart) – Technical implementation
+- [Get your tracking script](https://app.dub.co/settings/analytics) – Analytics settings → script builder

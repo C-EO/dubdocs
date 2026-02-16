@@ -1,6 +1,72 @@
 ---
 title: "What is Dub Partners?"
-mode: "frame"
+description: "Understand how Dub Partners helps you build and scale referral and affiliate programs with attribution, payouts, and white-labeling."
+og:title: "What is Dub Partners? | Dub Help Center"
 ---
 
-TBD
+[Dub Partners](https://dub.co/partners) is Dub's partner program product. It lets you run referral and affiliate programs with end-to-end attribution, commission tracking, and 1-click global payouts—all built on top of Dub's link infrastructure.
+
+<Note>
+  Dub Partners requires a [Business plan](https://dub.co/pricing) or higher.
+</Note>
+
+## Why Dub Partners?
+
+If you want to grow through partnerships—affiliates, referral partners, or resellers—you need to:
+
+1. **Attribute** – Know which partner drove each sign-up or sale
+2. **Reward** – Pay partners fairly based on clicks, leads, or revenue
+3. **Scale** – Onboard partners quickly and pay them without manual work
+
+Dub Partners handles all of this. Partners share links; Dub tracks clicks and conversions; you define reward rules; Dub calculates commissions and can pay partners automatically.
+
+## How it works (high level)
+
+<Frame>
+  <img
+    className="rounded-lg border border-gray-100"
+    src="https://assets.dub.co/cms/dub-partners.jpg"
+    alt="Dub Partners overview"
+  />
+</Frame>
+
+1. **You create a program** – Set up your partner program, define reward rules (e.g., % of sale, fixed amount per lead), and configure payouts.
+2. **Partners join and get links** – Partners apply or are invited, then receive unique tracking links (short links or query-parameter links).
+3. **Visitors click and convert** – When someone clicks a partner link and later signs up or buys, Dub attributes that conversion to the partner.
+4. **Commissions are calculated** – Dub applies your reward rules and creates commissions.
+5. **Partners get paid** – You can pay via Dub (Stripe Connect) or handle payouts externally.
+
+## Key concepts
+
+| Concept | What it means |
+|--------|----------------|
+| **Program** | Your partner program (e.g., "Pingback Affiliate Program"). Each workspace can have one program. |
+| **Partner** | A person or company in your program who shares links and earns commissions. |
+| **Partner group** | A tier or segment of partners (e.g., "Affiliates", "VIP Partners") with its own reward rules and link structure. |
+| **Reward rules** | How partners earn: per click, per lead, per sale, or a mix. You define these per group. |
+| **Conversion** | A tracked action (lead or sale) that gets attributed to a partner link. |
+| **Commission** | The amount a partner earns from a conversion, based on your reward rules. |
+
+For a deeper look at how Programs, Groups, Links, and Rewards fit together, see [Platform overview](/help/platform-overview).
+
+## Who is this for?
+
+- **Marketing managers** – Use the [Dub dashboard](https://app.dub.co) to set up programs, manage partners, and view analytics. Start with [Setting up your program](/help/setting-up-your-program).
+- **Developers** – Use the [API](/api-reference/introduction), [SDKs](/sdks/overview), and [conversion tracking](/conversions/quickstart) to integrate attribution into your app. Start with the [Partners quickstart](/partners/quickstart).
+
+## What's next?
+
+<CardGroup cols={2}>
+  <Card title="Platform overview" icon="sitemap" href="/help/platform-overview">
+    How Programs, Groups, Links, and Rewards fit together
+  </Card>
+  <Card title="Setting up your program" icon="rocket" href="/help/setting-up-your-program">
+    Step-by-step guide from zero to a live partner program
+  </Card>
+  <Card title="Technical quickstart" icon="code" href="/partners/quickstart">
+    Install tracking scripts and track conversions
+  </Card>
+  <Card title="API reference" icon="book" href="/api-reference/partners/create">
+    Manage partners and commissions via the API
+  </Card>
+</CardGroup>

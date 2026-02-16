@@ -18,6 +18,10 @@
         "icon": "books",
         "groups": [
           {
+            "group": "Home",
+            "pages": ["introduction"]
+          },
+          {
             "group": "Links",
             "pages": [
               "concepts/links/introduction",
@@ -132,47 +136,49 @@
             "group": "MANAGING A PROGRAM",
             "pages": [
               "help/introduction",
+              "help/platform-overview",
               {
                 "group": "Getting started",
                 "pages": [
-                  "setting-up-your-program",
-                  "partner-groups",
-                  "partner-links",
-                  "brand-resources",
-                  "managing-partners"
+                  "help/setting-up-your-program",
+                  "help/conversion-tracking",
+                  "help/partner-groups",
+                  "help/partner-links",
+                  "help/brand-resources",
+                  "help/managing-partners"
                 ]
               },
               {
                 "group": "Customizing rewards",
-                "pages": ["customizing-rewards", "managing-commissions"]
+                "pages": ["help/customizing-rewards", "help/managing-commissions"]
               },
               {
                 "group": "Recruiting partners",
                 "pages": [
-                  "inviting-partners",
-                  "landing-page",
-                  "application-form",
-                  "reviewing-applications",
-                  "embedded-dashboard",
-                  "partner-network"
+                  "help/inviting-partners",
+                  "help/landing-page",
+                  "help/application-form",
+                  "help/reviewing-applications",
+                  "help/embedded-dashboard",
+                  "help/partner-network"
                 ]
               },
               {
                 "group": "Sending payouts",
-                "pages": ["partner-payouts", "bank-account", "external-payouts"]
+                "pages": ["help/partner-payouts", "help/bank-account", "help/external-payouts"]
               },
               {
                 "group": "Engaging partners",
-                "pages": ["email-campaigns", "messages", "bounties"]
+                "pages": ["help/email-campaigns", "help/messages", "help/bounties"]
               },
               {
                 "group": "Insights and reporting",
-                "pages": ["program-analytics", "commissions"]
+                "pages": ["help/program-analytics", "help/commissions"]
               },
-              { "group": "Fraud detection", "pages": ["fraud-detection"] },
+              { "group": "Fraud detection", "pages": ["help/fraud-detection"] },
               {
                 "group": "Migration guides",
-                "pages": ["rewardful", "partnerstack", "firstpromoter", "tolt"]
+                "pages": ["help/rewardful", "help/partnerstack", "help/firstpromoter", "help/tolt"]
               }
             ]
           },
@@ -181,18 +187,18 @@
             "pages": [
               {
                 "group": "Getting started",
-                "pages": ["partner-profile", "partner-team", "merging-account"]
+                "pages": ["help/partner-profile", "help/partner-team", "help/merging-account"]
               },
               {
                 "group": "Joining programs",
-                "pages": ["program-marketplace", "navigating-program"]
+                "pages": ["help/program-marketplace", "help/navigating-program"]
               },
               {
                 "group": "Receiving payouts",
                 "pages": [
-                  "receiving-payouts",
-                  "payout-invoices",
-                  "commissions-payouts-work"
+                  "help/receiving-payouts",
+                  "help/payout-invoices",
+                  "help/commissions-payouts-work"
                 ]
               }
             ]

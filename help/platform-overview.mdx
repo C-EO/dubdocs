@@ -1,0 +1,123 @@
+---
+title: "Platform overview"
+description: "Understand how Dub Partners is structured: Programs, Groups, Links, Rewards, and the conversion flow."
+og:title: "How does Dub Partners work? | Dub Help Center"
+---
+
+This page explains how Dub Partners is structured and how data flows from a partner link to a commission. Use it to plan your implementation and understand how to configure your program.
+
+## The big picture
+
+```
+Program (your partner program)
+  └── Partner Groups (tiers with different reward rules)
+        └── Partners (people in each group)
+              └── Links (their tracking links)
+                    └── Clicks → Leads/Sales → Commissions → Payouts
+```
+
+## Core building blocks
+
+### Program
+
+Your **program** is the top-level container. It has:
+
+- **Name and branding** – Logo, description, terms URL
+- **Primary reward event** – What you pay on by default: sale, lead, or click
+- **Payout settings** – Minimum payout amount, payout mode (internal via Dub, external, or hybrid)
+- **Landing page** – Where new partners can learn about and apply to your program
+
+One workspace = one program. Create it via the [program onboarding flow](https://app.dub.co/program/new).
+
+### Partner groups
+
+**Partner groups** let you segment partners and give each segment different rules:
+
+- **Reward rules** – Click reward, lead reward, sale reward (e.g., 10% of sale, $5 per lead)
+- **Link structure** – Short links (`dub.co/abc`), query params (`yoursite.com?via=partner`), or path-based
+- **Application form** – Custom questions for applicants
+- **Landing page** – Group-specific signup/apply page
+
+Example: "Affiliates" get 10% of sale; "VIP Partners" get 15% and a custom landing page.
+
+### Partners
+
+A **partner** is a person or company enrolled in your program. They have:
+
+- **Profile** – Name, email, company, payout details (PayPal or Stripe Connect)
+- **Enrollment** – Which program and group they belong to
+- **Links** – Their unique tracking links
+- **Stats** – Clicks, leads, sales, commissions
+
+Partners can be invited, apply and get approved, or be auto-enrolled via an [embedded referral dashboard](/partners/embedded-referrals).
+
+### Links
+
+**Links** are how attribution works. Each partner gets links that include a tracking identifier. When someone clicks:
+
+1. Dub records the click and stores a `dub_id` cookie (or equivalent) on the visitor's device
+2. When the visitor converts (signs up, purchases), your app sends that `dub_id` to Dub
+3. Dub attributes the conversion to the partner and creates a commission
+
+Links can be:
+
+- **Short links** – `dub.co/xyz` (Dub-hosted)
+- **Query parameter** – `yoursite.com?via=partner-slug`
+- **Path-based** – `yoursite.com/ref/partner-slug`
+
+Configure this per partner group.
+
+### Rewards and commissions
+
+**Rewards** define how partners earn. You can set:
+
+- **Click reward** – Fixed amount per click (e.g., $0.10)
+- **Lead reward** – Fixed amount per lead (e.g., $5)
+- **Sale reward** – Percentage or fixed amount per sale (e.g., 10% of revenue)
+
+**Commissions** are the calculated amounts. Dub creates a commission when a conversion matches your reward rules. Commissions can be pending, approved, or paid out.
+
+## Conversion flow (technical)
+
+For developers: here's how attribution works end-to-end.
+
+<Frame>
+  <img
+    className="rounded-lg border border-gray-100"
+    src="https://assets.dub.co/help/conversion-click-event.png"
+    alt="Click to conversion flow"
+  />
+</Frame>
+
+1. **Click** – Visitor clicks a partner link. The `@dub/analytics` script (or equivalent) captures the click and sets a `dub_id` cookie.
+2. **Lead** – Visitor signs up. Your backend reads `dub_id` and calls `POST /track/lead` (or SDK equivalent). Dub attributes the lead to the partner.
+3. **Sale** – Visitor purchases. Your backend (or Stripe webhook) sends `POST /track/sale` with the customer ID. Dub attributes the sale and creates a commission.
+
+See [Conversion tracking quickstart](/conversions/quickstart) and [Partners quickstart](/partners/quickstart) for implementation details.
+
+## Popular integrations
+
+| Integration | Use case |
+|-------------|----------|
+| [Stripe](/conversions/sales/stripe) | Recurring revenue, refunds, payment events |
+| [Google Tag Manager](/conversions/leads/google-tag-manager) | Client-side lead tracking without code changes |
+| [Segment](/conversions/leads/segment) | Send leads/sales from your CDP |
+| [HubSpot](/conversions/leads/hubspot) | Lead tracking from HubSpot forms |
+| [Server-side SDKs](/sdks/overview) | TypeScript, Python, Go, PHP, Ruby |
+
+## What's next?
+
+<CardGroup cols={2}>
+  <Card title="Setting up your program" icon="rocket" href="/help/setting-up-your-program">
+    Step-by-step setup from zero to live
+  </Card>
+  <Card title="Partner payouts" icon="credit-card" href="/help/partner-payouts">
+    How partners get paid
+  </Card>
+  <Card title="Partners quickstart" icon="code" href="/partners/quickstart">
+    Technical implementation guide
+  </Card>
+  <Card title="Script builder" icon="wand-magic-sparkles" href="https://app.dub.co/settings/analytics">
+    Get your tracking script (Analytics settings)
+  </Card>
+</CardGroup>
