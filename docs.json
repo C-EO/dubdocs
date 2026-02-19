@@ -140,45 +140,64 @@
               {
                 "group": "Getting started",
                 "pages": [
-                  "managing-a-program/setting-up-your-program",
-                  "managing-a-program/conversion-tracking",
-                  "managing-a-program/partner-groups",
-                  "managing-a-program/partner-links",
-                  "managing-a-program/brand-resources",
-                  "managing-a-program/managing-partners"
+                  "managing-a-program/getting-started/setting-up-your-program",
+                  "managing-a-program/getting-started/program-landing-page",
+                  "managing-a-program/getting-started/inviting-partners",
+                  "managing-a-program/getting-started/conversion-tracking"
                 ]
               },
               {
                 "group": "Customizing rewards",
-                "pages": ["managing-a-program/customizing-rewards", "managing-a-program/managing-commissions"]
+                "pages": [
+                  "managing-a-program/customizing-rewards/customizing-rewards",
+                  "managing-a-program/customizing-rewards/managing-commissions"
+                ]
               },
               {
                 "group": "Recruiting partners",
                 "pages": [
-                  "managing-a-program/inviting-partners",
-                  "managing-a-program/landing-page",
-                  "managing-a-program/application-form",
-                  "managing-a-program/reviewing-applications",
-                  "managing-a-program/embedded-dashboard",
-                  "managing-a-program/partner-network"
+                  "managing-a-program/recruiting-partners/landing-page",
+                  "managing-a-program/recruiting-partners/application-form",
+                  "managing-a-program/recruiting-partners/reviewing-applications",
+                  "managing-a-program/recruiting-partners/embedded-dashboard",
+                  "managing-a-program/recruiting-partners/partner-network"
                 ]
               },
               {
                 "group": "Sending payouts",
-                "pages": ["managing-a-program/partner-payouts", "managing-a-program/bank-account", "managing-a-program/external-payouts"]
+                "pages": [
+                  "managing-a-program/sending-payouts/partner-payouts",
+                  "managing-a-program/sending-payouts/bank-account",
+                  "managing-a-program/sending-payouts/external-payouts"
+                ]
               },
               {
                 "group": "Engaging partners",
-                "pages": ["managing-a-program/email-campaigns", "managing-a-program/messages", "managing-a-program/bounties"]
+                "pages": [
+                  "managing-a-program/engaging-partners/email-campaigns",
+                  "managing-a-program/engaging-partners/messages",
+                  "managing-a-program/engaging-partners/bounties"
+                ]
               },
               {
                 "group": "Insights and reporting",
-                "pages": ["managing-a-program/program-analytics", "managing-a-program/commissions"]
+                "pages": [
+                  "managing-a-program/insights-and-reporting/program-analytics",
+                  "managing-a-program/insights-and-reporting/commissions"
+                ]
               },
-              { "group": "Fraud detection", "pages": ["managing-a-program/fraud-detection"] },
+              {
+                "group": "Fraud detection",
+                "pages": ["managing-a-program/fraud-detection"]
+              },
               {
                 "group": "Migration guides",
-                "pages": ["managing-a-program/rewardful", "managing-a-program/partnerstack", "managing-a-program/firstpromoter", "managing-a-program/tolt"]
+                "pages": [
+                  "managing-a-program/migration/rewardful",
+                  "managing-a-program/migration/partnerstack",
+                  "managing-a-program/migration/firstpromoter",
+                  "managing-a-program/migration/tolt"
+                ]
               }
             ]
           },
@@ -187,11 +206,18 @@
             "pages": [
               {
                 "group": "Getting started",
-                "pages": ["partnering-with-programs/partner-profile", "partnering-with-programs/partner-team", "partnering-with-programs/merging-account"]
+                "pages": [
+                  "partnering-with-programs/partner-profile",
+                  "partnering-with-programs/partner-team",
+                  "partnering-with-programs/merging-account"
+                ]
               },
               {
                 "group": "Joining programs",
-                "pages": ["partnering-with-programs/program-marketplace", "partnering-with-programs/navigating-program"]
+                "pages": [
+                  "partnering-with-programs/program-marketplace",
+                  "partnering-with-programs/navigating-program"
+                ]
               },
               {
                 "group": "Receiving payouts",

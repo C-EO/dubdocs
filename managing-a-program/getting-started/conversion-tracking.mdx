@@ -1,0 +1,94 @@
+---
+title: "Conversion tracking"
+description: "How to set up conversion tracking for your Dub Partners program—capture clicks and attribute sign-ups and purchases to your partners."
+og:title: "Conversion tracking for partner programs | Dub Help Center"
+---
+
+import DubClientInstall from "/snippets/dub-client-install.mdx";
+import DubClientInstallVerify from "/snippets/dub-client-install-verify.mdx";
+import VerifyTrackClick from "/snippets/verify-track-click.mdx";
+import InstallServerSdksTrackConversions from "/snippets/install-server-sdks-track-conversions.mdx";
+
+<Note>
+  Dub Partners require a [Business plan](https://dub.co/pricing) subscription or
+  higher.
+</Note>
+
+Dub needs to know when someone who clicked a partner link signs up or buys. That's conversion tracking. This guide covers the two steps to get it working:
+
+1. [Install the `@dub/analytics` client-side SDK](#step-1%3A-install-the-%40dub%2Fanalytics-client-side-sdk)
+2. [Install the Dub server-side SDK + track conversion events](#step-2%3A-install-the-dub-server-side-sdk-%2B-track-conversion-events)
+
+## Step 1: Install the `@dub/analytics` client-side SDK
+
+First, you'll need to install the [@dub/analytics client-side SDK](/sdks/client-side/introduction).
+
+This script detects the `dub_id` query parameter and storing it as a first-party cookie, which will be used to attribute subsequent conversion events to the original link.
+
+<Frame>
+  <img
+    className="rounded-lg border border-gray-100"
+    src="https://assets.dub.co/help/conversion-click-event.png"
+    alt="A diagram showing how click events are tracked in the conversion funnel"
+  />
+</Frame>
+
+On top of that, it also:
+
+- lets you [track clicks on the client-side](/sdks/client-side/features/click-tracking) using query parameters (e.g. `?via=john`)
+- [automatically fetch the partner and discount data](/sdks/client-side/features/click-tracking#automatically-fetching-partner-and-discount-data) for a given link – which is helpful for displaying [dual-sided incentives](/partners/link-based-discounts)
+
+<DubClientInstall />
+
+<DubClientInstallVerify />
+
+Once the script is installed, make sure to verify that [client-side click tracking](/sdks/client-side/features/click-tracking) is working as expected by checking if the following is true:
+
+<VerifyTrackClick />
+
+In case you missed it, you'll also need to allowlist your site's domain to ensure the client-side click events are ingested by Dub. To do that, navigate to your [workspace's Analytics settings page](https://app.dub.co/settings/analytics) and add your site's domain to the **Allowed Hostnames** list.
+
+<Frame>
+  <img
+    src="/images/conversions/allowed-hostnames.png"
+    alt="Enabling conversion tracking for a workspace"
+  />
+</Frame>
+
+<Tip>
+  When testing things out locally, you can add `localhost` to the **Allowed
+  Hostnames** list temporarily. This will allow local events to be ingested by
+  Dub. Don't forget to remove it once you're ready to go live!
+</Tip>
+
+## Step 2: Install the Dub server-side SDK + track conversion events
+
+<InstallServerSdksTrackConversions />
+
+## What's next
+
+Once conversion tracking is set up, you can configure the rest of your partner program:
+
+<CardGroup cols={2}>
+  <Card title="Setting up your program" icon="rocket" href="/managing-a-program/getting-started/setting-up-your-program">
+    Create your program and configure rewards
+  </Card>
+  <Card title="Migrating from Rewardful" icon="arrow-right-arrow-left" href="/managing-a-program/migration/rewardful">
+    Import your partners and conversions from Rewardful
+  </Card>
+  <Card title="Bank account" icon="building" href="/managing-a-program/sending-payouts/bank-account">
+    Connect your bank for partner payouts
+  </Card>
+  <Card title="Inviting partners" icon="user-plus" href="/managing-a-program/getting-started/inviting-partners">
+    Onboard partners and set up your landing page
+  </Card>
+  <Card title="Customizing rewards" icon="coins" href="/managing-a-program/customizing-rewards/customizing-rewards">
+    Configure commission rules for your program
+  </Card>
+  <Card title="Link-based discounts" icon="tag" href="/partners/link-based-discounts">
+    Dual-sided incentives for partners and customers
+  </Card>
+  <Card title="Embedded referral dashboard" icon="layout" href="/partners/embedded-referrals">
+    White-labeled dashboard inside your app
+  </Card>
+</CardGroup>

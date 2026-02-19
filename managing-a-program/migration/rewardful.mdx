@@ -1,0 +1,149 @@
+---
+title: "Migrating from Rewardful"
+description: "Easily migrate your affiliate program from Rewardful to Dub Partners in just a few clicks."
+og:title: "Migrating from Rewardful | Dub Help Center"
+---
+
+<Note>
+  Dub Partners is only available on [Business plans and above](https://dub.co/pricing).
+</Note>
+
+Rewardful is a popular affiliate management platform, especially for businesses that use Stripe for payments.
+
+However, Rewardful can be pretty limiting for companies that want to run their affiliate programs at scale:
+
+1. **No affiliate network:** Rewardful is a standalone affiliate software, which means you're on your own when it comes to finding and recruiting high-quality affiliates to join your program.
+2. **Limited white-labeling support:** It's not possible to embed Rewardful's dashboard inside your application.
+3. **Basic reward structures:** Companies can choose between two reward types: recurring or one-time sales rewards.
+4. **No payouts support:** Companies generally have to resort to using PayPal/Wise to pay out their affiliates manually and deal with the all-too-common payout failures.
+
+This is where [Dub Partners](https://dub.co/partners) comes in.
+
+1. **Powerful affiliate network:** With over 5,000 active affiliates in our network, Dub makes it easy to find and recruit high-performing partners with a proven track record of driving results.
+2. **White-labeling:** You can [embed a white-labeled referral dashboard into your application](/partners/embedded-referrals) for a better user experience.
+3. **Advanced reward structures:** On Dub, you can choose between [3 reward types](/managing-a-program/customizing-rewards/customizing-rewards) – per click, per lead, and per sale (flat/percentage). You can also set different reward conditions and create bounties to provide additional rewards for your affiliates.
+4. **Payouts you can rely on:** We let you [pay your partners globally](/managing-a-program/sending-payouts/partner-payouts) in 1-click, with tax compliance built-in.
+
+Case in point: [Tella](https://partners.dub.co/tella) migrated their affiliate program from Rewardful to Dub and saw a [38% increase in revenue and 2x more partner signups](https://dub.co/customers/tella).
+
+Read the [full comparison article between Dub and Rewardful here](https://dub.co/blog/dub-vs-rewardful).
+
+In this article, we'll learn how to import your Rewardful affiliate program to Dub Partners for a more powerful, scalable, and branded partner management experience.
+
+## How to migrate from Rewardful to Dub
+
+If you're looking to migrate from Rewardful to Dub Partners, we've built a custom migration tool that will help you migrate everything over in just 2-3 clicks – without breaking any existing Rewardful affiliate links.
+
+### Step 1: Add a custom domain to your Dub workspace
+
+Before starting the migration process, you'll need to add a custom domain to Dub. This domain will be used to create short links for each affiliate link that we import from Rewardful.
+
+If you haven't added a custom domain to Dub yet, you can [follow this guide to set that up](https://dub.co/help/article/how-to-add-custom-domain).
+
+### Step 2: Set up conversion tracking + client-side click-tracking
+
+Next, [set up conversion tracking](/managing-a-program/getting-started/conversion-tracking) to track signup and sale events. We also have some [in-app guides that you can reference here](https://app.dub.co/guides).
+
+For backward compatibility, we also recommend setting up [client-side click-tracking](/sdks/client-side/features/click-tracking) when installing the [client-side @dub/analytics SDK](/sdks/client-side/introduction) on your site. This will ensure all your existing `domain.com?via=affiliate` links will keep working as expected, which gives affiliates time to update their links to the new format.
+
+### Step 3: Get your Rewardful API Secret
+
+Go to your [Company settings page on Rewardful](https://app.getrewardful.com/company/edit) to retrieve your Rewardful API secret. We will use this API key to retrieve and import your existing Rewardful campaign to Dub.
+
+### Step 4: Import your Rewardful campaign in the Partners tab
+
+Once you've [set up your Dub partner program](/managing-a-program/getting-started/setting-up-your-program), go to your [Partners tab](https://app.dub.co/program/partners), click on the `⋮` button and select "Import from Rewardful".
+
+To save you some time, [here's a quicklink](https://app.dub.co/program/partners?import=rewardful) that will get you directly to the Rewardful import flow.
+
+Then, add your Rewardful API secret and select Fetch campaigns. From the retrieved list of Rewardful campaigns, select the main campaign you want to import first and click Continue.
+
+If you have multiple campaigns on Rewardful, you can import multiple campaigns into Dub as well.
+
+## What data is migrated?
+
+Our Rewardful migration tool imports the following attributes to Dub Partners:
+
+### Program terms
+
+Depending on the Rewardful campaign you import, we'll automatically configure the same reward rules on your Dub partner program:
+
+- Commission duration (e.g. up to 12 months or lifetime recurring)
+- Commission type (dollar amount or percentage) and amount
+
+### Affiliates / Partners
+
+To ensure the efficiency of your partner program, we automatically filter out dormant affiliates and only import the ones that are both:
+
+- Have at least 1 lead / referral
+- In an "active" state
+
+We also automatically import all your affiliates' links and recreate them in Dub using your program's domain and default URL.
+
+### Referrals / Customers
+
+By default, we import all referrals that are associated with an affiliate in your Rewardful campaign. This ensures that all subsequent subscription renewal events will continue to be tracked on Dub.
+
+Referrals that do not have a valid Stripe customer ID will not be imported.
+
+### Commissions
+
+We also import all commissions associated with any customers that were imported above. Depending on the commission state on Rewardful, they will be marked accordingly on Dub as well:
+
+| Rewardful | Dub |
+| --- | --- |
+| Pending | Pending |
+| Due | Pending |
+| Paid | Paid |
+| Voided | Canceled |
+
+Additionally, Dub also supports 3 additional commission states:
+
+- **Duplicate:** Useful for marketing if a commission was rewarded more than once and needs to be marked as a duplicate event.
+- **Fraud:** Useful for marking a sale as fraudulent and excluding it from any future payouts.
+- **Refunded:** When the sale for the commission was refunded. With our [Stripe integration](/conversions/sales/stripe), this is automatically detected and updated.
+- **Processed:** When a commission has been added to a [payout](/managing-a-program/sending-payouts/partner-payouts) (after any applicable holding period).
+
+Similar to referrals, commissions for a referral that do not have a valid Stripe customer ID will not be imported.
+
+If there are any other attributes that you'd like to see migrated, please [reach out to us](https://dub.co/contact/support) to let us know!
+
+## Migrating multiple campaigns
+
+If needed, you can migrate multiple Rewardful campaigns to Dub. We recommend starting with the main campaign, and then restarting the import flow to import the remaining campaigns. Our importer is built in an idempotent fashion, so it will import everything only once.
+
+To start another import flow, go to your program's Partners tab and click on the `⋮` button next to Invite partner. From the dropdown, select Import from Rewardful.
+
+## Next steps
+
+After importing your campaign, here are some recommended next steps:
+
+### 1. Set up your bank account for partner payouts
+
+Dub Partners supports [1-click payouts](/managing-a-program/sending-payouts/partner-payouts) to partners all across the globe. We generally recommend using ACH for partner payouts as it is the most cost-effective option. Here's [how you can set up your bank account](/managing-a-program/sending-payouts/bank-account) for ACH payouts.
+
+### 2. Notify your affiliates about the platform change
+
+Next, you'd want to reach out to your existing partners and let them know about the platform change. To do that, you can send them an email with the following example verbiage:
+
+> Hey,
+>
+> Starting today, we are switching the [Your Company] Affiliate Program from Rewardful to [Dub Partners](https://dub.co/partners).
+>
+> To get started, follow these steps:
+>
+> 1. Sign up for a Dub Partners account here: `partners.dub.co/{your_program_slug}/register`
+> 2. [Connect a payout method](https://partners.dub.co/settings/payouts) to receive your commissions.
+> 3. Start sharing your shiny new referral link with your audience 🚀
+>
+> Let us know if you have any questions!
+
+## Related articles
+
+<CardGroup cols={2}>
+  <Card title="Platform overview" icon="sitemap" href="/managing-a-program/platform-overview" />
+  <Card title="Inviting partners" icon="user-plus" href="/managing-a-program/getting-started/inviting-partners" />
+  <Card title="Partner payouts" icon="banknote" href="/managing-a-program/sending-payouts/partner-payouts" />
+  <Card title="Bank account" icon="building" href="/managing-a-program/sending-payouts/bank-account" />
+  <Card title="Link-based discounts" icon="tag" href="/partners/link-based-discounts" />
+</CardGroup>
