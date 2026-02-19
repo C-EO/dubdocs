@@ -135,50 +135,50 @@
           {
             "group": "MANAGING A PROGRAM",
             "pages": [
-              "help/introduction",
-              "help/platform-overview",
+              "managing-a-program/what-is-dub-partners",
+              "managing-a-program/platform-overview",
               {
                 "group": "Getting started",
                 "pages": [
-                  "help/setting-up-your-program",
-                  "help/conversion-tracking",
-                  "help/partner-groups",
-                  "help/partner-links",
-                  "help/brand-resources",
-                  "help/managing-partners"
+                  "managing-a-program/setting-up-your-program",
+                  "managing-a-program/conversion-tracking",
+                  "managing-a-program/partner-groups",
+                  "managing-a-program/partner-links",
+                  "managing-a-program/brand-resources",
+                  "managing-a-program/managing-partners"
                 ]
               },
               {
                 "group": "Customizing rewards",
-                "pages": ["help/customizing-rewards", "help/managing-commissions"]
+                "pages": ["managing-a-program/customizing-rewards", "managing-a-program/managing-commissions"]
               },
               {
                 "group": "Recruiting partners",
                 "pages": [
-                  "help/inviting-partners",
-                  "help/landing-page",
-                  "help/application-form",
-                  "help/reviewing-applications",
-                  "help/embedded-dashboard",
-                  "help/partner-network"
+                  "managing-a-program/inviting-partners",
+                  "managing-a-program/landing-page",
+                  "managing-a-program/application-form",
+                  "managing-a-program/reviewing-applications",
+                  "managing-a-program/embedded-dashboard",
+                  "managing-a-program/partner-network"
                 ]
               },
               {
                 "group": "Sending payouts",
-                "pages": ["help/partner-payouts", "help/bank-account", "help/external-payouts"]
+                "pages": ["managing-a-program/partner-payouts", "managing-a-program/bank-account", "managing-a-program/external-payouts"]
               },
               {
                 "group": "Engaging partners",
-                "pages": ["help/email-campaigns", "help/messages", "help/bounties"]
+                "pages": ["managing-a-program/email-campaigns", "managing-a-program/messages", "managing-a-program/bounties"]
               },
               {
                 "group": "Insights and reporting",
-                "pages": ["help/program-analytics", "help/commissions"]
+                "pages": ["managing-a-program/program-analytics", "managing-a-program/commissions"]
               },
-              { "group": "Fraud detection", "pages": ["help/fraud-detection"] },
+              { "group": "Fraud detection", "pages": ["managing-a-program/fraud-detection"] },
               {
                 "group": "Migration guides",
-                "pages": ["help/rewardful", "help/partnerstack", "help/firstpromoter", "help/tolt"]
+                "pages": ["managing-a-program/rewardful", "managing-a-program/partnerstack", "managing-a-program/firstpromoter", "managing-a-program/tolt"]
               }
             ]
           },
@@ -187,18 +187,18 @@
             "pages": [
               {
                 "group": "Getting started",
-                "pages": ["help/partner-profile", "help/partner-team", "help/merging-account"]
+                "pages": ["partnering-with-programs/partner-profile", "partnering-with-programs/partner-team", "partnering-with-programs/merging-account"]
               },
               {
                 "group": "Joining programs",
-                "pages": ["help/program-marketplace", "help/navigating-program"]
+                "pages": ["partnering-with-programs/program-marketplace", "partnering-with-programs/navigating-program"]
               },
               {
                 "group": "Receiving payouts",
                 "pages": [
-                  "help/receiving-payouts",
-                  "help/payout-invoices",
-                  "help/commissions-payouts-work"
+                  "partnering-with-programs/receiving-payouts",
+                  "partnering-with-programs/payout-invoices",
+                  "partnering-with-programs/commissions-payouts-work"
                 ]
               }
             ]
