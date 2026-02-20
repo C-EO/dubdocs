@@ -11,10 +11,18 @@
   "contextual": {
     "options": ["copy", "view", "chatgpt", "claude", "cursor", "vscode"]
   },
+  "fonts": {
+    "heading": {
+      "family": "Satoshi",
+      "source": "/fonts/Satoshi-Variable.woff2",
+      "format": "woff2",
+      "weight": 700
+    }
+  },
   "navigation": {
-    "anchors": [
+    "tabs": [
       {
-        "anchor": "Developer Docs",
+        "tab": "Developer Docs",
         "icon": "books",
         "groups": [
           {
@@ -129,13 +137,13 @@
         ]
       },
       {
-        "anchor": "Help Center",
+        "tab": "Help Center",
         "icon": "life-ring",
         "groups": [
           {
             "group": "MANAGING A PROGRAM",
             "pages": [
-              "help/platform-overview",
+              "help/article/dub-partners",
               {
                 "group": "Getting started",
                 "pages": [
@@ -233,7 +241,7 @@
         ]
       },
       {
-        "anchor": "APIs and SDKs",
+        "tab": "APIs and SDKs",
         "icon": "code",
         "groups": [
           {
