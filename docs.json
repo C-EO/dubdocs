@@ -533,8 +533,12 @@
       "destination": "/docs/conversions/leads/supabase"
     },
     {
+      "source": "docs/api-reference/tokens",
+      "destination": "/docs/api-reference/authentication"
+    },
+    {
       "source": "docs/api-reference/publishable-keys",
-      "destination": "/docs/api-reference/tokens#publishable-keys"
+      "destination": "/docs/api-reference/authentication#publishable-keys"
     },
     {
       "source": "/docs/api-reference/links/create",
