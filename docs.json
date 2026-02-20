@@ -535,275 +535,191 @@
       "destination": "/docs/conversions/leads/supabase"
     },
     {
-      "source": "/api-reference/endpoint/create-a-new-link",
-      "destination": "/docs/api-reference/endpoint/create-a-link"
-    },
-    {
-      "source": "/api-reference/endpoint/create-a-new-tag",
-      "destination": "/docs/api-reference/endpoint/create-a-tag"
-    },
-    {
-      "source": "/api-reference/endpoint/create-a-customer",
-      "destination": "/docs/api-reference/endpoint/retrieve-a-customer"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-a-project",
-      "destination": "/docs/api-reference/endpoint/retrieve-a-workspace"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-projects",
-      "destination": "/docs/api-reference/endpoint/retrieve-a-list-of-workspaces"
-    },
-    {
-      "source": "/api-reference/endpoint/edit-a-link",
-      "destination": "/docs/api-reference/endpoint/update-a-link"
-    },
-    {
-      "source": "/api-reference/endpoint/edit-a-domain",
-      "destination": "/docs/api-reference/endpoint/update-a-domain"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-browser",
-      "destination": "/docs/api-reference/endpoint/retrieve-browsers-by-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-city",
-      "destination": "/docs/api-reference/endpoint/retrieve-cities-by-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-clicks",
-      "destination": "/docs/api-reference/endpoint/retrieve-clicks-count"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-country",
-      "destination": "/docs/api-reference/endpoint/retrieve-countries-by-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-device",
-      "destination": "/docs/api-reference/endpoint/retrieve-devices-by-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-os",
-      "destination": "/docs/api-reference/endpoint/retrieve-os-by-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-referer",
-      "destination": "/docs/api-reference/endpoint/retrieve-referers-by-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-timeseries",
-      "destination": "/docs/api-reference/endpoint/retrieve-timeseries-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-top-links",
-      "destination": "/docs/api-reference/endpoint/retrieve-top-links-by-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-top-urls",
-      "destination": "/docs/api-reference/endpoint/retrieve-top-urls-by-clicks"
-    },
-    {
-      "source": "/api-reference/endpoint/retrieve-a-partners-analytics",
-      "destination": "/docs/api-reference/endpoint/retrieve-partner-analytics"
-    },
-    {
-      "source": "/api-reference/endpoint/add-a-domain",
-      "destination": "/docs/api-reference/endpoint/create-a-domain"
-    },
-    {
-      "source": "/api-reference/pagination",
-      "destination": "/docs/api-reference/introduction#pagination"
-    },
-    {
-      "source": "/api-reference/errors",
-      "destination": "/docs/api-reference/introduction#error-handling"
-    },
-    {
-      "source": "/api-reference/endpoint/create-a-link",
+      "source": "/docs/api-reference/endpoint/create-a-link",
       "destination": "/docs/api-reference/links/create"
     },
     {
-      "source": "/api-reference/endpoint/update-a-link",
+      "source": "/docs/api-reference/endpoint/update-a-link",
       "destination": "/docs/api-reference/links/update"
     },
     {
-      "source": "/api-reference/endpoint/upsert-a-link",
+      "source": "/docs/api-reference/endpoint/upsert-a-link",
       "destination": "/docs/api-reference/links/upsert"
     },
     {
-      "source": "/api-reference/endpoint/delete-a-link",
+      "source": "/docs/api-reference/endpoint/delete-a-link",
       "destination": "/docs/api-reference/links/delete"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-link",
+      "source": "/docs/api-reference/endpoint/retrieve-a-link",
       "destination": "/docs/api-reference/links/retrieve"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-links",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-links",
       "destination": "/docs/api-reference/links/list"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-domains",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-domains",
       "destination": "/docs/api-reference/domains/create"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-number-of-links",
+      "source": "/docs/api-reference/endpoint/retrieve-number-of-links",
       "destination": "/docs/api-reference/links/count"
     },
     {
-      "source": "/api-reference/endpoint/bulk-create-links",
+      "source": "/docs/api-reference/endpoint/bulk-create-links",
       "destination": "/docs/api-reference/links/bulk-create"
     },
     {
-      "source": "/api-reference/endpoint/bulk-update-links",
+      "source": "/docs/api-reference/endpoint/bulk-update-links",
       "destination": "/docs/api-reference/links/bulk-update"
     },
     {
-      "source": "/api-reference/endpoint/bulk-delete-links",
+      "source": "/docs/api-reference/endpoint/bulk-delete-links",
       "destination": "/docs/api-reference/links/bulk-delete"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-analytics",
+      "source": "/docs/api-reference/endpoint/retrieve-analytics",
       "destination": "/docs/api-reference/analytics/retrieve"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-events",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-events",
       "destination": "/docs/api-reference/analytics/list-events"
     },
     {
-      "source": "/api-reference/endpoint/track-lead",
+      "source": "/docs/api-reference/endpoint/track-lead",
       "destination": "/docs/api-reference/conversions/track-lead"
     },
     {
-      "source": "/api-reference/endpoint/track-sale",
+      "source": "/docs/api-reference/endpoint/track-sale",
       "destination": "/docs/api-reference/conversions/track-sale"
     },
     {
-      "source": "/api-reference/endpoint/track-open",
+      "source": "/docs/api-reference/endpoint/track-open",
       "destination": "/docs/api-reference/endpoint/track-open"
     },
     {
-      "source": "/api-reference/endpoint/create-referrals-embed-token",
+      "source": "/docs/api-reference/endpoint/create-referrals-embed-token",
       "destination": "/docs/api-reference/endpoint/create-referrals-embed-token"
     },
     {
-      "source": "/api-reference/endpoint/create-a-partner",
+      "source": "/docs/api-reference/endpoint/create-a-partner",
       "destination": "/docs/api-reference/partners/create"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-partners",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-partners",
       "destination": "/docs/api-reference/partners/list"
     },
     {
-      "source": "/api-reference/endpoint/ban-a-partner",
+      "source": "/docs/api-reference/endpoint/ban-a-partner",
       "destination": "/docs/api-reference/partners/ban"
     },
     {
-      "source": "/api-reference/endpoint/deactivate-a-partner",
+      "source": "/docs/api-reference/endpoint/deactivate-a-partner",
       "destination": "/docs/api-reference/partners/deactivate"
     },
     {
-      "source": "/api-reference/endpoint/create-a-partner-link",
+      "source": "/docs/api-reference/endpoint/create-a-partner-link",
       "destination": "/docs/api-reference/partners/create-link"
     },
     {
-      "source": "/api-reference/endpoint/upsert-a-partner-link",
+      "source": "/docs/api-reference/endpoint/upsert-a-partner-link",
       "destination": "/docs/api-reference/partners/upsert-link"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-partners-links",
+      "source": "/docs/api-reference/endpoint/retrieve-a-partners-links",
       "destination": "/docs/api-reference/partners/retrieve-links"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-partner-analytics",
+      "source": "/docs/api-reference/endpoint/retrieve-partner-analytics",
       "destination": "/docs/api-reference/partners/retrieve-analytics"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-customer",
+      "source": "/docs/api-reference/endpoint/retrieve-a-customer",
       "destination": "/docs/api-reference/customers/retrieve"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-customers",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-customers",
       "destination": "/docs/api-reference/customers/list"
     },
     {
-      "source": "/api-reference/endpoint/update-a-customer",
+      "source": "/docs/api-reference/endpoint/update-a-customer",
       "destination": "/docs/api-reference/customers/update"
     },
     {
-      "source": "/api-reference/endpoint/delete-a-customer",
+      "source": "/docs/api-reference/endpoint/delete-a-customer",
       "destination": "/docs/api-reference/customers/delete"
     },
     {
-      "source": "/api-reference/endpoint/list-submissions-for-a-bounty",
+      "source": "/docs/api-reference/endpoint/list-submissions-for-a-bounty",
       "destination": "/docs/api-reference/bounties/list"
     },
     {
-      "source": "/api-reference/endpoint/approve-a-bounty-submission",
+      "source": "/docs/api-reference/endpoint/approve-a-bounty-submission",
       "destination": "/docs/api-reference/bounties/approve"
     },
     {
-      "source": "/api-reference/endpoint/reject-a-bounty-submission",
+      "source": "/docs/api-reference/endpoint/reject-a-bounty-submission",
       "destination": "/docs/api-reference/bounties/reject"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-commissions",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-commissions",
       "destination": "/docs/api-reference/commissions/list"
     },
     {
-      "source": "/api-reference/endpoint/update-a-commission",
+      "source": "/docs/api-reference/endpoint/update-a-commission",
       "destination": "/docs/api-reference/commissions/update"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-payouts",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-payouts",
       "destination": "/docs/api-reference/payouts/list"
     },
     {
-      "source": "/api-reference/endpoint/create-a-domain",
+      "source": "/docs/api-reference/endpoint/create-a-domain",
       "destination": "/docs/api-reference/domains/create"
     },
     {
-      "source": "/api-reference/endpoint/update-a-domain",
+      "source": "/docs/api-reference/endpoint/update-a-domain",
       "destination": "/docs/api-reference/domains/update"
     },
     {
-      "source": "/api-reference/endpoint/delete-a-domain",
+      "source": "/docs/api-reference/endpoint/delete-a-domain",
       "destination": "/docs/api-reference/domains/delete"
     },
     {
-      "source": "/api-reference/endpoint/register-a-domain",
+      "source": "/docs/api-reference/endpoint/register-a-domain",
       "destination": "/docs/api-reference/domains/register"
     },
     {
-      "source": "/api-reference/endpoint/check-a-domain-availability",
+      "source": "/docs/api-reference/endpoint/check-a-domain-availability",
       "destination": "/docs/api-reference/domains/check-availability"
     },
     {
-      "source": "/api-reference/endpoint/create-a-folder",
+      "source": "/docs/api-reference/endpoint/create-a-folder",
       "destination": "/docs/api-reference/folders/create"
     },
     {
-      "source": "/api-reference/endpoint/update-a-folder",
+      "source": "/docs/api-reference/endpoint/update-a-folder",
       "destination": "/docs/api-reference/folders/update"
     },
     {
-      "source": "/api-reference/endpoint/delete-a-folder",
+      "source": "/docs/api-reference/endpoint/delete-a-folder",
       "destination": "/docs/api-reference/folders/delete"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-folders",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-folders",
       "destination": "/docs/api-reference/folders/list"
     },
     {
-      "source": "/api-reference/endpoint/create-a-tag",
+      "source": "/docs/api-reference/endpoint/create-a-tag",
       "destination": "/docs/api-reference/tags/create"
     },
     {
-      "source": "/api-reference/endpoint/retrieve-a-list-of-tags",
+      "source": "/docs/api-reference/endpoint/retrieve-a-list-of-tags",
       "destination": "/docs/api-reference/tags/list"
     },
     {
-      "source": "/api-reference/endpoint/update-a-tag",
+      "source": "/docs/api-reference/endpoint/update-a-tag",
       "destination": "/docs/api-reference/tags/update"
     }
   ]
