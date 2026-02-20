@@ -147,65 +147,53 @@
               {
                 "group": "Getting started",
                 "pages": [
-                  "help/getting-started/setting-up-your-program",
-                  "help/getting-started/partner-groups",
-                  "help/getting-started/program-landing-page",
-                  "help/getting-started/brand-resources",
-                  "help/getting-started/inviting-partners",
-                  "help/getting-started/conversion-tracking"
-                ]
-              },
-              {
-                "group": "Customizing rewards",
-                "pages": [
-                  "help/customizing-rewards/customizing-rewards",
-                  "help/customizing-rewards/managing-commissions"
+                  "help/article/setting-up-your-program",
+                  "help/article/partner-groups",
+                  "help/article/partner-rewards",
+                  "help/article/program-resources"
                 ]
               },
               {
                 "group": "Recruiting partners",
                 "pages": [
-                  "help/recruiting-partners/landing-page",
-                  "help/recruiting-partners/application-form",
-                  "help/recruiting-partners/reviewing-applications",
-                  "help/recruiting-partners/embedded-dashboard",
-                  "help/recruiting-partners/partner-network"
+                  "help/article/inviting-partners",
+                  "help/article/program-landing-page",
+                  "help/article/program-application-form",
+                  "help/article/reviewing-applications",
+                  "docs/partners/embedded-referrals"
                 ]
               },
               {
                 "group": "Sending payouts",
                 "pages": [
-                  "help/sending-payouts/partner-payouts",
-                  "help/sending-payouts/bank-account",
-                  "help/sending-payouts/external-payouts"
+                  "help/article/partner-payouts",
+                  "help/article/how-to-set-up-bank-account",
+                  "docs/partners/external-payouts"
                 ]
               },
               {
                 "group": "Engaging partners",
                 "pages": [
-                  "help/engaging-partners/email-campaigns",
-                  "help/engaging-partners/messages",
-                  "help/engaging-partners/bounties"
+                  "help/article/email-campaigns",
+                  "help/article/messaging-partners",
+                  "help/article/program-bounties"
                 ]
               },
               {
                 "group": "Insights and reporting",
                 "pages": [
-                  "help/insights-and-reporting/program-analytics",
-                  "help/insights-and-reporting/commissions"
+                  "help/article/program-analytics",
+                  "help/article/partner-commissions",
+                  "help/article/fraud-detection"
                 ]
-              },
-              {
-                "group": "Fraud detection",
-                "pages": ["help/fraud-detection"]
               },
               {
                 "group": "Migration guides",
                 "pages": [
-                  "help/migration/rewardful",
-                  "help/migration/partnerstack",
-                  "help/migration/firstpromoter",
-                  "help/migration/tolt"
+                  "help/article/migrating-from-rewardful",
+                  "help/article/migrating-from-partnerstack",
+                  "help/article/migrating-from-firstpromoter",
+                  "help/article/migrating-from-tolt"
                 ]
               }
             ]
