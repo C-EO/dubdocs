@@ -21,7 +21,9 @@ Dub supports OAuth 2.0 authentication, which is **recommended** if you build int
 We recommend you use a OAuth client library to integrate the OAuth flow. You can find recommended libraries in a variety of programming languages [here](https://oauth.net/code/).
 
 <Info>
-  OAuth endpoints (`/oauth/authorize`, `/oauth/token`, `/oauth/userinfo`) are not available in the Dub SDKs. You'll need to call these endpoints directly using HTTP requests or an OAuth client library.
+  OAuth endpoints (`/oauth/authorize`, `/oauth/token`, `/oauth/userinfo`) are
+  not available in the Dub SDKs. You'll need to call these endpoints directly
+  using HTTP requests or an OAuth client library.
 </Info>
 
 ### Set up OAuth 2.0
@@ -277,18 +279,18 @@ You can request access to specific scopes when redirecting users to the Dub OAut
 
 Dub supports the following scopes for OAuth 2.0:
 
-| Scope              | Description                                                         |
-| ------------------ | ------------------------------------------------------------------- |
-| `links.read`       | Read access to links.                                               |
-| `links.write`      | Write access to links.                                              |
-| `tags.read`        | Read access to tags.                                                |
-| `tags.write`       | Write access to tags.                                               |
-| `analytics.read`   | Read access to analytics.                                           |
-| `domains.read`     | Read access to domains.                                             |
-| `domains.write`    | Write access to domains.                                            |
-| `folders.read`     | Read access to folders.                                             |
-| `folders.write`    | Write access to folders.                                            |
-| `user.read`        | Read access to user information. This scope is included by default. |
+| Scope            | Description                                                         |
+| ---------------- | ------------------------------------------------------------------- |
+| `links.read`     | Read access to links.                                               |
+| `links.write`    | Write access to links.                                              |
+| `tags.read`      | Read access to tags.                                                |
+| `tags.write`     | Write access to tags.                                               |
+| `analytics.read` | Read access to analytics.                                           |
+| `domains.read`   | Read access to domains.                                             |
+| `domains.write`  | Write access to domains.                                            |
+| `folders.read`   | Read access to folders.                                             |
+| `folders.write`  | Write access to folders.                                            |
+| `user.read`      | Read access to user information. This scope is included by default. |
 
 ### Examples
 
@@ -307,4 +309,4 @@ Dub supports the following scopes for OAuth 2.0:
 
 Dub also supports API key authentication; however, it is **not recommended** for building integrations. It should only be used for internal integrations or personal projects that do not require user consent.
 
-Learn more about [API Keys](/docs/api-reference/tokens).
+Learn more about [API Keys](/docs/api-reference/authentication#api-keys).

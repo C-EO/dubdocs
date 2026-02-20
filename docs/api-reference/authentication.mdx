@@ -4,12 +4,12 @@ title: "Authentication"
 
 ## Introduction
 
-Dub uses two types of authentication keys depending on where your code runs. Choose the right one for your use case:
+Dub uses two distinct types of authentication keys depending on where your code runs. Choose the right one for your use case:
 
-| Key type                                  | Use case                                | Where to use                                |
-| :---------------------------------------- | :-------------------------------------- | :------------------------------------------ |
-| [**API keys**](#api-keys)                 | Server-to-server (REST APIs)            | Back-end only; store securely, never expose |
-| [**Publishable keys**](#publishable-keys) | Client-side (SDKs, conversion tracking) | Safe to include in frontend code            |
+| Key type                                  | Use case                        | Where to use                                          |
+| :---------------------------------------- | :------------------------------ | :---------------------------------------------------- |
+| [**API keys**](#api-keys)                 | Server-to-server (REST APIs)    | Back-end only; store securely, never expose to client |
+| [**Publishable keys**](#publishable-keys) | Client-side conversion tracking | Safe to include in frontend code                      |
 
 ## API keys
 

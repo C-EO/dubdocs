@@ -248,7 +248,7 @@
             "group": "OVERVIEW",
             "pages": [
               "docs/api-reference/introduction",
-              "docs/api-reference/tokens",
+              "docs/api-reference/authentication",
               "docs/api-reference/rate-limits"
             ]
           },
