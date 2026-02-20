@@ -249,7 +249,6 @@
             "pages": [
               "docs/api-reference/introduction",
               "docs/api-reference/tokens",
-              "docs/api-reference/publishable-keys",
               "docs/api-reference/rate-limits"
             ]
           },
@@ -311,37 +310,8 @@
             ]
           },
           {
-            "group": "APIs",
+            "group": "CORE APIs",
             "pages": [
-              {
-                "group": "Links API",
-                "pages": [
-                  "docs/api-reference/links/create",
-                  "docs/api-reference/links/update",
-                  "docs/api-reference/links/upsert",
-                  "docs/api-reference/links/delete",
-                  "docs/api-reference/links/retrieve",
-                  "docs/api-reference/links/list",
-                  "docs/api-reference/links/count",
-                  "docs/api-reference/links/bulk-create",
-                  "docs/api-reference/links/bulk-update",
-                  "docs/api-reference/links/bulk-delete"
-                ]
-              },
-              {
-                "group": "Analytics API",
-                "pages": [
-                  "docs/api-reference/analytics/retrieve",
-                  "docs/api-reference/analytics/list-events"
-                ]
-              },
-              {
-                "group": "Conversions API",
-                "pages": [
-                  "docs/api-reference/conversions/track-lead",
-                  "docs/api-reference/conversions/track-sale"
-                ]
-              },
               {
                 "group": "Partners API",
                 "pages": [
@@ -351,8 +321,16 @@
                   "docs/api-reference/partners/deactivate",
                   "docs/api-reference/partners/create-link",
                   "docs/api-reference/partners/upsert-link",
-                  "docs/api-reference/partners/retrieve-links",
-                  "docs/api-reference/partners/retrieve-analytics"
+                  "docs/api-reference/partners/retrieve-links"
+                ]
+              },
+              {
+                "group": "Analytics API",
+                "pages": [
+                  "docs/api-reference/analytics/retrieve",
+                  "docs/api-reference/analytics/list-events",
+                  "docs/api-reference/analytics/track-lead",
+                  "docs/api-reference/analytics/track-sale"
                 ]
               },
               {
@@ -382,6 +360,26 @@
               {
                 "group": "Payouts API",
                 "pages": ["docs/api-reference/payouts/list"]
+              }
+            ]
+          },
+          {
+            "group": "OTHER APIs",
+            "pages": [
+              {
+                "group": "Links API",
+                "pages": [
+                  "docs/api-reference/links/create",
+                  "docs/api-reference/links/update",
+                  "docs/api-reference/links/upsert",
+                  "docs/api-reference/links/delete",
+                  "docs/api-reference/links/retrieve",
+                  "docs/api-reference/links/list",
+                  "docs/api-reference/links/count",
+                  "docs/api-reference/links/bulk-create",
+                  "docs/api-reference/links/bulk-update",
+                  "docs/api-reference/links/bulk-delete"
+                ]
               },
               {
                 "group": "Domains API",
@@ -455,87 +453,91 @@
   },
   "redirects": [
     {
-      "source": "/partners/white-labeling",
-      "destination": "/partners/embedded-referrals"
+      "source": "/docspartners/white-labeling",
+      "destination": "/docs/partners/embedded-referrals"
     },
     {
-      "source": "/sdks",
+      "source": "/docs/sdks",
       "destination": "/docs/sdks/overview"
     },
     {
-      "source": "/sdks/typescript/:path*",
+      "source": "/docs/sdks/typescript/:path*",
       "destination": "/docs/sdks/typescript"
     },
     {
-      "source": "/sdks/cli/overview",
+      "source": "/docs/sdks/cli/overview",
       "destination": "/docs/sdks/cli"
     },
     {
-      "source": "/sdks/js-client/overview",
+      "source": "/docs/sdks/js-client/overview",
       "destination": "/docs/sdks/client-side/installation-guides/react"
     },
     {
-      "source": "/sdks/client-side/features/client-side-click-tracking",
+      "source": "/docs/sdks/client-side/features/client-side-click-tracking",
       "destination": "/docs/sdks/client-side/features/click-tracking"
     },
     {
-      "source": "/self-hosting/guide",
+      "source": "/docs/self-hosting/guide",
       "destination": "/docs/self-hosting"
     },
     {
-      "source": "/integrations/webhooks",
+      "source": "/docs/integrations/webhooks",
       "destination": "/docs/concepts/webhooks/introduction"
     },
     {
-      "source": "/integrations/zapier",
+      "source": "/docs/integrations/zapier",
       "destination": "https://dub.co/integrations/zapier"
     },
     {
-      "source": "/integrations/make",
+      "source": "/docs/integrations/make",
       "destination": "https://dub.co/integrations/make"
     },
     {
-      "source": "/integrations/stripe",
+      "source": "/docs/integrations/stripe",
       "destination": "https://dub.co/integrations/stripe"
     },
     {
-      "source": "/integrations/shopify",
+      "source": "/docs/integrations/shopify",
       "destination": "https://dub.co/integrations/shopify"
     },
     {
-      "source": "/integrations/segment",
+      "source": "/docs/integrations/segment",
       "destination": "https://dub.co/integrations/segment"
     },
     {
-      "source": "/integrations/wordpress",
+      "source": "/docs/integrations/wordpress",
       "destination": "https://dub.co/integrations/wordpress"
     },
     {
-      "source": "/integrations/raycast",
+      "source": "/docs/integrations/raycast",
       "destination": "https://dub.co/integrations/raycast"
     },
     {
-      "source": "/integrations/slack",
+      "source": "/docs/integrations/slack",
       "destination": "https://dub.co/integrations/slack"
     },
     {
-      "source": "/concepts/links/bulk-actions",
+      "source": "/docs/concepts/links/bulk-actions",
       "destination": "/docs/concepts/links/bulk-operations"
     },
     {
-      "source": "/concepts/analytics",
+      "source": "/docs/concepts/analytics",
       "destination": "/docs/concepts/analytics/introduction"
     },
     {
-      "source": "/conversions/clicks/introduction",
+      "source": "/docs/conversions/clicks/introduction",
       "destination": "/docs/sdks/client-side/features/client-side-click-tracking"
     },
     {
-      "source": "/conversions/leads/supabase-auth",
+      "source": "/docs/conversions/leads/supabase-auth",
       "destination": "/docs/conversions/leads/supabase"
     },
     {
-      "source": "/docs/api-reference/endpoint/create-a-link",
+      "source": "docs/api-reference/publishable-keys",
+      "destination": "/docs/api-reference/tokens#publishable-keys"
+    },
+    {
+      "source": "/docs/api-reference/links/create",
       "destination": "/docs/api-reference/links/create"
     },
     {
@@ -588,11 +590,11 @@
     },
     {
       "source": "/docs/api-reference/endpoint/track-lead",
-      "destination": "/docs/api-reference/conversions/track-lead"
+      "destination": "/docs/api-reference/analytics/track-lead"
     },
     {
       "source": "/docs/api-reference/endpoint/track-sale",
-      "destination": "/docs/api-reference/conversions/track-sale"
+      "destination": "/docs/api-reference/analytics/track-sale"
     },
     {
       "source": "/docs/api-reference/endpoint/track-open",
