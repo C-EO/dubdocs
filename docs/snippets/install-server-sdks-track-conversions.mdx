@@ -6,32 +6,32 @@ import AuthProviders from "/snippets/auth-providers.mdx";
   guide](https://dub.co/docs/conversions/sales/shopify) for more information.
 </Tip>
 
-The recommended way to track conversions on Dub is using [server-side tracking](/conversions/leads/introduction), which is more reliable than [client-side tracking](/conversions/leads/client-side).
+The recommended way to track conversions on Dub is using [server-side tracking](/docs/conversions/leads/introduction), which is more reliable than [client-side tracking](/docs/conversions/leads/client-side).
 
-Depending on which framework you're using, you can use our [native SDKs](/sdks/overview):
+Depending on which framework you're using, you can use our [native SDKs](/docs/sdks/overview):
 
 <CardGroup>
-  <Card title="TypeScript" icon="npm" href="/sdks/typescript" horizontal>
+  <Card title="TypeScript" icon="npm" href="/docs/sdks/typescript" horizontal>
     TypeScript library for the Dub API
   </Card>
-  <Card title="Go" icon="golang" href="/sdks/go" iconType="brands" horizontal>
+  <Card title="Go" icon="golang" href="/docs/sdks/go" iconType="brands" horizontal>
     Go library for the Dub API
   </Card>
-  <Card title="Python" icon="python" href="/sdks/python" horizontal>
+  <Card title="Python" icon="python" href="/docs/sdks/python" horizontal>
     Python library for the Dub API
   </Card>
-  <Card title="Ruby" icon="gem" href="/sdks/ruby" horizontal>
+  <Card title="Ruby" icon="gem" href="/docs/sdks/ruby" horizontal>
     Ruby library for the Dub API
   </Card>
-  <Card title="PHP" icon="php" href="/sdks/php" horizontal>
+  <Card title="PHP" icon="php" href="/docs/sdks/php" horizontal>
     PHP library for the Dub API
   </Card>
 </CardGroup>
 
 If you're using a framework that isn't listed, you can use the Dub REST API to track events on the server-side:
 
-- [`POST /track/lead`](https://dub.co/docs/api-reference/endpoint/track-lead)
-- [`POST /track/sale`](https://dub.co/docs/api-reference/endpoint/track-sale)
+- [`POST /track/lead`](https://dub.co/docs/api-reference/conversions/track-lead)
+- [`POST /track/sale`](https://dub.co/docs/api-reference/conversions/track-sale)
 
 Once you install the SDKs, you can start tracking conversion events.
 
@@ -70,7 +70,7 @@ To learn more about tracking lead events with Dub, refer to the following resour
   <Card
     title="POST /track/lead endpoint"
     icon="code"
-    href="https://dub.co/docs/api-reference/endpoint/track-lead"
+    href="https://dub.co/docs/api-reference/conversions/track-lead"
   >
     View the full list of attributes you can pass when sending a lead event
   </Card>
@@ -109,7 +109,7 @@ Depending on which payment processor you're using, we offer native integrations 
   />
 </CardGroup>
 
-Alternatively, you can also send sale events manually using [our SDKs](/sdks/overview) or the [`POST /track/sale` API endpoint](https://dub.co/docs/api-reference/endpoint/track-sale).
+Alternatively, you can also send sale events manually using [our SDKs](/docs/sdks/overview) or the [`POST /track/sale` API endpoint](https://dub.co/docs/api-reference/conversions/track-sale).
 
 To learn more about tracking sale events with Dub, refer to the following resources:
 
@@ -124,7 +124,7 @@ To learn more about tracking sale events with Dub, refer to the following resour
   <Card
     title="POST /track/sale endpoint"
     icon="code"
-    href="https://dub.co/docs/api-reference/endpoint/track-sale"
+    href="https://dub.co/docs/api-reference/conversions/track-sale"
   >
     View the full list of attributes you can pass when sending a sale event
   </Card>

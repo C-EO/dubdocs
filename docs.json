@@ -635,6 +635,10 @@
       "destination": "/docs/api-reference/links/list"
     },
     {
+      "source": "/api-reference/endpoint/retrieve-a-list-of-domains",
+      "destination": "/docs/api-reference/domains/create"
+    },
+    {
       "source": "/api-reference/endpoint/retrieve-number-of-links",
       "destination": "/docs/api-reference/links/count"
     },
@@ -665,6 +669,14 @@
     {
       "source": "/api-reference/endpoint/track-sale",
       "destination": "/docs/api-reference/conversions/track-sale"
+    },
+    {
+      "source": "/api-reference/endpoint/track-open",
+      "destination": "/docs/api-reference/endpoint/track-open"
+    },
+    {
+      "source": "/api-reference/endpoint/create-referrals-embed-token",
+      "destination": "/docs/api-reference/endpoint/create-referrals-embed-token"
     },
     {
       "source": "/api-reference/endpoint/create-a-partner",

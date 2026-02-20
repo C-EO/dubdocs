@@ -7,7 +7,7 @@ import DubAnalyticsParams from "/snippets/dub-analytics-params-react.mdx";
 import VerifyTrackClick from "/snippets/verify-track-click.mdx";
 import FetchPartnerDiscountData from "/snippets/fetch-partner-discount-data.mdx";
 
-With the [`@dub/analytics` script](/sdks/client-side/introduction), you can track clicks on the client-side using query parameters (e.g. `?via=john`, `?ref=jane`).
+With the [`@dub/analytics` script](/docs/sdks/client-side/introduction), you can track clicks on the client-side using query parameters (e.g. `?via=john`, `?ref=jane`).
 
 A few use cases include:
 
@@ -56,7 +56,7 @@ You can group your hostnames when adding them to the allow list:
 
 <Step title="Install the Dub client-side SDK">
 
-Next, install the Dub [client-side SDK](/sdks/client-side/introduction) and initialize it with the domain you added in the previous step.
+Next, install the Dub [client-side SDK](/docs/sdks/client-side/introduction) and initialize it with the domain you added in the previous step.
 
 <CodeGroup>
 
@@ -101,7 +101,7 @@ Here's the full list of parameters you can pass to the script:
 
 To avoid ad-blockers from blocking your click-tracking requests, we recommend setting up a reverse proxy.
 
-Refer to the [Reverse-proxy support](/sdks/client-side/features/reverse-proxy-support) guide to learn how to set one up.
+Refer to the [Reverse-proxy support](/docs/sdks/client-side/features/reverse-proxy-support) guide to learn how to set one up.
 
 </Step>
 
@@ -121,7 +121,7 @@ Once you've done that, check if the following is true:
 
 ## Automatically fetching partner and discount data
 
-If you're using [Dub Partners](/partners/quickstart) with [dual-sided incentives](https://dub.co/help/article/dual-sided-incentives), the script will automatically fetch the partner and discount data for you when someone lands on your site via a valid referral link.
+If you're using [Dub Partners](/docs/partners/quickstart) with [dual-sided incentives](https://dub.co/help/article/dual-sided-incentives), the script will automatically fetch the partner and discount data for you when someone lands on your site via a valid referral link.
 
 <FetchPartnerDiscountData />
 

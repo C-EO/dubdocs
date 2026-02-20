@@ -21,7 +21,7 @@ Dub needs to know when someone who clicked a partner link signs up or buys. That
 
 ## Step 1: Install the `@dub/analytics` client-side SDK
 
-First, you'll need to install the [@dub/analytics client-side SDK](/sdks/client-side/introduction).
+First, you'll need to install the [@dub/analytics client-side SDK](/docs/sdks/client-side/introduction).
 
 This script detects the `dub_id` query parameter and storing it as a first-party cookie, which will be used to attribute subsequent conversion events to the original link.
 
@@ -35,14 +35,14 @@ This script detects the `dub_id` query parameter and storing it as a first-party
 
 On top of that, it also:
 
-- lets you [track clicks on the client-side](/sdks/client-side/features/click-tracking) using query parameters (e.g. `?via=john`)
-- [automatically fetch the partner and discount data](/sdks/client-side/features/click-tracking#automatically-fetching-partner-and-discount-data) for a given link – which is helpful for displaying [dual-sided incentives](/partners/link-based-discounts)
+- lets you [track clicks on the client-side](/docs/sdks/client-side/features/click-tracking) using query parameters (e.g. `?via=john`)
+- [automatically fetch the partner and discount data](/docs/sdks/client-side/features/click-tracking#automatically-fetching-partner-and-discount-data) for a given link – which is helpful for displaying [dual-sided incentives](/docs/partners/link-based-discounts)
 
 <DubClientInstall />
 
 <DubClientInstallVerify />
 
-Once the script is installed, make sure to verify that [client-side click tracking](/sdks/client-side/features/click-tracking) is working as expected by checking if the following is true:
+Once the script is installed, make sure to verify that [client-side click tracking](/docs/sdks/client-side/features/click-tracking) is working as expected by checking if the following is true:
 
 <VerifyTrackClick />
 
@@ -85,10 +85,10 @@ Once conversion tracking is set up, you can configure the rest of your partner p
   <Card title="Customizing rewards" icon="coins" href="/help/customizing-rewards/customizing-rewards">
     Configure commission rules for your program
   </Card>
-  <Card title="Link-based discounts" icon="tag" href="/partners/link-based-discounts">
+  <Card title="Link-based discounts" icon="tag" href="/docs/partners/link-based-discounts">
     Dual-sided incentives for partners and customers
   </Card>
-  <Card title="Embedded referral dashboard" icon="layout" href="/partners/embedded-referrals">
+  <Card title="Embedded referral dashboard" icon="layout" href="/docs/partners/embedded-referrals">
     White-labeled dashboard inside your app
   </Card>
 </CardGroup>

@@ -9,13 +9,13 @@ Webhooks allows you to listen to real-time events happening across your Dub work
 - Triggering a Zap on [Zapier](https://dub.co/integrations/zapier) when a new link is created in Dub
 - Sending click events in real-time to [Segment](https://dub.co/integrations/segment) for further processing
 - Get a [Slack](https://dub.co/integrations/slack) notification when someone clicks on your pitch deck link
-- Building gamified referral programs with [Dub Conversions](/conversions/quickstart) – e.g. increment usage credits for the referrer when a [new signup](/conversions/leads) happens
+- Building gamified referral programs with [Dub Conversions](/docs/conversions/quickstart) – e.g. increment usage credits for the referrer when a [new signup](/docs/conversions/leads) happens
 
 <Warning>
   The following endpoints do not trigger webhook events: [Bulk create
-  links](/api-reference/endpoint/bulk-create-links), [Bulk update
-  links](/api-reference/endpoint/bulk-update-links), [Bulk delete
-  links](/api-reference/endpoint/bulk-delete-links).
+  links](/docs/api-reference/links/bulk-create), [Bulk update
+  links](/docs/api-reference/links/bulk-update), [Bulk delete
+  links](/docs/api-reference/links/bulk-delete).
 </Warning>
 
 In this guide, we'll show you how to configure webhooks for your Dub workspace and a list of available events you can listen to.
@@ -40,8 +40,8 @@ Fill in the required fields in the webhook creation form:
 
 1. **Name**: Give your webhook a name that helps you identify it.
 2. **URL**: Enter the URL of the endpoint where you want to send the webhook. We recommend using [webhook.site](https://webhook.site/) to test your webhook.
-3. **Signing secret**: This is an auto-generated secret key that you can use to verify the authenticity of the webhook in your application. Learn more about [verifying webhook requests](/concepts/webhooks/verify-webhook-requests).
-4. **Events**: Select the events you want to listen to. You can select multiple events. Refer to the [Event Types](/concepts/webhooks/event-types) section to see the list of available events.
+3. **Signing secret**: This is an auto-generated secret key that you can use to verify the authenticity of the webhook in your application. Learn more about [verifying webhook requests](/docs/concepts/webhooks/verify-webhook-requests).
+4. **Events**: Select the events you want to listen to. You can select multiple events. Refer to the [Event Types](/docs/concepts/webhooks/event-types) section to see the list of available events.
 
 Finally, click on **Create webhook** to create the webhook.
 

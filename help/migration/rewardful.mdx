@@ -20,7 +20,7 @@ However, Rewardful can be pretty limiting for companies that want to run their a
 This is where [Dub Partners](https://dub.co/partners) comes in.
 
 1. **Powerful affiliate network:** With over 5,000 active affiliates in our network, Dub makes it easy to find and recruit high-performing partners with a proven track record of driving results.
-2. **White-labeling:** You can [embed a white-labeled referral dashboard into your application](/partners/embedded-referrals) for a better user experience.
+2. **White-labeling:** You can [embed a white-labeled referral dashboard into your application](/docs/partners/embedded-referrals) for a better user experience.
 3. **Advanced reward structures:** On Dub, you can choose between [3 reward types](/help/customizing-rewards/customizing-rewards) – per click, per lead, and per sale (flat/percentage). You can also set different reward conditions and create bounties to provide additional rewards for your affiliates.
 4. **Payouts you can rely on:** We let you [pay your partners globally](/help/sending-payouts/partner-payouts) in 1-click, with tax compliance built-in.
 
@@ -44,7 +44,7 @@ If you haven't added a custom domain to Dub yet, you can [follow this guide to s
 
 Next, [set up conversion tracking](/help/getting-started/conversion-tracking) to track signup and sale events. We also have some [in-app guides that you can reference here](https://app.dub.co/guides).
 
-For backward compatibility, we also recommend setting up [client-side click-tracking](/sdks/client-side/features/click-tracking) when installing the [client-side @dub/analytics SDK](/sdks/client-side/introduction) on your site. This will ensure all your existing `domain.com?via=affiliate` links will keep working as expected, which gives affiliates time to update their links to the new format.
+For backward compatibility, we also recommend setting up [client-side click-tracking](/docs/sdks/client-side/features/click-tracking) when installing the [client-side @dub/analytics SDK](/docs/sdks/client-side/introduction) on your site. This will ensure all your existing `domain.com?via=affiliate` links will keep working as expected, which gives affiliates time to update their links to the new format.
 
 ### Step 3: Get your Rewardful API Secret
 
@@ -101,7 +101,7 @@ Additionally, Dub also supports 3 additional commission states:
 
 - **Duplicate:** Useful for marketing if a commission was rewarded more than once and needs to be marked as a duplicate event.
 - **Fraud:** Useful for marking a sale as fraudulent and excluding it from any future payouts.
-- **Refunded:** When the sale for the commission was refunded. With our [Stripe integration](/conversions/sales/stripe), this is automatically detected and updated.
+- **Refunded:** When the sale for the commission was refunded. With our [Stripe integration](/docs/conversions/sales/stripe), this is automatically detected and updated.
 - **Processed:** When a commission has been added to a [payout](/help/sending-payouts/partner-payouts) (after any applicable holding period).
 
 Similar to referrals, commissions for a referral that do not have a valid Stripe customer ID will not be imported.
@@ -145,5 +145,5 @@ Next, you'd want to reach out to your existing partners and let them know about 
   <Card title="Inviting partners" icon="user-plus" href="/help/getting-started/inviting-partners" />
   <Card title="Partner payouts" icon="banknote" href="/help/sending-payouts/partner-payouts" />
   <Card title="Bank account" icon="building" href="/help/sending-payouts/bank-account" />
-  <Card title="Link-based discounts" icon="tag" href="/partners/link-based-discounts" />
+  <Card title="Link-based discounts" icon="tag" href="/docs/partners/link-based-discounts" />
 </CardGroup>

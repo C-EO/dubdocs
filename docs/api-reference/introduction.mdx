@@ -16,7 +16,7 @@ https://api.dub.co
 
 ## Authentication
 
-Authentication to Dub's API is performed via the Authorization header with a Bearer token. To authenticate, you need to include the Authorization header with the word `Bearer` followed by your [API key](/api-reference/tokens) in your requests like so:
+Authentication to Dub's API is performed via the Authorization header with a Bearer token. To authenticate, you need to include the Authorization header with the word `Bearer` followed by your [API key](/docs/api-reference/tokens) in your requests like so:
 
 ```bash Terminal
 Authorization: Bearer dub_xxxxxx
@@ -87,19 +87,19 @@ $links = $client->links->list();
 
 </CodeGroup>
 
-Learn more about [how to get your API key](/api-reference/tokens).
+Learn more about [how to get your API key](/docs/api-reference/tokens).
 
 ## Native SDKs
 
 Dub offers native SDKs in some of the most popular programming languages:
 
-- [TypeScript SDK](/sdks/typescript)
-- [Python SDK](/sdks/python)
-- [Ruby SDK](/sdks/ruby)
-- [PHP SDK](/sdks/php)
-- [Go SDK](/sdks/go)
+- [TypeScript SDK](/docs/sdks/typescript)
+- [Python SDK](/docs/sdks/python)
+- [Ruby SDK](/docs/sdks/ruby)
+- [PHP SDK](/docs/sdks/php)
+- [Go SDK](/docs/sdks/go)
 
-You can find the full list of SDKs [here](/sdks/overview).
+You can find the full list of SDKs [here](/docs/sdks/overview).
 
 ## Error Handling
 
@@ -201,9 +201,9 @@ Dub's API supports pagination. This is useful when you have a large number of re
 
 These list API methods share a common set of parameters that allow you to control the number of items returned and the page number. For example, you can:
 
-- [retrieve a list of links](/api-reference/endpoint/retrieve-a-list-of-links)
-- [retrieve a list of domains](/api-reference/endpoint/retrieve-a-list-of-domains)
-- [retrieve a list of events](/api-reference/endpoint/retrieve-a-list-of-events)
+- [retrieve a list of links](/docs/api-reference/links/list)
+- [retrieve a list of domains](/docs/api-reference/domains/create)
+- [retrieve a list of events](/docs/api-reference/analytics/list-events)
 
 ### Parameters
 

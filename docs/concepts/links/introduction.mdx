@@ -9,8 +9,8 @@ Links are the bread and butter of [Dub](https://dub.co).
 Everything on Dub starts with a link. Whether you're creating:
 
 - a handful of links for your marketing campaign
-- hundreds of links for your [affiliate program](/partners/quickstart)
-- thousands of links, [programmatically](/api-reference/endpoint/bulk-create-links), for your SMS campaign
+- hundreds of links for your [affiliate program](/docs/partners/quickstart)
+- thousands of links, [programmatically](/docs/api-reference/links/bulk-create), for your SMS campaign
 
 In this guide, we'll cover the link model, how to create links, and more.
 
@@ -26,9 +26,9 @@ The link model consists of the following properties:
 | `domain`    | The domain of the link                                    | `dub.link`                      |
 | `key`       | The short link slug                                       | `claim`                         |
 
-For more advanced features like [custom link previews](https://dub.co/help/article/custom-link-previews), [conversion tracking](/conversions/quickstart), and more, see the full list of properties [here](/api-reference/endpoint/create-a-link).
+For more advanced features like [custom link previews](https://dub.co/help/article/custom-link-previews), [conversion tracking](/docs/conversions/quickstart), and more, see the full list of properties [here](/docs/api-reference/links/create).
 
-You can use the various [Dub SDKs](/sdks/overview) to programmatically manage your links.
+You can use the various [Dub SDKs](/docs/sdks/overview) to programmatically manage your links.
 
 ## Create a link
 
@@ -138,7 +138,7 @@ curl --request POST \
 
 </CodeGroup>
 
-Check out the [full API reference for the link creation endpoint](/api-reference/endpoint/create-a-link).
+Check out the [full API reference for the link creation endpoint](/docs/api-reference/links/create).
 
 ## Update a link
 
@@ -251,7 +251,7 @@ curl --request PATCH \
 
 </CodeGroup>
 
-Check out the [full API reference for the link update endpoint](/api-reference/endpoint/update-a-link).
+Check out the [full API reference for the link update endpoint](/docs/api-reference/links/update).
 
 ## Upsert a link
 
@@ -363,4 +363,4 @@ curl --request POST \
 
 </CodeGroup>
 
-Check out the [full API reference for the link upsert endpoint](/api-reference/endpoint/upsert-a-link).
+Check out the [full API reference for the link upsert endpoint](/docs/api-reference/links/upsert).

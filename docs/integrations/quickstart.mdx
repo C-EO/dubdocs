@@ -6,10 +6,10 @@ description: "Learn how to authenticate users with OAuth 2.0. for your Dub integ
 
 Integrations allow you to extend the capabilities of Dub and seamlessly connect with third-party platforms and services.
 
-You can build your own integrations with Dub using our [API](/api-reference/introduction).
+You can build your own integrations with Dub using our [API](/docs/api-reference/introduction).
 
-1. Read the documentation on how to [create links](/api-reference/endpoint/create-a-link) or [track sale conversions](/api-reference/endpoint/track-sale).
-2. Learn how to [integrate Dub into your application](/integrations/quickstart).
+1. Read the documentation on how to [create links](/docs/api-reference/links/create) or [track sale conversions](/docs/api-reference/conversions/track-sale).
+2. Learn how to [integrate Dub into your application](/docs/integrations/quickstart).
 3. [Reach out to us](https://dub.co/contact/support) to feature your integration in the integrations marketplace.
 
 In this guide, you will learn how to create and manage integrations on Dub, allowing you to incorporate Dub's link attribution platform into your application.
@@ -203,9 +203,9 @@ Here is a step-by-step guide on how to set up OAuth 2.0 authentication with Dub.
   <Step title="Make an API request with the access token">
     Once you have obtained a valid access token, you can use it to make requests to the Dub API.
 
-    You can initialize [Dub SDK](/sdks/overview) with the access token.
+    You can initialize [Dub SDK](/docs/sdks/overview) with the access token.
 
-    Here is an example of how you can create a link using the [Dub TypeScript SDK](/sdks/typescript):
+    Here is an example of how you can create a link using the [Dub TypeScript SDK](/docs/sdks/typescript):
 
     ```javascript
     import { Dub } from "dub";
@@ -307,4 +307,4 @@ Dub supports the following scopes for OAuth 2.0:
 
 Dub also supports API key authentication; however, it is **not recommended** for building integrations. It should only be used for internal integrations or personal projects that do not require user consent.
 
-Learn more about [API Keys](/api-reference/tokens).
+Learn more about [API Keys](/docs/api-reference/tokens).

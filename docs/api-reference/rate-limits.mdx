@@ -33,7 +33,7 @@ Depending on your Dub plan, you can expect the following rate limits:
 
 ## Rate limits by endpoint
 
-Dub's [Analytics endpoints](/concepts/analytics/introduction) have separate, per-second rate limits to ensure optimal performance:
+Dub's [Analytics endpoints](/docs/concepts/analytics/introduction) have separate, per-second rate limits to ensure optimal performance:
 
 | Plan                                    | Analytics API rate limit                                                |
 | --------------------------------------- | ----------------------------------------------------------------------- |
@@ -45,8 +45,8 @@ Dub's [Analytics endpoints](/concepts/analytics/introduction) have separate, per
 
 Analytics endpoints include:
 
-- [`GET /analytics`](/api-reference/endpoint/retrieve-analytics) – retrieving aggregated analytics
-- [`GET /events`](/api-reference/endpoint/retrieve-a-list-of-events) – retrieving paginated lists of events
+- [`GET /analytics`](/docs/api-reference/analytics/retrieve) – retrieving aggregated analytics
+- [`GET /events`](/docs/api-reference/analytics/list-events) – retrieving paginated lists of events
 
 All other API endpoints use the standard rate limits listed in the [Rate limits by plan](#rate-limits-by-plan) section above.
 
@@ -56,7 +56,7 @@ Here are some tips on how you can optimize your API setup to comply with our rat
 
 ### 1. Bulk link creation
 
-If you need to create a lot of links within a short period of time, try our [bulk link creation endpoint](/api-reference/endpoint/bulk-create-links) instead (create up to 100 links in one API call)
+If you need to create a lot of links within a short period of time, try our [bulk link creation endpoint](/docs/api-reference/links/bulk-create) instead (create up to 100 links in one API call)
 
 <CodeGroup>
 
@@ -127,7 +127,7 @@ s.links.create_many(
     
 ### 2. Fetch workspace-level analytics
 
-If you're using our [Analytics API](/api-reference/endpoint/retrieve-analytics), instead of retrieving the clicks count for every single link, try making a single API call to get workspace-level click analytics instead.
+If you're using our [Analytics API](/docs/api-reference/analytics/retrieve), instead of retrieving the clicks count for every single link, try making a single API call to get workspace-level click analytics instead.
 
 <CodeGroup>
 
@@ -188,6 +188,6 @@ If you're expecting high volume, fast-changing data (e.g. thousands of clicks on
   />
 </Frame>
 
-[Webhooks](/concepts/webhooks/introduction) are _push-based_, meaning that Dub will send events to your webhook receiver endpoint when specific events occur, while a REST API is _pull-based_, meaning that you need to consistently poll the API endpoint to get real-time updates.
+[Webhooks](/docs/concepts/webhooks/introduction) are _push-based_, meaning that Dub will send events to your webhook receiver endpoint when specific events occur, while a REST API is _pull-based_, meaning that you need to consistently poll the API endpoint to get real-time updates.
 
-Check out our [webhooks documentation](/concepts/webhooks/introduction) to learn more.
+Check out our [webhooks documentation](/docs/concepts/webhooks/introduction) to learn more.

@@ -38,7 +38,7 @@ Dub's powerful [attribution platform](https://dub.co/analytics) lets you underst
 
 <EnableConversionTracking />
 
-Then, you'll need generate a [publishable key](/api-reference/publishable-keys) from your Dub workspace to track conversions on the client-side.
+Then, you'll need generate a [publishable key](/docs/api-reference/publishable-keys) from your Dub workspace to track conversions on the client-side.
 
 To do that, navigate to your [workspace's Analytics settings page](https://app.dub.co/settings/analytics) and generate a new publishable key under the **Publishable Key** section.
 
@@ -56,7 +56,7 @@ Once these are set up, we can start tracking conversion events for your deep lin
 <Tabs>
 <Tab title="React Native">
 
-Install the [Dub React Native SDK](/sdks/client-side-mobile/installation-guides/react-native) and initialize it with your publishable key and short link domain.
+Install the [Dub React Native SDK](/docs/sdks/client-side-mobile/installation-guides/react-native) and initialize it with your publishable key and short link domain.
 
 <Steps titleSize="h3">
 
@@ -68,7 +68,7 @@ Install the [Dub React Native SDK](/sdks/client-side-mobile/installation-guides/
 </Tab>
 <Tab title="iOS">
 
-Install the [Dub iOS SDK](/sdks/client-side-mobile/installation-guides/swift) and initialize it with your publishable key and short link domain.
+Install the [Dub iOS SDK](/docs/sdks/client-side-mobile/installation-guides/swift) and initialize it with your publishable key and short link domain.
 
 <Steps titleSize="h3">
 
@@ -388,10 +388,10 @@ class ViewController: UIViewController {
 
 </CodeGroup>
 
-Alternatively, you can [track conversion events server-side](/conversions/quickstart#step-3%3A-install-the-dub-server-side-sdk-%2B-track-conversion-events) for [lead events](/conversions/leads/introduction) and [sale events](/conversions/sales/introduction) by sending the `clickId` resolved from the deep link to your backend and then calling off to either:
+Alternatively, you can [track conversion events server-side](/docs/conversions/quickstart#step-3%3A-install-the-dub-server-side-sdk-%2B-track-conversion-events) for [lead events](/docs/conversions/leads/introduction) and [sale events](/docs/conversions/sales/introduction) by sending the `clickId` resolved from the deep link to your backend and then calling off to either:
 
-- [`POST /track/lead`](https://dub.co/docs/api-reference/endpoint/track-lead)
-- [`POST /track/sale`](https://dub.co/docs/api-reference/endpoint/track-sale)
+- [`POST /track/lead`](https://dub.co/docs/api-reference/conversions/track-lead)
+- [`POST /track/sale`](https://dub.co/docs/api-reference/conversions/track-sale)
 
 ## Step 4: View your conversions
 

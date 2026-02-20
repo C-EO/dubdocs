@@ -94,7 +94,7 @@ For external payouts to work, each partner must have a `tenantId` configured. Th
 
 You can set the tenant ID when:
 
-- [Creating a partner via API](/api-reference/endpoint/create-a-partner)
+- [Creating a partner via API](/docs/api-reference/partners/create)
 - [Updating a partner in your dashboard](https://dub.co/help/article/managing-program-partners#advanced-settings)
 - Importing partners from another platform
 
@@ -113,11 +113,11 @@ You can set the tenant ID when:
 
 ### 2. Set up webhook receiver
 
-Create a webhook endpoint that listens for the `payout.confirmed` event. See our [webhook setup guide](/concepts/webhooks/introduction) for detailed instructions.
+Create a webhook endpoint that listens for the `payout.confirmed` event. See our [webhook setup guide](/docs/concepts/webhooks/introduction) for detailed instructions.
 
 Your webhook endpoint should:
 
-1. Verify the [webhook signature](/concepts/webhooks/verify-webhook-requests) to ensure it's from Dub
+1. Verify the [webhook signature](/docs/concepts/webhooks/verify-webhook-requests) to ensure it's from Dub
 2. Extract the payout and partner information from the payload
 3. Initiate the payout through your payment system
 4. Return a 2xx status code on success
@@ -284,7 +284,7 @@ Log all webhook events for debugging and reconciliation.
 
 ## Related resources
 
-- [Webhook setup guide](/concepts/webhooks/introduction)
-- [Webhook event types](/concepts/webhooks/event-types)
-- [Verifying webhook requests](/concepts/webhooks/verify-webhook-requests)
-- [Partners API reference](/api-reference/endpoint/create-a-partner)
+- [Webhook setup guide](/docs/concepts/webhooks/introduction)
+- [Webhook event types](/docs/concepts/webhooks/event-types)
+- [Verifying webhook requests](/docs/concepts/webhooks/verify-webhook-requests)
+- [Partners API reference](/docs/api-reference/partners/create)

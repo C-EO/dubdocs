@@ -9,7 +9,7 @@ import ClientSideTrackingInstall from "/snippets/client-side-tracking-install.md
 import ClientSideLeadTracking from "/snippets/client-side-lead-tracking.mdx";
 import ClientSideSaleTracking from "/snippets/client-side-sale-tracking.mdx";
 
-`@dub/analytics` is a client-side script for [tracking conversion events](/conversions/quickstart) with Dub.
+`@dub/analytics` is a client-side script for [tracking conversion events](/docs/conversions/quickstart) with Dub.
 
 By default, the script handles the detection of the `dub_id` query parameter and storing it as a first-party cookie:
 
@@ -21,7 +21,7 @@ By default, the script handles the detection of the `dub_id` query parameter and
   />
 </Frame>
 
-Then, when a conversion event occurs (e.g. a user signs up for an account), you can check for the `dub_id` cookie and attribute the conversion to the original click by [tracking a lead event](/conversions/leads/introduction).
+Then, when a conversion event occurs (e.g. a user signs up for an account), you can check for the `dub_id` cookie and attribute the conversion to the original click by [tracking a lead event](/docs/conversions/leads/introduction).
 
 <Frame>
   <img
@@ -31,7 +31,7 @@ Then, when a conversion event occurs (e.g. a user signs up for an account), you 
   />
 </Frame>
 
-Finally, when the user completes a purchase (e.g. subscribing to a plan, purchasing a product, etc.), you can [track a sale event](/conversions/sales/introduction). Under the hood, Dub will automatically attribute the sale to the original link click.
+Finally, when the user completes a purchase (e.g. subscribing to a plan, purchasing a product, etc.), you can [track a sale event](/docs/conversions/sales/introduction). Under the hood, Dub will automatically attribute the sale to the original link click.
 
 <Frame>
   <img
