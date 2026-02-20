@@ -26,11 +26,11 @@
         "icon": "books",
         "groups": [
           {
-            "group": "Home",
+            "group": "HOME",
             "pages": ["docs/introduction"]
           },
           {
-            "group": "Links",
+            "group": "LINKS",
             "pages": [
               "docs/concepts/links/introduction",
               "docs/concepts/links/bulk-operations",
@@ -47,7 +47,7 @@
             ]
           },
           {
-            "group": "Analytics",
+            "group": "ANALYTICS",
             "pages": [
               "docs/concepts/analytics/introduction",
               {
@@ -63,7 +63,7 @@
             ]
           },
           {
-            "group": "Conversion tracking",
+            "group": "CONVERSION TRACKING",
             "pages": [
               "docs/conversions/quickstart",
               {
@@ -108,7 +108,7 @@
             ]
           },
           {
-            "group": "Dub Partners",
+            "group": "DUB PARTNERS",
             "pages": [
               "docs/partners/quickstart",
               "docs/partners/embedded-referrals",
@@ -116,7 +116,7 @@
             ]
           },
           {
-            "group": "Integrations",
+            "group": "INTEGRATIONS",
             "pages": [
               "docs/integrations",
               "docs/integrations/quickstart",
@@ -131,7 +131,7 @@
             ]
           },
           {
-            "group": "Open source",
+            "group": "OPEN SOURCE",
             "pages": ["docs/local-development", "docs/self-hosting"]
           }
         ]
@@ -245,7 +245,7 @@
         "icon": "code",
         "groups": [
           {
-            "group": "Overview",
+            "group": "OVERVIEW",
             "pages": [
               "docs/api-reference/introduction",
               "docs/api-reference/tokens",
