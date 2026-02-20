@@ -1,0 +1,169 @@
+---
+title: "Tracking internal traffic and product-led growth with Dub Analytics"
+description: "Learn how to track internal traffic and product-led growth by leveraging the referer URL data in Dub Analytics."
+og:title: "Track Internal Traffic with Dub Analytics"
+og:description: "Learn how to track internal traffic and product-led growth by leveraging the referer URL data in Dub Analytics."
+---
+
+You can now see the [full referer URL](/changelog/referer-urls) data in [Dub Analytics](/help/article/dub-analytics). This lets you understand the specific URL where your users are coming from – as long as the site has the correct [Referer-Policy](#how-to-enable-full-referer-urls) header set.
+
+In this article, we'll walk you through how to use the full referer URL data to gain deeper insights into internal traffic on your website, and how to make sure your `Referer-Policy` header is set up correctly to support this.
+
+## Example use cases
+
+Here are some examples of how you can use the full referer URL data to make data-driven decisions:
+
+### Tracking internal traffic
+
+You can use the full referer URL data to track internal traffic.
+
+For example, we recently replaced the **Sign Up** [button](https://d.to/register) in our nav bar with a Dub-powered link (`d.to/register`). This gave us insight into which pages sent the most traffic to our signup page:
+
+<img src="https://assets.dub.co/changelog/referer-urls.png" alt="Full Referer URLs in Dub Analytics" className="rounded-lg border border-gray-100" />
+
+You can check out the live demo for yourself [here](https://d.to/stats/try).
+
+### Tracking product-led growth
+
+Say you run a SaaS product with dynamic user-generated content/web-pages. Here are some examples:
+
+- Dub's [public analytics dashboards](/help/article/share-analytics) (e.g. `d.to/stats/try`)
+- [Cal.com](https://go.cal.com)'s booking pages (e.g. `cal.com/peer`)
+- [Product Hunt](https://meow.ph)'s launch pages (e.g. `producthunt.com/posts/dub`)
+
+By leveraging the full referer URL data, you can measure how much organic traffic existing users bring in, since the full URL of each page will be tracked in Dub.
+
+Also, with [Dub Conversions](/help/article/dub-conversions), you can keep track of signups and upgrades as well, giving you a complete picture of your app's K-factor or the "viral coefficient formula".
+
+For example, here are the top pages on Dub that drove the most signups via the `d.to/register` link above:
+
+<img src="https://assets.dub.co/help/referer-urls-leads.png" alt="Full Referer URLs in Dub Analytics" className="rounded-lg border border-gray-100" />
+
+## How to enable full referer URL tracking (via Referer-Policy header)
+
+To enable full referer URLs, you need to make sure your site has the correct [Referer-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy) header set.
+
+<Tip>
+
+We recommend setting the `no-referrer-when-downgrade` [policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#no-referrer-when-downgrade), which will only send the domain, path, and query parameters to the destination URL as long as the protocol security level stays the same (i.e. `HTTP` → `HTTP`, or `HTTPS` → `HTTPS`).
+
+<br />
+
+If the protocol security level is downgraded (i.e. `HTTPS` → `HTTP`), the referer will not be sent. This is a good compromise to make sure your users' privacy is respected while still getting a good amount of data.
+
+</Tip>
+
+There are a few ways to configure this, depending on your application framework:
+
+### Using Next.js
+
+If you are using [Next.js](/solutions/typescript), you can use the [`headers` property](https://nextjs.org/docs/app/api-reference/next-config-js/headers) in your `next.config.js` file to configure the referer policy.
+
+```javascript title="next.config.js"
+module.exports = {
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Referrer-Policy",
+            value: "no-referrer-when-downgrade",
+          },
+        ],
+      },
+    ];
+  },
+};
+```
+
+### Using Nuxt
+
+If you are using [Nuxt](https://go.nuxt.com), you can use the `routeRules` property in your `nuxt.config.ts` file to configure the referer policy:
+
+```typescript title="nuxt.config.ts"
+export default defineNuxtConfig({
+  routeRules: {
+    "/**": {
+      security: {
+        headers: {
+          "referrer-policy": "no-referrer-when-downgrade",
+        },
+      },
+    },
+  },
+});
+```
+
+### Using Laravel
+
+If you are using [Laravel](/solutions/php), you can use the [Laravel Security Middleware](https://laravel-news.com/laravel-security-middleware) to configure the referer policy.
+
+```php title="app/Http/Middleware/SetReferrerPolicy.php"
+final class SetReferrerPolicy
+{
+    public function handle(Request $request, Closure $next): Response
+    {
+        /**
+         * @var Response $response
+         */
+        $response = $next($request);
+
+        $response->headers->set(
+            key: 'Referrer-Policy',
+            values: 'no-referrer-when-downgrade',
+        );
+
+        return $response;
+    }
+}
+```
+
+### Using Flask
+
+If you are using [Flask](/solutions/python), you can set the `Referrer-Policy` header for all requests like this:
+
+```python title="app.py"
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.after_request
+def set_headers(response):
+    response.headers["Referrer-Policy"] = 'no-referrer-when-downgrade'
+    return response
+
+@app.route('/')
+def index():
+    return 'Hello world!'
+
+if __name__ == '__main__':
+    app.run()
+```
+
+Alternatively, you can set the header for specific endpoint:
+
+```python title="app.py"
+from flask import Flask, make_response
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    response = make_response('Hello world!')
+    response.headers["Referrer-Policy"] = 'no-referrer-when-downgrade'
+    return response
+
+if __name__ == '__main__':
+    app.run()
+```
+
+### Using a Meta Tag
+
+Alternatively, you can also set the referer policy using a meta tag in the `<head>` section of your HTML:
+
+```html
+<meta name="referrer" content="no-referrer-when-downgrade" />
+```
+
+This is useful if you are using a website builder like Webflow or Framer, where you don't have access to the server-side configuration.

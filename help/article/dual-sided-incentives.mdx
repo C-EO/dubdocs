@@ -1,0 +1,133 @@
+---
+title: "Offering dual-sided incentives"
+description: "Learn how to offer dual-sided incentives to your partners and the users they refer."
+og:title: "Offering dual-sided incentives"
+og:description: "Learn how to offer dual-sided incentives to your partners and the users they refer."
+---
+
+With Dub Partners, you can create dual-sided incentives for your affiliate/referral programs, which give special discounts to customers who sign up via a referral link.
+
+<Video src="https://assets.dub.co/cms/dub-partners-dual-sided-incentives.mp4" />
+
+Some examples include:
+- 25% discount for the first 12 months
+- 30% lifetime discount
+- $50 one-off discount
+
+This can drive powerful word-of-mouth growth as partners are more likely to share their link if it gives their audience/user base additional discounts, and on the other hand, their users are more likely to click on their links as well if they're getting a special deal.
+
+You can create one default discount for all partners on your program, and additional discounts for specific partners.
+
+In this article, we'll learn how to set up dual-sided incentives with Dub Partners.
+
+<CheckList>
+ <CheckListItem
+    title="Install the Stripe integration"
+    href="https://dub.co/integrations/stripe"
+  >
+    To set up dual-sided incentives on Dub Partners, you first need to install our Stripe integration, which helps you track conversions + generate Stripe coupons/promo codes.
+  </CheckListItem>
+</CheckList>
+
+## Option 1: Direct link-based discounts (recommended)
+
+If you're using Stripe for payments, you can follow these steps to set up direct link-based discounts for your [partner referral links](/help/article/partner-link-settings):
+
+<Info>
+Link-based discounts provide better attribution accuracy since you get visibility into the [customer's geolocation, device info, referrer details, and UTM data](/help/article/program-analytics).
+<br/>
+The trade-off here is that it requires some engineering work to set up.
+</Info>
+
+<Steps>
+<Step title="Create a discount on Dub">
+First, navigate to the [partner group](/help/article/partner-groups) that you want to create a discount for. Under the **Discount** tab, you'll be able to create a discount for the group
+
+<img src="https://assets.dub.co/cms/group-discounts-empty.png" alt="Group discounts page" className="rounded-lg border border-gray-100" />
+If you already have a discount set up for your default group, you can just duplicate it. If not, click **Create** to create your first group discount:
+
+<img src="https://assets.dub.co/cms/new-discount-reward.png" alt="Program discounts tab" className="rounded-lg border border-gray-100" />
+
+#### New Stripe coupon
+If you don't have a coupon set up on Stripe yet, you can use the **New Stripe coupon** option to create a new coupon based on the discount type (percentage vs flat), amount, and duration set in Dub.
+
+#### Use Stripe coupon ID
+If you already have an existing coupon on Stripe, you can enter the Stripe coupon ID (should be an 8 alphanumeric code) under the **Use Stripe coupon ID** option.
+
+<Warning>
+Since Stripe doesn't support updating coupons after creation, you'd need to delete your discount in Dub and create a new one if you want to update any of the discount parameters.
+<br/>
+Note: Deleting a discount on Dub does not delete the corresponding Stripe coupon.
+</Warning>
+
+
+</Step>
+
+<Step title="Add coupon logic to checkout flow">
+Lastly, you'll need to add the coupon logic to your [Stripe checkout flow](https://dub.co/docs/conversions/sales/stripe#option-2%3A-using-stripe-checkout-recommended) and leverage [Dub's Customers API](https://dub.co/docs/api-reference/endpoint/retrieve-a-list-of-customers) to determine if a user is eligible for a discount or not.
+
+You can [refer the docs on how to set that up here](https://dub.co/docs/partners/link-based-discounts#option-1%3A-direct-link-based-discounts-recommended).
+
+Once this is set up, eligible customers will automatically see the coupon code applied at checkout:
+
+<img src="https://assets.dub.co/cms/stripe-coupon-applied.png" alt="Stripe coupon applied" className="rounded-lg border border-gray-100" />
+
+</Step>
+</Steps>
+
+## Option 2: Using Stripe promo codes (no link required)
+
+If you're using Stripe for payments, you can follow these steps to set up Stripe promo-code-based discounts for your partners.
+
+<Info>
+Stripe promo-code-based discounts is much easier to set up (no code required).
+<br/>
+However, you do sacrifice on attribution accuracy since you won't have any insights into the [customer's geolocation, device info, referrer details, and UTM data](/help/article/program-analytics). Our Stripe integration will try to derive the customer's location based on their Stripe billing address, but **it can sometimes be inaccurate**.
+</Info>
+
+<Steps>
+<Step title="Create a discount on Dub">
+
+First, navigate to the [partner group](/help/article/partner-groups) that you want to create a discount for. Under the **Discount** tab, you'll be able to create a discount for the group
+
+<img src="https://assets.dub.co/cms/group-discounts-empty.png" alt="Group discounts page" className="rounded-lg border border-gray-100" />
+If you already have a discount set up for your default group, you can just duplicate it. If not, click **Create** to create your first group discount:
+
+<img src="https://assets.dub.co/cms/new-discount-reward.png" alt="Program discounts tab" className="rounded-lg border border-gray-100" />
+
+#### New Stripe coupon
+If you don't have a coupon set up on Stripe yet, you can use the **New Stripe coupon** option to create a new coupon based on the discount type (percentage vs flat), amount, and duration set in Dub.
+
+#### Use Stripe coupon ID
+If you already have an existing coupon on Stripe, you can enter the Stripe coupon ID (should be an 8 alphanumeric code) under the **Use Stripe coupon ID** option.
+
+<Warning>
+Since Stripe doesn't support updating coupons after creation, you'd need to delete your discount in Dub and create a new one if you want to update any of the discount parameters.
+<br/>
+Note: Deleting a discount on Dub does not delete the corresponding Stripe coupon.
+</Warning>
+
+</Step>
+<Step title="Create your partner code">
+Open the partner profile that you'd like to create a discount code for, then click **Create Code** in the "Discount codes" section. 
+<img src="https://assets.dub.co/cms/partner-create-code.png" alt="Partner links page" className="rounded-lg border border-gray-100" />
+Here you can select which referral link you'd like to associate the code with. Then you can create the discount code. 
+<img src="https://assets.dub.co/cms/new-discount-code.png" alt="Partner links page" className="rounded-lg border border-gray-100" />
+<Warning>
+Discount codes cannot be edited after creation, so ensure that you have everything correct before creating the code
+</Warning>
+
+After the code has been created, you'll see its value populated in the Discount Code section, and it is ready for use. In the Partner Dashboard, they'll also see the associated discount code within their partner links. 
+
+<img src="https://assets.dub.co/cms/partner-code-created.png" alt="Partner links page with discount code" className="rounded-lg border border-gray-100" />
+
+</Step>
+</Steps>
+
+## Displaying discount banner
+
+Once you've set up dual-sided incentives, a potential next step would be to display the discount information on your pricing page / landing page hero:
+
+<img src="https://mintlify.s3.us-west-1.amazonaws.com/dub/images/dub-partner-data.png" alt="A screenshot of the Dub partner data example" className="rounded-lg border border-gray-100" />
+
+[Check out this guide](https://dub.co/docs/partners/link-based-discounts#displaying-discount-banner) to learn how to set up a discount banner for your partner links.

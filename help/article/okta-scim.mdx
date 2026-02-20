@@ -1,0 +1,111 @@
+---
+title: "Configuring SCIM Directory Sync with Okta"
+description: "For Dub Enterprise users, you can automatically provision and deprovision users from your Okta directory to Dub using SCIM Directory Sync."
+og:title: "Configuring SCIM Directory Sync with Okta"
+og:description: "For Dub Enterprise users, you can automatically provision and deprovision users from your Okta directory to Dub using SCIM Directory Sync."
+---
+
+<Tip>
+  This feature is only available on [Dub Enterprise](/enterprise).
+</Tip>
+
+For Dub Enterprise users, you can automatically provision and deprovision users from your Okta directory to Dub using [SCIM Directory Sync](https://developer.okta.com/docs/concepts/scim/).
+
+<CheckList>
+  <CheckListItem
+    title="Create a SAML application in Okta"
+    href="/help/article/okta-saml"
+  >
+    Before you can configure SCIM Directory Sync, you need to create a SAML
+    application in Okta.
+  </CheckListItem>
+</CheckList>
+
+## Step 1: Configure Directory Sync on Dub
+
+In your workspace settings, click on **Security** in the **Workspace** group.
+
+<img src="https://assets.dub.co/cms/scim-directory-sync-2.png" alt="Directory Sync section on the Dub Dashboard" className="rounded-lg border border-gray-100" />
+
+
+Under the **Directory Sync** section, click on **Configure**. This will open up the Directory Sync modal:
+
+1. Select **Okta** as the Directory Provider.
+2. Click **Save changes**.
+
+<img src="https://assets.dub.co/help/okta-scim-modal.png" alt="SCIM Modal" className="rounded-lg border border-gray-100" />
+
+This will generate a Directory Sync connection for your Dub workspace, and return 2 values, which will be needed in Step 2:
+
+1. **SCIM 2.0 Base URL**
+2. **OAuth Bearer Token**
+
+<img src="https://assets.dub.co/help/okta-scim-modal-configured.png" alt="SCIM Modal Configured" className="rounded-lg border border-gray-100" />
+
+## Step 2: Add Provisioning to SAML Application
+
+Go to the **General** tab of your existing Dub Okta SAML application that you want to enable SCIM provisioning for. Under **App Settings** click **Edit**.
+
+<img src="https://assets.dub.co/help/okta-scim-general.png" alt="General tab of Okta SAML application" className="rounded-lg border border-gray-100" />
+
+Select the "Enable SCIM provisioning" option and click **Save**.
+
+<img src="https://assets.dub.co/help/okta-scim-enable.png" alt="Enable SCIM provisioning" className="rounded-lg border border-gray-100" />
+
+You should now see a **Provisioning** tab. Select it and click **Edit**.
+
+<img src="https://assets.dub.co/help/okta-scim-provisioning.png" alt="Provisioning tab of Okta SAML application" className="rounded-lg border border-gray-100" />
+
+1. Under the **SCIM connector base URL** field, enter the **SCIM 2.0 Base URL** value from Step 1.
+
+2. Under **Unique identifier field for users**, enter `userName`.
+
+<CopyBox title="Copy this unique identifier" copy="userName" />
+
+3. Under **Supported provisioning actions**, select the following options:
+
+- Push New Users
+- Push Profile Updates
+- Push groups
+
+4. Under **Authentication Mode**, select **HTTP Header**.
+
+5. Copy & paste the **OAuth Bearer Token** value from Step 1 into the **Authorization** field.
+
+<img src="https://assets.dub.co/help/okta-scim-connection.png" alt="Configure SCIM provisioning" className="rounded-lg border border-gray-100" />
+
+Click "Test Connector Configuration" to verify that the connection is working, and then click "Save".
+
+## Step 3: Configure Provisioning Actions
+
+Under the **To App** section, click **Edit**.
+
+Check the following options, and click **Save**:
+
+- Create Users
+- Update User Attributes
+- Deactivate Users
+
+<img src="https://assets.dub.co/help/okta-scim-actions.png" alt="SCIM Provisioning Actions" className="rounded-lg border border-gray-100" />
+
+## Step 4: Assign Users
+
+Once you've configured Directory sync, you can assign users to Dub directly within Okta.
+
+Click on the **Assignments** tab, and click **Assign**. You can choose to assign users individually, or assign them in bulk by group.
+
+<img src="https://assets.dub.co/help/okta-saml-assign.png" alt="Assigning users in Okta" className="rounded-lg border border-gray-100" />
+
+Select the users or groups you want to assign and click **Assign**.
+
+<img src="https://assets.dub.co/help/okta-saml-choose.png" alt="Assigning users in Okta choose users" className="rounded-lg border border-gray-100" />
+
+In the next screen, scroll to the bottom and click **Save and Go Back**.
+
+<img src="https://assets.dub.co/help/okta-saml-save.png" alt="Saving Okta assignment" className="rounded-lg border border-gray-100" />
+
+Your assigned users should now receive an invitation email to join your Dub workspace.
+
+<img src="https://assets.dub.co/help/saml-invite.png" alt="SAML invite email" className="rounded-lg border border-gray-100" />
+
+They will also be able to sign in to Dub using Okta SSO.
