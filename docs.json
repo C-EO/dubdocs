@@ -19,21 +19,21 @@
         "groups": [
           {
             "group": "Home",
-            "pages": ["introduction"]
+            "pages": ["docs/introduction"]
           },
           {
             "group": "Links",
             "pages": [
-              "concepts/links/introduction",
-              "concepts/links/bulk-operations",
-              "concepts/links/organization",
+              "docs/concepts/links/introduction",
+              "docs/concepts/links/bulk-operations",
+              "docs/concepts/links/organization",
               {
                 "group": "Deep links",
                 "pages": [
-                  "concepts/deep-links/quickstart",
-                  "concepts/deep-links/deferred-deep-linking",
-                  "concepts/deep-links/attribution",
-                  "concepts/deep-links/migrating-from-firebase"
+                  "docs/concepts/deep-links/quickstart",
+                  "docs/concepts/deep-links/deferred-deep-linking",
+                  "docs/concepts/deep-links/attribution",
+                  "docs/concepts/deep-links/migrating-from-firebase"
                 ]
               }
             ]
@@ -41,15 +41,15 @@
           {
             "group": "Analytics",
             "pages": [
-              "concepts/analytics/introduction",
+              "docs/concepts/analytics/introduction",
               {
                 "group": "Filtering and aggregation",
                 "pages": [
-                  "concepts/analytics/location",
-                  "concepts/analytics/device",
-                  "concepts/analytics/referrers",
-                  "concepts/analytics/utm",
-                  "concepts/analytics/tags"
+                  "docs/concepts/analytics/location",
+                  "docs/concepts/analytics/device",
+                  "docs/concepts/analytics/referrers",
+                  "docs/concepts/analytics/utm",
+                  "docs/concepts/analytics/tags"
                 ]
               }
             ]
@@ -57,25 +57,25 @@
           {
             "group": "Conversion tracking",
             "pages": [
-              "conversions/quickstart",
+              "docs/conversions/quickstart",
               {
                 "group": "Tracking lead events",
                 "pages": [
-                  "conversions/leads/introduction",
-                  "conversions/leads/client-side",
-                  "conversions/leads/deferred",
+                  "docs/conversions/leads/introduction",
+                  "docs/conversions/leads/client-side",
+                  "docs/conversions/leads/deferred",
                   {
                     "group": "Third-party integrations",
                     "pages": [
-                      "conversions/leads/hubspot",
-                      "conversions/leads/segment",
-                      "conversions/leads/google-tag-manager",
-                      "conversions/leads/clerk",
-                      "conversions/leads/better-auth",
-                      "conversions/leads/next-auth",
-                      "conversions/leads/supabase",
-                      "conversions/leads/auth0",
-                      "conversions/leads/appwrite"
+                      "docs/conversions/leads/hubspot",
+                      "docs/conversions/leads/segment",
+                      "docs/conversions/leads/google-tag-manager",
+                      "docs/conversions/leads/clerk",
+                      "docs/conversions/leads/better-auth",
+                      "docs/conversions/leads/next-auth",
+                      "docs/conversions/leads/supabase",
+                      "docs/conversions/leads/auth0",
+                      "docs/conversions/leads/appwrite"
                     ]
                   }
                 ]
@@ -83,16 +83,16 @@
               {
                 "group": "Tracking sale events",
                 "pages": [
-                  "conversions/sales/introduction",
-                  "conversions/sales/client-side",
-                  "conversions/sales/direct",
+                  "docs/conversions/sales/introduction",
+                  "docs/conversions/sales/client-side",
+                  "docs/conversions/sales/direct",
                   {
                     "group": "Third-party integrations",
                     "pages": [
-                      "conversions/sales/stripe",
-                      "conversions/sales/shopify",
-                      "conversions/sales/segment",
-                      "conversions/sales/google-tag-manager"
+                      "docs/conversions/sales/stripe",
+                      "docs/conversions/sales/shopify",
+                      "docs/conversions/sales/segment",
+                      "docs/conversions/sales/google-tag-manager"
                     ]
                   }
                 ]
@@ -102,29 +102,29 @@
           {
             "group": "Dub Partners",
             "pages": [
-              "partners/quickstart",
-              "partners/embedded-referrals",
-              "partners/link-based-discounts"
+              "docs/partners/quickstart",
+              "docs/partners/embedded-referrals",
+              "docs/partners/link-based-discounts"
             ]
           },
           {
             "group": "Integrations",
             "pages": [
-              "integrations",
-              "integrations/quickstart",
+              "docs/integrations",
+              "docs/integrations/quickstart",
               {
                 "group": "Webhooks",
                 "pages": [
-                  "concepts/webhooks/introduction",
-                  "concepts/webhooks/event-types",
-                  "concepts/webhooks/verify-webhook-requests"
+                  "docs/concepts/webhooks/introduction",
+                  "docs/concepts/webhooks/event-types",
+                  "docs/concepts/webhooks/verify-webhook-requests"
                 ]
               }
             ]
           },
           {
             "group": "Open source",
-            "pages": ["local-development", "self-hosting"]
+            "pages": ["docs/local-development", "docs/self-hosting"]
           }
         ]
       },
@@ -135,69 +135,69 @@
           {
             "group": "MANAGING A PROGRAM",
             "pages": [
-              "managing-a-program/platform-overview",
+              "help/platform-overview",
               {
                 "group": "Getting started",
                 "pages": [
-                  "managing-a-program/getting-started/setting-up-your-program",
-                  "managing-a-program/getting-started/partner-groups",
-                  "managing-a-program/getting-started/program-landing-page",
-                  "managing-a-program/getting-started/brand-resources",
-                  "managing-a-program/getting-started/inviting-partners",
-                  "managing-a-program/getting-started/conversion-tracking"
+                  "help/getting-started/setting-up-your-program",
+                  "help/getting-started/partner-groups",
+                  "help/getting-started/program-landing-page",
+                  "help/getting-started/brand-resources",
+                  "help/getting-started/inviting-partners",
+                  "help/getting-started/conversion-tracking"
                 ]
               },
               {
                 "group": "Customizing rewards",
                 "pages": [
-                  "managing-a-program/customizing-rewards/customizing-rewards",
-                  "managing-a-program/customizing-rewards/managing-commissions"
+                  "help/customizing-rewards/customizing-rewards",
+                  "help/customizing-rewards/managing-commissions"
                 ]
               },
               {
                 "group": "Recruiting partners",
                 "pages": [
-                  "managing-a-program/recruiting-partners/landing-page",
-                  "managing-a-program/recruiting-partners/application-form",
-                  "managing-a-program/recruiting-partners/reviewing-applications",
-                  "managing-a-program/recruiting-partners/embedded-dashboard",
-                  "managing-a-program/recruiting-partners/partner-network"
+                  "help/recruiting-partners/landing-page",
+                  "help/recruiting-partners/application-form",
+                  "help/recruiting-partners/reviewing-applications",
+                  "help/recruiting-partners/embedded-dashboard",
+                  "help/recruiting-partners/partner-network"
                 ]
               },
               {
                 "group": "Sending payouts",
                 "pages": [
-                  "managing-a-program/sending-payouts/partner-payouts",
-                  "managing-a-program/sending-payouts/bank-account",
-                  "managing-a-program/sending-payouts/external-payouts"
+                  "help/sending-payouts/partner-payouts",
+                  "help/sending-payouts/bank-account",
+                  "help/sending-payouts/external-payouts"
                 ]
               },
               {
                 "group": "Engaging partners",
                 "pages": [
-                  "managing-a-program/engaging-partners/email-campaigns",
-                  "managing-a-program/engaging-partners/messages",
-                  "managing-a-program/engaging-partners/bounties"
+                  "help/engaging-partners/email-campaigns",
+                  "help/engaging-partners/messages",
+                  "help/engaging-partners/bounties"
                 ]
               },
               {
                 "group": "Insights and reporting",
                 "pages": [
-                  "managing-a-program/insights-and-reporting/program-analytics",
-                  "managing-a-program/insights-and-reporting/commissions"
+                  "help/insights-and-reporting/program-analytics",
+                  "help/insights-and-reporting/commissions"
                 ]
               },
               {
                 "group": "Fraud detection",
-                "pages": ["managing-a-program/fraud-detection"]
+                "pages": ["help/fraud-detection"]
               },
               {
                 "group": "Migration guides",
                 "pages": [
-                  "managing-a-program/migration/rewardful",
-                  "managing-a-program/migration/partnerstack",
-                  "managing-a-program/migration/firstpromoter",
-                  "managing-a-program/migration/tolt"
+                  "help/migration/rewardful",
+                  "help/migration/partnerstack",
+                  "help/migration/firstpromoter",
+                  "help/migration/tolt"
                 ]
               }
             ]
@@ -239,63 +239,63 @@
           {
             "group": "Overview",
             "pages": [
-              "api-reference/introduction",
-              "api-reference/tokens",
-              "api-reference/publishable-keys",
-              "api-reference/rate-limits"
+              "docs/api-reference/introduction",
+              "docs/api-reference/tokens",
+              "docs/api-reference/publishable-keys",
+              "docs/api-reference/rate-limits"
             ]
           },
           {
             "group": "SDKs",
             "pages": [
-              "sdks/overview",
+              "docs/sdks/overview",
               {
                 "group": "Server-side SDKs",
                 "pages": [
-                  "sdks/typescript",
-                  "sdks/python",
-                  "sdks/ruby",
-                  "sdks/php",
-                  "sdks/go"
+                  "docs/sdks/typescript",
+                  "docs/sdks/python",
+                  "docs/sdks/ruby",
+                  "docs/sdks/php",
+                  "docs/sdks/go"
                 ]
               },
               {
                 "group": "Client-side SDK (Web)",
                 "pages": [
-                  "sdks/client-side/introduction",
+                  "docs/sdks/client-side/introduction",
                   {
                     "group": "Installation Guides",
                     "pages": [
-                      "sdks/client-side/installation-guides/react",
-                      "sdks/client-side/installation-guides/google-tag-manager",
-                      "sdks/client-side/installation-guides/manual",
-                      "sdks/client-side/installation-guides/webflow",
-                      "sdks/client-side/installation-guides/wordpress",
-                      "sdks/client-side/installation-guides/framer",
-                      "sdks/client-side/installation-guides/shopify"
+                      "docs/sdks/client-side/installation-guides/react",
+                      "docs/sdks/client-side/installation-guides/google-tag-manager",
+                      "docs/sdks/client-side/installation-guides/manual",
+                      "docs/sdks/client-side/installation-guides/webflow",
+                      "docs/sdks/client-side/installation-guides/wordpress",
+                      "docs/sdks/client-side/installation-guides/framer",
+                      "docs/sdks/client-side/installation-guides/shopify"
                     ]
                   },
                   {
                     "group": "Features",
                     "pages": [
-                      "sdks/client-side/features/click-tracking",
-                      "sdks/client-side/features/conversion-tracking",
-                      "sdks/client-side/features/cross-domain-tracking",
-                      "sdks/client-side/features/reverse-proxy-support"
+                      "docs/sdks/client-side/features/click-tracking",
+                      "docs/sdks/client-side/features/conversion-tracking",
+                      "docs/sdks/client-side/features/cross-domain-tracking",
+                      "docs/sdks/client-side/features/reverse-proxy-support"
                     ]
                   },
-                  "sdks/client-side/variants"
+                  "docs/sdks/client-side/variants"
                 ]
               },
               {
                 "group": "Client-side SDK (Mobile)",
                 "pages": [
-                  "sdks/client-side-mobile/introduction",
+                  "docs/sdks/client-side-mobile/introduction",
                   {
                     "group": "Installation Guides",
                     "pages": [
-                      "sdks/client-side-mobile/installation-guides/swift",
-                      "sdks/client-side-mobile/installation-guides/react-native"
+                      "docs/sdks/client-side-mobile/installation-guides/swift",
+                      "docs/sdks/client-side-mobile/installation-guides/react-native"
                     ]
                   }
                 ]
@@ -308,98 +308,98 @@
               {
                 "group": "Links API",
                 "pages": [
-                  "api-reference/links/create",
-                  "api-reference/links/update",
-                  "api-reference/links/upsert",
-                  "api-reference/links/delete",
-                  "api-reference/links/retrieve",
-                  "api-reference/links/list",
-                  "api-reference/links/count",
-                  "api-reference/links/bulk-create",
-                  "api-reference/links/bulk-update",
-                  "api-reference/links/bulk-delete"
+                  "docs/api-reference/links/create",
+                  "docs/api-reference/links/update",
+                  "docs/api-reference/links/upsert",
+                  "docs/api-reference/links/delete",
+                  "docs/api-reference/links/retrieve",
+                  "docs/api-reference/links/list",
+                  "docs/api-reference/links/count",
+                  "docs/api-reference/links/bulk-create",
+                  "docs/api-reference/links/bulk-update",
+                  "docs/api-reference/links/bulk-delete"
                 ]
               },
               {
                 "group": "Analytics API",
                 "pages": [
-                  "api-reference/analytics/retrieve",
-                  "api-reference/analytics/list-events"
+                  "docs/api-reference/analytics/retrieve",
+                  "docs/api-reference/analytics/list-events"
                 ]
               },
               {
                 "group": "Conversions API",
                 "pages": [
-                  "api-reference/conversions/track-lead",
-                  "api-reference/conversions/track-sale"
+                  "docs/api-reference/conversions/track-lead",
+                  "docs/api-reference/conversions/track-sale"
                 ]
               },
               {
                 "group": "Partners API",
                 "pages": [
-                  "api-reference/partners/create",
-                  "api-reference/partners/list",
-                  "api-reference/partners/ban",
-                  "api-reference/partners/deactivate",
-                  "api-reference/partners/create-link",
-                  "api-reference/partners/upsert-link",
-                  "api-reference/partners/retrieve-links",
-                  "api-reference/partners/retrieve-analytics"
+                  "docs/api-reference/partners/create",
+                  "docs/api-reference/partners/list",
+                  "docs/api-reference/partners/ban",
+                  "docs/api-reference/partners/deactivate",
+                  "docs/api-reference/partners/create-link",
+                  "docs/api-reference/partners/upsert-link",
+                  "docs/api-reference/partners/retrieve-links",
+                  "docs/api-reference/partners/retrieve-analytics"
                 ]
               },
               {
                 "group": "Customers API",
                 "pages": [
-                  "api-reference/customers/retrieve",
-                  "api-reference/customers/list",
-                  "api-reference/customers/update",
-                  "api-reference/customers/delete"
+                  "docs/api-reference/customers/retrieve",
+                  "docs/api-reference/customers/list",
+                  "docs/api-reference/customers/update",
+                  "docs/api-reference/customers/delete"
                 ]
               },
               {
                 "group": "Bounties API",
                 "pages": [
-                  "api-reference/bounties/list",
-                  "api-reference/bounties/approve",
-                  "api-reference/bounties/reject"
+                  "docs/api-reference/bounties/list",
+                  "docs/api-reference/bounties/approve",
+                  "docs/api-reference/bounties/reject"
                 ]
               },
               {
                 "group": "Commissions API",
                 "pages": [
-                  "api-reference/commissions/list",
-                  "api-reference/commissions/update"
+                  "docs/api-reference/commissions/list",
+                  "docs/api-reference/commissions/update"
                 ]
               },
               {
                 "group": "Payouts API",
-                "pages": ["api-reference/payouts/list"]
+                "pages": ["docs/api-reference/payouts/list"]
               },
               {
                 "group": "Domains API",
                 "pages": [
-                  "api-reference/domains/create",
-                  "api-reference/domains/update",
-                  "api-reference/domains/delete",
-                  "api-reference/domains/register",
-                  "api-reference/domains/check-availability"
+                  "docs/api-reference/domains/create",
+                  "docs/api-reference/domains/update",
+                  "docs/api-reference/domains/delete",
+                  "docs/api-reference/domains/register",
+                  "docs/api-reference/domains/check-availability"
                 ]
               },
               {
                 "group": "Folders API",
                 "pages": [
-                  "api-reference/folders/create",
-                  "api-reference/folders/update",
-                  "api-reference/folders/delete",
-                  "api-reference/folders/list"
+                  "docs/api-reference/folders/create",
+                  "docs/api-reference/folders/update",
+                  "docs/api-reference/folders/delete",
+                  "docs/api-reference/folders/list"
                 ]
               },
               {
                 "group": "Tags API",
                 "pages": [
-                  "api-reference/tags/create",
-                  "api-reference/tags/list",
-                  "api-reference/tags/update"
+                  "docs/api-reference/tags/create",
+                  "docs/api-reference/tags/list",
+                  "docs/api-reference/tags/update"
                 ]
               }
             ]
@@ -452,31 +452,31 @@
     },
     {
       "source": "/sdks",
-      "destination": "/sdks/overview"
+      "destination": "/docs/sdks/overview"
     },
     {
       "source": "/sdks/typescript/:path*",
-      "destination": "/sdks/typescript"
+      "destination": "/docs/sdks/typescript"
     },
     {
       "source": "/sdks/cli/overview",
-      "destination": "/sdks/cli"
+      "destination": "/docs/sdks/cli"
     },
     {
       "source": "/sdks/js-client/overview",
-      "destination": "/sdks/client-side/installation-guides/react"
+      "destination": "/docs/sdks/client-side/installation-guides/react"
     },
     {
       "source": "/sdks/client-side/features/client-side-click-tracking",
-      "destination": "/sdks/client-side/features/click-tracking"
+      "destination": "/docs/sdks/client-side/features/click-tracking"
     },
     {
       "source": "/self-hosting/guide",
-      "destination": "/self-hosting"
+      "destination": "/docs/self-hosting"
     },
     {
       "source": "/integrations/webhooks",
-      "destination": "/concepts/webhooks/introduction"
+      "destination": "/docs/concepts/webhooks/introduction"
     },
     {
       "source": "/integrations/zapier",
@@ -512,279 +512,279 @@
     },
     {
       "source": "/concepts/links/bulk-actions",
-      "destination": "/concepts/links/bulk-operations"
+      "destination": "/docs/concepts/links/bulk-operations"
     },
     {
       "source": "/concepts/analytics",
-      "destination": "/concepts/analytics/introduction"
+      "destination": "/docs/concepts/analytics/introduction"
     },
     {
       "source": "/conversions/clicks/introduction",
-      "destination": "/sdks/client-side/features/client-side-click-tracking"
+      "destination": "/docs/sdks/client-side/features/client-side-click-tracking"
     },
     {
       "source": "/conversions/leads/supabase-auth",
-      "destination": "/conversions/leads/supabase"
+      "destination": "/docs/conversions/leads/supabase"
     },
     {
       "source": "/api-reference/endpoint/create-a-new-link",
-      "destination": "/api-reference/endpoint/create-a-link"
+      "destination": "/docs/api-reference/endpoint/create-a-link"
     },
     {
       "source": "/api-reference/endpoint/create-a-new-tag",
-      "destination": "/api-reference/endpoint/create-a-tag"
+      "destination": "/docs/api-reference/endpoint/create-a-tag"
     },
     {
       "source": "/api-reference/endpoint/create-a-customer",
-      "destination": "/api-reference/endpoint/retrieve-a-customer"
+      "destination": "/docs/api-reference/endpoint/retrieve-a-customer"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-project",
-      "destination": "/api-reference/endpoint/retrieve-a-workspace"
+      "destination": "/docs/api-reference/endpoint/retrieve-a-workspace"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-projects",
-      "destination": "/api-reference/endpoint/retrieve-a-list-of-workspaces"
+      "destination": "/docs/api-reference/endpoint/retrieve-a-list-of-workspaces"
     },
     {
       "source": "/api-reference/endpoint/edit-a-link",
-      "destination": "/api-reference/endpoint/update-a-link"
+      "destination": "/docs/api-reference/endpoint/update-a-link"
     },
     {
       "source": "/api-reference/endpoint/edit-a-domain",
-      "destination": "/api-reference/endpoint/update-a-domain"
+      "destination": "/docs/api-reference/endpoint/update-a-domain"
     },
     {
       "source": "/api-reference/endpoint/retrieve-browser",
-      "destination": "/api-reference/endpoint/retrieve-browsers-by-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-browsers-by-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-city",
-      "destination": "/api-reference/endpoint/retrieve-cities-by-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-cities-by-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-clicks",
-      "destination": "/api-reference/endpoint/retrieve-clicks-count"
+      "destination": "/docs/api-reference/endpoint/retrieve-clicks-count"
     },
     {
       "source": "/api-reference/endpoint/retrieve-country",
-      "destination": "/api-reference/endpoint/retrieve-countries-by-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-countries-by-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-device",
-      "destination": "/api-reference/endpoint/retrieve-devices-by-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-devices-by-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-os",
-      "destination": "/api-reference/endpoint/retrieve-os-by-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-os-by-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-referer",
-      "destination": "/api-reference/endpoint/retrieve-referers-by-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-referers-by-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-timeseries",
-      "destination": "/api-reference/endpoint/retrieve-timeseries-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-timeseries-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-top-links",
-      "destination": "/api-reference/endpoint/retrieve-top-links-by-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-top-links-by-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-top-urls",
-      "destination": "/api-reference/endpoint/retrieve-top-urls-by-clicks"
+      "destination": "/docs/api-reference/endpoint/retrieve-top-urls-by-clicks"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-partners-analytics",
-      "destination": "/api-reference/endpoint/retrieve-partner-analytics"
+      "destination": "/docs/api-reference/endpoint/retrieve-partner-analytics"
     },
     {
       "source": "/api-reference/endpoint/add-a-domain",
-      "destination": "/api-reference/endpoint/create-a-domain"
+      "destination": "/docs/api-reference/endpoint/create-a-domain"
     },
     {
       "source": "/api-reference/pagination",
-      "destination": "/api-reference/introduction#pagination"
+      "destination": "/docs/api-reference/introduction#pagination"
     },
     {
       "source": "/api-reference/errors",
-      "destination": "/api-reference/introduction#error-handling"
+      "destination": "/docs/api-reference/introduction#error-handling"
     },
     {
       "source": "/api-reference/endpoint/create-a-link",
-      "destination": "/api-reference/links/create"
+      "destination": "/docs/api-reference/links/create"
     },
     {
       "source": "/api-reference/endpoint/update-a-link",
-      "destination": "/api-reference/links/update"
+      "destination": "/docs/api-reference/links/update"
     },
     {
       "source": "/api-reference/endpoint/upsert-a-link",
-      "destination": "/api-reference/links/upsert"
+      "destination": "/docs/api-reference/links/upsert"
     },
     {
       "source": "/api-reference/endpoint/delete-a-link",
-      "destination": "/api-reference/links/delete"
+      "destination": "/docs/api-reference/links/delete"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-link",
-      "destination": "/api-reference/links/retrieve"
+      "destination": "/docs/api-reference/links/retrieve"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-links",
-      "destination": "/api-reference/links/list"
+      "destination": "/docs/api-reference/links/list"
     },
     {
       "source": "/api-reference/endpoint/retrieve-number-of-links",
-      "destination": "/api-reference/links/count"
+      "destination": "/docs/api-reference/links/count"
     },
     {
       "source": "/api-reference/endpoint/bulk-create-links",
-      "destination": "/api-reference/links/bulk-create"
+      "destination": "/docs/api-reference/links/bulk-create"
     },
     {
       "source": "/api-reference/endpoint/bulk-update-links",
-      "destination": "/api-reference/links/bulk-update"
+      "destination": "/docs/api-reference/links/bulk-update"
     },
     {
       "source": "/api-reference/endpoint/bulk-delete-links",
-      "destination": "/api-reference/links/bulk-delete"
+      "destination": "/docs/api-reference/links/bulk-delete"
     },
     {
       "source": "/api-reference/endpoint/retrieve-analytics",
-      "destination": "/api-reference/analytics/retrieve"
+      "destination": "/docs/api-reference/analytics/retrieve"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-events",
-      "destination": "/api-reference/analytics/list-events"
+      "destination": "/docs/api-reference/analytics/list-events"
     },
     {
       "source": "/api-reference/endpoint/track-lead",
-      "destination": "/api-reference/conversions/track-lead"
+      "destination": "/docs/api-reference/conversions/track-lead"
     },
     {
       "source": "/api-reference/endpoint/track-sale",
-      "destination": "/api-reference/conversions/track-sale"
+      "destination": "/docs/api-reference/conversions/track-sale"
     },
     {
       "source": "/api-reference/endpoint/create-a-partner",
-      "destination": "/api-reference/partners/create"
+      "destination": "/docs/api-reference/partners/create"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-partners",
-      "destination": "/api-reference/partners/list"
+      "destination": "/docs/api-reference/partners/list"
     },
     {
       "source": "/api-reference/endpoint/ban-a-partner",
-      "destination": "/api-reference/partners/ban"
+      "destination": "/docs/api-reference/partners/ban"
     },
     {
       "source": "/api-reference/endpoint/deactivate-a-partner",
-      "destination": "/api-reference/partners/deactivate"
+      "destination": "/docs/api-reference/partners/deactivate"
     },
     {
       "source": "/api-reference/endpoint/create-a-partner-link",
-      "destination": "/api-reference/partners/create-link"
+      "destination": "/docs/api-reference/partners/create-link"
     },
     {
       "source": "/api-reference/endpoint/upsert-a-partner-link",
-      "destination": "/api-reference/partners/upsert-link"
+      "destination": "/docs/api-reference/partners/upsert-link"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-partners-links",
-      "destination": "/api-reference/partners/retrieve-links"
+      "destination": "/docs/api-reference/partners/retrieve-links"
     },
     {
       "source": "/api-reference/endpoint/retrieve-partner-analytics",
-      "destination": "/api-reference/partners/retrieve-analytics"
+      "destination": "/docs/api-reference/partners/retrieve-analytics"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-customer",
-      "destination": "/api-reference/customers/retrieve"
+      "destination": "/docs/api-reference/customers/retrieve"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-customers",
-      "destination": "/api-reference/customers/list"
+      "destination": "/docs/api-reference/customers/list"
     },
     {
       "source": "/api-reference/endpoint/update-a-customer",
-      "destination": "/api-reference/customers/update"
+      "destination": "/docs/api-reference/customers/update"
     },
     {
       "source": "/api-reference/endpoint/delete-a-customer",
-      "destination": "/api-reference/customers/delete"
+      "destination": "/docs/api-reference/customers/delete"
     },
     {
       "source": "/api-reference/endpoint/list-submissions-for-a-bounty",
-      "destination": "/api-reference/bounties/list"
+      "destination": "/docs/api-reference/bounties/list"
     },
     {
       "source": "/api-reference/endpoint/approve-a-bounty-submission",
-      "destination": "/api-reference/bounties/approve"
+      "destination": "/docs/api-reference/bounties/approve"
     },
     {
       "source": "/api-reference/endpoint/reject-a-bounty-submission",
-      "destination": "/api-reference/bounties/reject"
+      "destination": "/docs/api-reference/bounties/reject"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-commissions",
-      "destination": "/api-reference/commissions/list"
+      "destination": "/docs/api-reference/commissions/list"
     },
     {
       "source": "/api-reference/endpoint/update-a-commission",
-      "destination": "/api-reference/commissions/update"
+      "destination": "/docs/api-reference/commissions/update"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-payouts",
-      "destination": "/api-reference/payouts/list"
+      "destination": "/docs/api-reference/payouts/list"
     },
     {
       "source": "/api-reference/endpoint/create-a-domain",
-      "destination": "/api-reference/domains/create"
+      "destination": "/docs/api-reference/domains/create"
     },
     {
       "source": "/api-reference/endpoint/update-a-domain",
-      "destination": "/api-reference/domains/update"
+      "destination": "/docs/api-reference/domains/update"
     },
     {
       "source": "/api-reference/endpoint/delete-a-domain",
-      "destination": "/api-reference/domains/delete"
+      "destination": "/docs/api-reference/domains/delete"
     },
     {
       "source": "/api-reference/endpoint/register-a-domain",
-      "destination": "/api-reference/domains/register"
+      "destination": "/docs/api-reference/domains/register"
     },
     {
       "source": "/api-reference/endpoint/check-a-domain-availability",
-      "destination": "/api-reference/domains/check-availability"
+      "destination": "/docs/api-reference/domains/check-availability"
     },
     {
       "source": "/api-reference/endpoint/create-a-folder",
-      "destination": "/api-reference/folders/create"
+      "destination": "/docs/api-reference/folders/create"
     },
     {
       "source": "/api-reference/endpoint/update-a-folder",
-      "destination": "/api-reference/folders/update"
+      "destination": "/docs/api-reference/folders/update"
     },
     {
       "source": "/api-reference/endpoint/delete-a-folder",
-      "destination": "/api-reference/folders/delete"
+      "destination": "/docs/api-reference/folders/delete"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-folders",
-      "destination": "/api-reference/folders/list"
+      "destination": "/docs/api-reference/folders/list"
     },
     {
       "source": "/api-reference/endpoint/create-a-tag",
-      "destination": "/api-reference/tags/create"
+      "destination": "/docs/api-reference/tags/create"
     },
     {
       "source": "/api-reference/endpoint/retrieve-a-list-of-tags",
-      "destination": "/api-reference/tags/list"
+      "destination": "/docs/api-reference/tags/list"
     },
     {
       "source": "/api-reference/endpoint/update-a-tag",
-      "destination": "/api-reference/tags/update"
+      "destination": "/docs/api-reference/tags/update"
     }
   ]
 }
