@@ -237,9 +237,9 @@
         "icon": "code",
         "groups": [
           {
-            "group": "OVERVIEW",
+            "group": " ",
             "pages": [
-              "docs/api-reference/introduction",
+              "docs/api-reference",
               "docs/api-reference/authentication",
               "docs/api-reference/rate-limits"
             ]
@@ -302,10 +302,10 @@
             ]
           },
           {
-            "group": "CORE APIs",
+            "group": "REST API",
             "pages": [
               {
-                "group": "Partners API",
+                "group": "Partners",
                 "pages": [
                   "docs/api-reference/partners/create",
                   "docs/api-reference/partners/list",
@@ -317,16 +317,16 @@
                 ]
               },
               {
-                "group": "Analytics API",
+                "group": "Analytics",
                 "pages": [
                   "docs/api-reference/analytics/retrieve",
-                  "docs/api-reference/analytics/list-events",
+                  "docs/api-reference/events/list",
                   "docs/api-reference/analytics/track-lead",
                   "docs/api-reference/analytics/track-sale"
                 ]
               },
               {
-                "group": "Customers API",
+                "group": "Customers",
                 "pages": [
                   "docs/api-reference/customers/retrieve",
                   "docs/api-reference/customers/list",
@@ -335,7 +335,7 @@
                 ]
               },
               {
-                "group": "Bounties API",
+                "group": "Bounties",
                 "pages": [
                   "docs/api-reference/bounties/list",
                   "docs/api-reference/bounties/approve",
@@ -343,23 +343,23 @@
                 ]
               },
               {
-                "group": "Commissions API",
+                "group": "Commissions",
                 "pages": [
                   "docs/api-reference/commissions/list",
                   "docs/api-reference/commissions/update"
                 ]
               },
               {
-                "group": "Payouts API",
+                "group": "Payouts",
                 "pages": ["docs/api-reference/payouts/list"]
               }
             ]
           },
           {
-            "group": "OTHER APIs",
+            "group": "LINKS API",
             "pages": [
               {
-                "group": "Links API",
+                "group": "Links",
                 "pages": [
                   "docs/api-reference/links/create",
                   "docs/api-reference/links/update",
@@ -374,7 +374,7 @@
                 ]
               },
               {
-                "group": "Domains API",
+                "group": "Domains",
                 "pages": [
                   "docs/api-reference/domains/create",
                   "docs/api-reference/domains/update",
@@ -384,7 +384,7 @@
                 ]
               },
               {
-                "group": "Folders API",
+                "group": "Folders",
                 "pages": [
                   "docs/api-reference/folders/create",
                   "docs/api-reference/folders/update",
@@ -393,7 +393,7 @@
                 ]
               },
               {
-                "group": "Tags API",
+                "group": "Tags",
                 "pages": [
                   "docs/api-reference/tags/create",
                   "docs/api-reference/tags/list",
@@ -447,6 +447,10 @@
     {
       "source": "/docs/introduction",
       "destination": "/docs"
+    },
+    {
+      "source": "/docs/api-reference/introduction",
+      "destination": "/docs/api-reference"
     },
     {
       "source": "/docs/sdks",
@@ -582,7 +586,7 @@
     },
     {
       "source": "/docs/api-reference/endpoint/retrieve-a-list-of-events",
-      "destination": "/docs/api-reference/analytics/list-events"
+      "destination": "/docs/api-reference/events/list"
     },
     {
       "source": "/docs/api-reference/endpoint/track-lead",
