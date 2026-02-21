@@ -177,14 +177,15 @@ Show as `Gold Plan` (what the partner sees)
 <Info>
   Where `Your product ID` is listed, you'll enter your product ID (the
   screenshot uses an example product ID)
-  <br />
-  If you're using our Stripe integration, the product ID will be the Stripe
-  product ID that the subscription is for (starts with `prod_xxx`).
-  <br />
-  If you're manually tracking a sale event via our `/track/sale` endpoint, you
-  can pass along the product ID via the [metadata
-  prop](https://dub.co/docs/api-reference/endpoint/track-sale#body-metadata)
-  (e.g. `metadata.productId = "prod_xxx"`).
+
+If you're using our Stripe integration, the product ID will be the Stripe
+product ID that the subscription is for (starts with `prod_xxx`).
+
+If you're manually tracking a sale event via our `/track/sale` endpoint, you
+can pass along the product ID via the [metadata
+prop](https://dub.co/docs/api-reference/endpoint/track-sale#body-metadata)
+(e.g. `metadata.productId = "prod_xxx"`).
+
 </Info>
 
 </Step>

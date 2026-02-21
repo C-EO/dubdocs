@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "aspen",
-  "name": "Dub Documentation",
+  "name": "Dub",
   "colors": {
     "primary": "#eb5611",
     "light": "#eb5611",
@@ -208,24 +208,26 @@
               {
                 "group": "Getting started",
                 "pages": [
-                  "partnering-with-programs/partner-profile",
-                  "partnering-with-programs/partner-team",
-                  "partnering-with-programs/merging-account"
+                  "help/article/partner-profile",
+                  "help/article/managing-partner-teams",
+                  "help/article/merging-partner-accounts",
+                  "help/article/partners-faq"
                 ]
               },
               {
                 "group": "Joining programs",
                 "pages": [
-                  "partnering-with-programs/program-marketplace",
-                  "partnering-with-programs/navigating-program"
+                  "help/article/program-marketplace",
+                  "help/article/navigating-partner-program",
+                  "help/article/communicating-with-programs"
                 ]
               },
               {
-                "group": "Receiving payouts",
+                "group": "Getting paid",
                 "pages": [
-                  "partnering-with-programs/receiving-payouts",
-                  "partnering-with-programs/payout-invoices",
-                  "partnering-with-programs/commissions-payouts-work"
+                  "help/article/receiving-payouts",
+                  "help/article/partner-payout-invoice",
+                  "help/article/commissions-payouts"
                 ]
               }
             ]
@@ -321,8 +323,8 @@
                 "pages": [
                   "docs/api-reference/analytics/retrieve",
                   "docs/api-reference/events/list",
-                  "docs/api-reference/analytics/track-lead",
-                  "docs/api-reference/analytics/track-sale"
+                  "docs/api-reference/track/lead",
+                  "docs/api-reference/track/sale"
                 ]
               },
               {
@@ -590,11 +592,11 @@
     },
     {
       "source": "/docs/api-reference/endpoint/track-lead",
-      "destination": "/docs/api-reference/analytics/track-lead"
+      "destination": "/docs/api-reference/track/lead"
     },
     {
       "source": "/docs/api-reference/endpoint/track-sale",
-      "destination": "/docs/api-reference/analytics/track-sale"
+      "destination": "/docs/api-reference/track/sale"
     },
     {
       "source": "/docs/api-reference/endpoint/track-open",

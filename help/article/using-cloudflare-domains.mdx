@@ -37,7 +37,11 @@ To set this up, all you need to do is [set your domain's DNS records](/help/arti
 4. Change the **Proxy status** to **DNS only**.
 5. Click on the **Save** button.
 
-<img src="https://assets.dub.co/help/cloudflare-without-proxy.png" alt="" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/cloudflare-without-proxy.png"
+  alt=""
+  className="rounded-lg border border-gray-100"
+/>
 
 This will make sure that the traffic to your domain is _not proxied through Cloudflare_ and is sent directly to Dub.
 
@@ -45,7 +49,11 @@ This will make sure that the traffic to your domain is _not proxied through Clou
 
 If you really want to use Cloudflare's proxy for your custom domain, you'll need to make sure that your SSL/TLS encryption mode is set to "Full" on Cloudflare.
 
-<img src="https://assets.dub.co/help/cloudflare-with-proxy.png" alt="Using Cloudflare's proxy for your custom domain" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/cloudflare-with-proxy.png"
+  alt="Using Cloudflare's proxy for your custom domain"
+  className="rounded-lg border border-gray-100"
+/>
 
 You can do that by following these steps:
 
@@ -55,15 +63,17 @@ You can do that by following these steps:
 4. Select the **Custom SSL/TLS** option and then select the **Full** option.
 5. Click on **Save** to apply the changes.
 
-<img src="https://assets.dub.co/help/cloudflare-domain-ssl-full.png" alt="" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/cloudflare-domain-ssl-full.png"
+  alt=""
+  className="rounded-lg border border-gray-100"
+/>
 
 <Warning>
   Using Cloudflare's Proxy can potentially **cause [inaccuracies in analytics
   data](/help/article/incorrect-analytics-geolocation-data)**. This is because using a proxy will send all traffic through the proxy
   first, then to Dub. This will result in incorrect geolocation data being
   presented and the public IP address of your proxy being sent.
-
-<br />
 
 To avoid this, we recommend using [Cloudflare's DNS only mode](#using-cloudflares-dns-only-without-proxy) instead of using
 their proxy.

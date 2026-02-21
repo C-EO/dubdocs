@@ -55,8 +55,6 @@ To enable full referer URLs, you need to make sure your site has the correct [Re
 
 We recommend setting the `no-referrer-when-downgrade` [policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy#no-referrer-when-downgrade), which will only send the domain, path, and query parameters to the destination URL as long as the protocol security level stays the same (i.e. `HTTP` → `HTTP`, or `HTTPS` → `HTTPS`).
 
-<br />
-
 If the protocol security level is downgraded (i.e. `HTTPS` → `HTTP`), the referer will not be sent. This is a good compromise to make sure your users' privacy is respected while still getting a good amount of data.
 
 </Tip>
