@@ -26,8 +26,8 @@
         "icon": "books",
         "groups": [
           {
-            "group": "HOME",
-            "pages": ["docs/introduction"]
+            "group": " ",
+            "pages": ["docs"]
           },
           {
             "group": "LINKS",
@@ -445,8 +445,8 @@
   },
   "redirects": [
     {
-      "source": "/docspartners/white-labeling",
-      "destination": "/docs/partners/embedded-referrals"
+      "source": "/docs/introduction",
+      "destination": "/docs"
     },
     {
       "source": "/docs/sdks",
