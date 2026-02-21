@@ -231,6 +231,114 @@
                 ]
               }
             ]
+          },
+          {
+            "group": "DUB LINKS",
+            "pages": [
+              {
+                "group": "Link management",
+                "pages": [
+                  "help/article/how-to-create-link",
+                  "help/article/how-to-import-csv",
+                  "help/article/dub-links-not-working",
+                  "help/article/custom-qr-codes",
+                  "help/article/device-targeting",
+                  "help/article/dub-link-builder",
+                  "help/article/geo-targeting",
+                  "help/article/how-noindex-works",
+                  "help/article/how-to-check-link-destination",
+                  "help/article/how-to-export-links",
+                  "help/article/link-cloaking",
+                  "help/article/link-comments",
+                  "help/article/password-protected-links",
+                  "help/article/how-to-use-tags",
+                  "help/article/bulk-link-actions",
+                  "help/article/how-to-create-utm-templates",
+                  "help/article/utm-builder",
+                  "help/article/link-expiration",
+                  "help/article/link-double-redirects",
+                  "help/article/parameter-passing",
+                  "help/article/custom-link-previews",
+                  "help/article/link-folders",
+                  "help/article/how-to-transfer-links",
+                  "help/article/ab-testing",
+                  "help/article/folders-rbac"
+                ]
+              },
+              {
+                "group": "Analytics",
+                "pages": [
+                  "help/article/dub-analytics",
+                  "help/article/dub-conversions",
+                  "help/article/filter-analytics-by-trigger",
+                  "help/article/how-to-export-analytics",
+                  "help/article/incorrect-analytics-geolocation-data",
+                  "help/article/real-time-events-stream",
+                  "help/article/tracking-internal-traffic",
+                  "help/article/filter-analytics-by-tags",
+                  "help/article/filter-analytics-by-utms",
+                  "help/article/dub-analytics-limits",
+                  "help/article/filter-analytics-by-folders",
+                  "help/article/share-analytics",
+                  "help/article/customer-insights"
+                ]
+              },
+              {
+                "group": "Custom domains",
+                "pages": [
+                  "help/article/how-to-add-custom-domain",
+                  "help/article/archiving-domains",
+                  "help/article/how-to-set-primary-domain",
+                  "help/article/how-to-use-dub-with-subpath",
+                  "help/article/setting-not-found-url",
+                  "help/article/troubleshooting-domains",
+                  "help/article/using-cloudflare-domains",
+                  "help/article/choosing-a-custom-domain",
+                  "help/article/custom-domain-deep-links",
+                  "help/article/default-dub-domains",
+                  "help/article/free-dot-link-domain",
+                  "help/article/how-to-transfer-domains",
+                  "help/article/using-proxies-on-custom-domains",
+                  "help/article/how-to-redirect-root-domain"
+                ]
+              },
+              {
+                "group": "Migration guides",
+                "pages": [
+                  "help/article/migrating-from-bitly",
+                  "help/article/migrating-from-rebrandly",
+                  "help/article/migrating-from-short"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "WORKSPACE GUIDES",
+            "pages": [
+              {
+                "group": "Workspace management",
+                "pages": [
+                  "help/article/what-is-a-workspace",
+                  "help/article/how-to-invite-teammates",
+                  "help/article/how-to-change-default-workspace",
+                  "help/article/how-to-download-invoice",
+                  "help/article/how-to-change-billing-information",
+                  "help/article/how-to-cancel-subscription",
+                  "help/article/workspace-roles",
+                  "help/article/how-to-delete-account"
+                ]
+              },
+              {
+                "group": "SAML/SSO",
+                "pages": [
+                  "help/article/okta-scim",
+                  "help/article/okta-saml",
+                  "help/article/google-saml",
+                  "help/article/azure-saml",
+                  "help/article/azure-scim"
+                ]
+              }
+            ]
           }
         ]
       },
