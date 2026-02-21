@@ -141,6 +141,10 @@
         "icon": "life-ring",
         "groups": [
           {
+            "group": " ",
+            "pages": ["help"]
+          },
+          {
             "group": "MANAGING A PROGRAM",
             "pages": [
               "help/article/dub-partners",

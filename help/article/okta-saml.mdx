@@ -6,7 +6,7 @@ og:description: "Securely manage team access to Dub with Okta SAML SSO, designed
 ---
 
 <Tip>
-  This feature is only available on [Dub Enterprise](/enterprise).
+  This feature is only available on [Dub Enterprise](https://dub.co/enterprise).
 </Tip>
 
 For Dub Enterprise users, you can securely manage your team's access to Dub using [Okta SAML SSO](https://support.okta.com/help/s/article/okta-saml).
@@ -15,19 +15,35 @@ For Dub Enterprise users, you can securely manage your team's access to Dub usin
 
 In your Okta Dashboard, click on **Applications** in the sidebar.
 
-<img src="https://assets.dub.co/help/okta-saml-apps.png" alt="Applications tab on the Okta Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-apps.png"
+  alt="Applications tab on the Okta Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Then, click on **Create App Integration**.
 
-<img src="https://assets.dub.co/help/okta-saml-create-app.png" alt="Create App Integration button on the Okta Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-create-app.png"
+  alt="Create App Integration button on the Okta Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Select **SAML 2.0** as the sign on method, and click **Next**.
 
-<img src="https://assets.dub.co/help/okta-saml-saml-2.png" alt="Saml 2.0 option on the Okta Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-saml-2.png"
+  alt="Saml 2.0 option on the Okta Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 In the **General Settings** page, enter "Dub" as the app name, and click **Next**.
 
-<img src="https://assets.dub.co/help/okta-saml-app-name.png" alt="General Settings page on the Okta Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-app-name.png"
+  alt="General Settings page on the Okta Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Copy the following values and paste them into the **SAML Settings** > **General** section:
 
@@ -39,13 +55,21 @@ https://api.dub.co/auth/saml/callback
 https://saml.dub.co
 ```
 
-<img src="https://assets.dub.co/help/okta-saml-urls.png" alt="SAML Settings page on the Okta Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-urls.png"
+  alt="SAML Settings page on the Okta Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 ## Step 2: Configure Attribute Statements
 
 Right below the **General** section, you'll see the **Attribute Statements** section.
 
-<img src="https://assets.dub.co/help/okta-saml-attributes.png" alt="Attribute Statements section on the Okta Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-attributes.png"
+  alt="Attribute Statements section on the Okta Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Click on **Add Row** and add the following attribute statements:
 
@@ -62,20 +86,33 @@ Once that's done, click **Next**.
 
 Under the **Feedback** section, select **This is an internal app we have created** and click **Finish**.
 
-<img src="https://assets.dub.co/help/okta-saml-feedback.png" alt="Feedback section on the Okta Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-feedback.png"
+  alt="Feedback section on the Okta Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 ## Step 4: Copy the Metadata URL
 
 After you've submitted the feedback, you'll be redirected to the **Sign On** tab, which contains the metadata URL.
 
-<img src="https://assets.dub.co/help/okta-saml-metadata-url.png" alt="Sign On tab on the Okta Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-metadata-url.png"
+  alt="Sign On tab on the Okta Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Copy the metadata URL and return to the Dub dashboard.
 
 ## Step 5: Configure SAML SSO on Dub
+
 In your workspace settings, click on **Security** in the **Workspace** group.
 
-<img src="https://assets.dub.co/cms/saml-directory-sync-2.png" alt="Directory Sync section on the Dub Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/cms/saml-directory-sync-2.png"
+  alt="Directory Sync section on the Dub Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Under the **SAML Single Sign-On** section, click on **Configure**. This will open up the SAML SSO modal:
 
@@ -83,7 +120,11 @@ Under the **SAML Single Sign-On** section, click on **Configure**. This will ope
 2. Enter the Metadata URL value that you copied from Step 4.
 3. Click **Save changes**.
 
-<img src="https://assets.dub.co/help/okta-saml-modal.png" alt="SAML SSO Modal" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-modal.png"
+  alt="SAML SSO Modal"
+  className="rounded-lg border border-gray-100"
+/>
 
 ## Step 6: Assign Users
 
@@ -99,18 +140,34 @@ Once you've configured SAML SSO, you can start assigning users & groups to your 
 
 Click on the **Assignments** tab, and click **Assign**. You can choose to assign users individually, or assign them in bulk by group.
 
-<img src="https://assets.dub.co/help/okta-saml-assign.png" alt="Assigning users in Okta" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-assign.png"
+  alt="Assigning users in Okta"
+  className="rounded-lg border border-gray-100"
+/>
 
 Select the users or groups you want to assign and click **Assign**.
 
-<img src="https://assets.dub.co/help/okta-saml-choose.png" alt="Assigning users in Okta choose users" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-choose.png"
+  alt="Assigning users in Okta choose users"
+  className="rounded-lg border border-gray-100"
+/>
 
 In the next screen, scroll to the bottom and click **Save and Go Back**.
 
-<img src="https://assets.dub.co/help/okta-saml-save.png" alt="Saving Okta assignment" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/okta-saml-save.png"
+  alt="Saving Okta assignment"
+  className="rounded-lg border border-gray-100"
+/>
 
 Your assigned users should now receive an invitation email to join your Dub workspace.
 
-<img src="https://assets.dub.co/help/saml-invite.png" alt="SAML invite email" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/saml-invite.png"
+  alt="SAML invite email"
+  className="rounded-lg border border-gray-100"
+/>
 
 They will also be able to sign in to Dub using Okta SSO.

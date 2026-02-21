@@ -5,7 +5,7 @@ og:title: "Track Internal Traffic with Dub Analytics"
 og:description: "Learn how to track internal traffic and product-led growth by leveraging the referer URL data in Dub Analytics."
 ---
 
-You can now see the [full referer URL](/changelog/referer-urls) data in [Dub Analytics](/help/article/dub-analytics). This lets you understand the specific URL where your users are coming from – as long as the site has the correct [Referer-Policy](#how-to-enable-full-referer-urls) header set.
+You can now see the [full referer URL](https://dub.co/changelog/referer-urls) data in [Dub Analytics](/help/article/dub-analytics). This lets you understand the specific URL where your users are coming from – as long as the site has the correct [Referer-Policy](#how-to-enable-full-referer-urls) header set.
 
 In this article, we'll walk you through how to use the full referer URL data to gain deeper insights into internal traffic on your website, and how to make sure your `Referer-Policy` header is set up correctly to support this.
 
@@ -19,7 +19,11 @@ You can use the full referer URL data to track internal traffic.
 
 For example, we recently replaced the **Sign Up** [button](https://d.to/register) in our nav bar with a Dub-powered link (`d.to/register`). This gave us insight into which pages sent the most traffic to our signup page:
 
-<img src="https://assets.dub.co/changelog/referer-urls.png" alt="Full Referer URLs in Dub Analytics" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/changelog/referer-urls.png"
+  alt="Full Referer URLs in Dub Analytics"
+  className="rounded-lg border border-gray-100"
+/>
 
 You can check out the live demo for yourself [here](https://d.to/stats/try).
 
@@ -37,7 +41,11 @@ Also, with [Dub Conversions](/help/article/dub-conversions), you can keep track 
 
 For example, here are the top pages on Dub that drove the most signups via the `d.to/register` link above:
 
-<img src="https://assets.dub.co/help/referer-urls-leads.png" alt="Full Referer URLs in Dub Analytics" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/referer-urls-leads.png"
+  alt="Full Referer URLs in Dub Analytics"
+  className="rounded-lg border border-gray-100"
+/>
 
 ## How to enable full referer URL tracking (via Referer-Policy header)
 
@@ -57,7 +65,7 @@ There are a few ways to configure this, depending on your application framework:
 
 ### Using Next.js
 
-If you are using [Next.js](/solutions/typescript), you can use the [`headers` property](https://nextjs.org/docs/app/api-reference/next-config-js/headers) in your `next.config.js` file to configure the referer policy.
+If you are using [Next.js](https://dub.co/solutions/typescript), you can use the [`headers` property](https://nextjs.org/docs/app/api-reference/next-config-js/headers) in your `next.config.js` file to configure the referer policy.
 
 ```javascript title="next.config.js"
 module.exports = {
@@ -97,7 +105,7 @@ export default defineNuxtConfig({
 
 ### Using Laravel
 
-If you are using [Laravel](/solutions/php), you can use the [Laravel Security Middleware](https://laravel-news.com/laravel-security-middleware) to configure the referer policy.
+If you are using [Laravel](https://dub.co/solutions/php), you can use the [Laravel Security Middleware](https://laravel-news.com/laravel-security-middleware) to configure the referer policy.
 
 ```php title="app/Http/Middleware/SetReferrerPolicy.php"
 final class SetReferrerPolicy
@@ -121,7 +129,7 @@ final class SetReferrerPolicy
 
 ### Using Flask
 
-If you are using [Flask](/solutions/python), you can set the `Referrer-Policy` header for all requests like this:
+If you are using [Flask](https://dub.co/solutions/python), you can set the `Referrer-Policy` header for all requests like this:
 
 ```python title="app.py"
 from flask import Flask

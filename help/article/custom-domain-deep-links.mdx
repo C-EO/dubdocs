@@ -7,11 +7,10 @@ og:description: "Learn how to redirect users to a specific page within your mobi
 
 <Tip>
   This feature is only available for [Pro plans and
-  above](/help/article/pro-plan).
+  above](https://dub.co/pricing).
 </Tip>
 
 On Dub, you can create deep links that lets you to redirect users to a specific page within your mobile application.
-
 
 For example, you're creating an ad campaign to drive traffic to a specific product page within your mobile app. By following the steps below, you'll be able to make sure that all your short links for your custom domain are set up with deep linking functionality.
 
@@ -27,11 +26,19 @@ For example, you're creating an ad campaign to drive traffic to a specific produ
 
 To do that, go to your [workspace domain settings](https://app.dub.co/settings/domains) page and click on the edit button for your custom domain:
 
-   <img src="https://assets.dub.co/cms/update-domain-button.png" alt="Update domain button" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/cms/update-domain-button.png"
+  alt="Update domain button"
+  className="rounded-lg border border-gray-100"
+/>
 
 In the domain modal, click on **Show advanced settings**, which will open up the Deep Link Configuration settings fields.
 
-   <img src="https://assets.dub.co/cms/domain-modal-advanced-settings.png" alt="Domain modal advanced settings" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/cms/domain-modal-advanced-settings.png"
+  alt="Domain modal advanced settings"
+  className="rounded-lg border border-gray-100"
+/>
 
 **iOS (apple-app-site-association)**
 
@@ -51,7 +58,6 @@ For iOS apps, upload your Apple App Site Association file to enable iOS deep lin
 }
 ```
 
-
 **Android (assetlinks.json)**
 
 For Android apps, upload your AseetLinks file to enable Android deep links:
@@ -64,12 +70,11 @@ For Android apps, upload your AseetLinks file to enable Android deep links:
       "package_name": "YOUR_PACKAGE_NAME",
       "sha256_cert_fingerprints": []
     },
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ]
+    "relation": ["delegate_permission/common.handle_all_urls"]
   }
 ]
 ```
+
   </Step>
   <Step title="Verify that your configuration files are set up correctly">
 
@@ -89,7 +94,6 @@ Once you've set up your deep link configuration files, you can go to their respe
 
   </Step>
 </Steps>
-
 
 ---
 

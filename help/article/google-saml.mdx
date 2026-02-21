@@ -6,7 +6,7 @@ og:description: "For Dub Enterprise users, you can securely manage your team's a
 ---
 
 <Tip>
-  This feature is only available on [Dub Enterprise](/enterprise).
+  This feature is only available on [Dub Enterprise](https://dub.co/enterprise).
 </Tip>
 
 For Dub Enterprise users, you can securely manage your team's access to Dub using [Google Workspace SAML SSO](https://cloud.google.com/architecture/identity/single-sign-on).
@@ -23,15 +23,27 @@ In your [Google Admin](https://admin.google.com/) dashboard, click on **Apps** i
 
 If you don't already have an existing SAML application, click on **Add app** and select **Add custom SAML app** from the dropdown menu.
 
-<img src="https://assets.dub.co/help/google-saml-create-app.png" alt="Create App on the Google Admin Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/google-saml-create-app.png"
+  alt="Create App on the Google Admin Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Enter the **App name** for your application, and click **Continue**.
 
-<img src="https://assets.dub.co/help/google-saml-app-name.png" alt="Configuring SAML app name on the Google Admin Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/google-saml-app-name.png"
+  alt="Configuring SAML app name on the Google Admin Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 In the next screen, click **Download Metadata** to download the metadata XML file and click **Continue**. You'll need this file in Step 3.
 
-<img src="https://assets.dub.co/help/google-saml-download.png" alt="Downloading SAML metadata on the Google Admin Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/google-saml-download.png"
+  alt="Downloading SAML metadata on the Google Admin Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Copy the following values and paste them under **Service provider details**:
 
@@ -43,7 +55,11 @@ https://api.dub.co/auth/saml/callback
 https://saml.dub.co
 ```
 
-<img src="https://assets.dub.co/help/google-saml-provider.png" alt="Service provider details on the Google Admin Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/google-saml-provider.png"
+  alt="Service provider details on the Google Admin Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Click **Next** to proceed to the next step.
 
@@ -57,17 +73,29 @@ On the next screen, under the **Attributes** section, click **Add Mapping** and 
 | `First name`                | `firstName`    |
 | `Last name`                 | `lastName`     |
 
-<img src="https://assets.dub.co/help/google-saml-attributes.png" alt="Attribute Mapping on the Google Admin Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/google-saml-attributes.png"
+  alt="Attribute Mapping on the Google Admin Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Once that's done, click **Finish**.
 
 On the next screen, click **User access** to configure the application to allow users to log in.
 
-<img src="https://assets.dub.co/help/google-saml-users.png" alt="User access on the Google Admin Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/google-saml-users.png"
+  alt="User access on the Google Admin Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Check the **ON for everyone** checkbox and click **Save**.
 
-<img src="https://assets.dub.co/help/google-saml-save.png" alt="Turn on access for everyone on the Google Admin Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/google-saml-save.png"
+  alt="Turn on access for everyone on the Google Admin Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 This will allow users in your Google Workspace to automatically sign in to Dub with Google SAML SSO.
 
@@ -77,7 +105,11 @@ You can now return to the Dub dashboard to complete the SAML SSO configuration.
 
 In your workspace settings, click on **Security** in the **Workspace** group.
 
-<img src="https://assets.dub.co/cms/saml-directory-sync-2.png" alt="Directory Sync section on the Dub Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/cms/saml-directory-sync-2.png"
+  alt="Directory Sync section on the Dub Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Under the **SAML Single Sign-On** section, click on **Configure**. This will open up the SAML SSO modal:
 
@@ -85,6 +117,10 @@ Under the **SAML Single Sign-On** section, click on **Configure**. This will ope
 2. Upload the metadata XML file you downloaded in Step 1.
 3. Click **Save changes**.
 
-<img src="https://assets.dub.co/help/google-saml-modal.png" alt="Google SAML SSO Modal" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/google-saml-modal.png"
+  alt="Google SAML SSO Modal"
+  className="rounded-lg border border-gray-100"
+/>
 
 That's it! You're all set – your team can now sign in to Dub using Google SAML SSO.

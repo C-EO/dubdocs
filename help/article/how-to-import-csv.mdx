@@ -15,14 +15,14 @@ To import your links, you can follow these steps:
 
 Before you import your CSV file, make sure it is in the correct format. Your CSV file needs to have the following data:
 
-| Column          | Required | Description                                                    | Example                  |
-| --------------- | -------- | -------------------------------------------------------------- | ------------------------ |
+| Column          | Required | Description                                                    | Example                   |
+| --------------- | -------- | -------------------------------------------------------------- | ------------------------- |
 | Destination URL | **Yes**  | The destination URL of the link you want to import.            | `https://www.google​.com` |
-| Short link      | **Yes**  | The shortened version of the link.                             | `yourdomain.com/abc123`        |
-| Title           | No       | The title of the link.                                         | `Google`                 |
-| Description     | No       | The description of the link.                                   | `Search the web`         |
-| Tags            | No       | The tags of the link – must be a comma-separated list of tags. | `search, google, web`    |
-| Creation date   | No       | The date the link was created.                                 | `2024-01-01`             |
+| Short link      | **Yes**  | The shortened version of the link.                             | `yourdomain.com/abc123`   |
+| Title           | No       | The title of the link.                                         | `Google`                  |
+| Description     | No       | The description of the link.                                   | `Search the web`          |
+| Tags            | No       | The tags of the link – must be a comma-separated list of tags. | `search, google, web`     |
+| Creation date   | No       | The date the link was created.                                 | `2024-01-01`              |
 
 The actual names of your columns can be anything you want, but you need to make sure that the required columns are present.
 
@@ -41,11 +41,19 @@ If you haven't already, [create a workspace on Dub.co](/help/article/what-is-a-w
 
 Then, from your [links dashboard](https://d.to/register), click on the `⋮` button next to the **Create Link** button and select **Import from CSV**.
 
-<img src="https://assets.dub.co/help/links-dashboard-dropdown.png" alt="Import from CSV button" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/links-dashboard-dropdown.png"
+  alt="Import from CSV button"
+  className="rounded-lg border border-gray-100"
+/>
 
 This will open a modal with a file uploader.
 
-<img src="https://assets.dub.co/help/import-csv-modal.png" alt="CSV import modal" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/import-csv-modal.png"
+  alt="CSV import modal"
+  className="rounded-lg border border-gray-100"
+/>
 
 Upload your CSV file, and you should be automatically redirected to the next step.
 
@@ -53,9 +61,13 @@ Upload your CSV file, and you should be automatically redirected to the next ste
 
 <Step title="Review the AI-generated column mappings">
 
-When you upload a CSV file, [Dub AI](/blog/introducing-dub-ai) will automatically map the columns in your CSV file to the [supported data fields in Dub](/docs/data-model#links).
+When you upload a CSV file, [Dub AI](https://dub.co/blog/introducing-dub-ai) will automatically map the columns in your CSV file to the [supported data fields in Dub](/docs/data-model#links).
 
-<img src="https://assets.dub.co/help/import-csv-modal-mapping.png" alt="CSV import column mapping" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/import-csv-modal-mapping.png"
+  alt="CSV import column mapping"
+  className="rounded-lg border border-gray-100"
+/>
 
 You can then review and edit the mappings before selecting **Confirm import**. In just a few seconds, all your links will be migrated to Dub.co.
 
@@ -67,11 +79,19 @@ Alternatively, you can also select **Choose another file** to upload a different
 
 Once all your links have been imported, we will send you an email to let you know that the migration is complete.
 
-<img src="https://assets.dub.co/help/csv-import-email.png" alt="Email notification about completed CSV import" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/csv-import-email.png"
+  alt="Email notification about completed CSV import"
+  className="rounded-lg border border-gray-100"
+/>
 
 If there are any issues with the import, we will send you a separate email with the details of the errors.
 
-<img src="https://assets.dub.co/help/csv-import-email-error.png" alt="Email notification about CSV import errors" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/csv-import-email-error.png"
+  alt="Email notification about CSV import errors"
+  className="rounded-lg border border-gray-100"
+/>
 
 </Step>
 

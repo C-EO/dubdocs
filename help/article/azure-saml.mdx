@@ -6,7 +6,7 @@ og:description: "For Dub Enterprise users, you can securely manage your team's a
 ---
 
 <Tip>
-  This feature is only available on [Dub Enterprise](/enterprise).
+  This feature is only available on [Dub Enterprise](https://dub.co/enterprise).
 </Tip>
 
 For Dub Enterprise users, you can securely manage your team's access to Dub using [Azure AD SAML SSO](https://learn.microsoft.com/en-us/azure/active-directory/architecture/auth-saml).
@@ -15,31 +15,55 @@ For Dub Enterprise users, you can securely manage your team's access to Dub usin
 
 In your [Azure Admin console](https://portal.azure.com/), select **Azure Active Directory** (or search for it in the search bar).
 
-<img src="https://assets.dub.co/help/azure-ad.png" alt="Azure Active Directory option on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-ad.png"
+  alt="Azure Active Directory option on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Then, click on **Enterprise applications** from the left sidebar.
 
-<img src="https://assets.dub.co/help/azure-ent-apps.png" alt="Enterprise applications option on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-ent-apps.png"
+  alt="Enterprise applications option on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 If you already have an existing Azure AD SAML application, select it from the list and move on to [Step 2](#step-2-configure-saml-applicaation).
 
 If not, click on **New application** at the top.
 
-<img src="https://assets.dub.co/help/azure-new-app.png" alt="Create new application button on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-new-app.png"
+  alt="Create new application button on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 In the next screen, click on **Create your own application**. Give your application a **Name** (e.g. "Dub") and click **Create**.
 
-<img src="https://assets.dub.co/help/azure-create-own.png" alt="Create your own application option on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-create-own.png"
+  alt="Create your own application option on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 ## Step 2: Configure SAML Application
 
 Under the **Manage** section in the left sidebar, select **Single sign-on**. Then, click on **SAML**.
 
-<img src="https://assets.dub.co/help/azure-saml.png" alt="SAML option on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-saml.png"
+  alt="SAML option on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Under the **Basic SAML Configuration** section, click on **Edit**.
 
-<img src="https://assets.dub.co/help/azure-saml-edit.png" alt="Edit button on the SAML Settings page on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-saml-edit.png"
+  alt="Edit button on the SAML Settings page on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 This will open up a sheet overlay. Under **Basic SAML Configuration**, enter the following values:
 
@@ -51,28 +75,44 @@ https://saml.dub.co
 https://api.dub.co/auth/saml/callback
 ```
 
-<img src="https://assets.dub.co/help/azure-basic-saml.png" alt="Basic SAML Configuration section on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-basic-saml.png"
+  alt="Basic SAML Configuration section on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Click **Save** in the menu bar to save your changes.
 
-<img src="https://assets.dub.co/help/azure-save-saml.png" alt="Basic SAML Configuration section on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-save-saml.png"
+  alt="Basic SAML Configuration section on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 ## Step 3: Attribute Mapping
 
 Click **Edit** on the **Attributes & Claims** section.
 
-<img src="https://assets.dub.co/help/azure-attributes.png" alt="Attributes & Claims section on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-attributes.png"
+  alt="Attributes & Claims section on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Under **Additional claims**, make sure the following entries are present:
 
-| Name                                                               | Value                  |
-| ------------------------------------------------------------------ | ---------------------- |
+| Name                                                                                                                                     | Value                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
 | [http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress) | user.mail              |
-| [http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname)    | user.givenname         |
-| [http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name)         | user.userprincipalname |
-| [http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname)      | user.surname           |
+| [http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname)       | user.givenname         |
+| [http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name)                 | user.userprincipalname |
+| [http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname)           | user.surname           |
 
-<img src="https://assets.dub.co/help/azure-attributes-claims.png" alt="Additional claims section on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-attributes-claims.png"
+  alt="Additional claims section on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Once that's done, click on the `X` button in the top right corner to go back to the main settings page (or click the back button in your browser).
 
@@ -80,13 +120,21 @@ Once that's done, click on the `X` button in the top right corner to go back to 
 
 Scroll down to the 3rd section on the page, **SAML Certificates**. Copy the **App Federation Metadata Url** value and return to the Dub dashboard.
 
-<img src="https://assets.dub.co/help/azure-metadata-url.png" alt="Metadata URL on the Azure Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-metadata-url.png"
+  alt="Metadata URL on the Azure Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 ## Step 5: Configure SAML SSO on Dub
 
 In your workspace settings, click on **Security** in the **Workspace** group.
 
-<img src="https://assets.dub.co/cms/saml-directory-sync-2.png" alt="Directory Sync section on the Dub Dashboard" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/cms/saml-directory-sync-2.png"
+  alt="Directory Sync section on the Dub Dashboard"
+  className="rounded-lg border border-gray-100"
+/>
 
 Under the **SAML Single Sign-On** section, click on **Configure**. This will open up the SAML SSO modal:
 
@@ -94,7 +142,11 @@ Under the **SAML Single Sign-On** section, click on **Configure**. This will ope
 2. Enter the **App Federation Metadata Url** value that you copied from Step 4.
 3. Click **Save changes**.
 
-<img src="https://assets.dub.co/cms/saml-entra.png" alt="SAML SSO Modal" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/cms/saml-entra.png"
+  alt="SAML SSO Modal"
+  className="rounded-lg border border-gray-100"
+/>
 
 ## Step 6: Assign Users
 
@@ -110,17 +162,29 @@ Once you've configured SAML SSO, you can start assigning users & groups to your 
 
 From your application, click the **Users and groups** from the left navigation menu and click **Add user/group**.
 
-<img src="https://assets.dub.co/help/azure-scim-add-users.png" alt="Adding users in Azure AD" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-scim-add-users.png"
+  alt="Adding users in Azure AD"
+  className="rounded-lg border border-gray-100"
+/>
 
 Click on **None Selected** under **Users**.
 
 From the right side of the screen, select the users you want to assign to the app and click the **Select** button. Thenm click **Assign** to those users to your app.
 
-<img src="https://assets.dub.co/help/azure-scim-assign-user.png" alt="Assigning users in Azure AD" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/azure-scim-assign-user.png"
+  alt="Assigning users in Azure AD"
+  className="rounded-lg border border-gray-100"
+/>
 
 Your assigned users should now receive an invitation email to join your Dub workspace.
 
-<img src="https://assets.dub.co/help/saml-invite.png" alt="SAML invite email" className="rounded-lg border border-gray-100" />
+<img
+  src="https://assets.dub.co/help/saml-invite.png"
+  alt="SAML invite email"
+  className="rounded-lg border border-gray-100"
+/>
 
 <Warning>
   Azure AD SCIM provisioning can take [anywhere between 20-40 minutes to

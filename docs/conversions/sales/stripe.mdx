@@ -117,7 +117,8 @@ Depending on your setup, there are a few ways you can track sales with the Dub S
 </Tip>
 
 <Note>
-  When using Stripe Payment Links, lead and sale events are tracked but lead webhooks and [lead
+  When using Stripe Payment Links, lead and sale events are tracked but lead
+  webhooks and [lead
   rewards](https://dub.co/help/article/partner-rewards#configuring-reward-types)
   will not be generated.
 </Note>
@@ -133,7 +134,7 @@ Then, when a user clicks on the shortened link, Dub will automatically append th
   />
 </Frame>
 
-Finally, when the user completes the checkout flow, Dub will automatically [track the sale event](/docs/api-reference/conversions/track-sale) and [update the customer's `customerExternalId`](/docs/api-reference/customers/update) with their Stripe customer ID for future reference.
+Finally, when the user completes the checkout flow, Dub will automatically [track the sale event](/docs/api-reference/analytics/track-sale) and [update the customer's `customerExternalId`](/docs/api-reference/customers/update) with their Stripe customer ID for future reference.
 
 Alternatively, if you have a marketing site that you're redirecting your users to first, you can do this instead:
 
@@ -400,13 +401,11 @@ await stripe.customers.update(user.id, {
 
 This way, when the customer makes a purchase, Dub will automatically associate the purchase details (invoice amount, currency, etc.) with the original click event.
 
-
 ## Tracking free trials
 
 Dub supports tracking [subscription free trials](https://docs.stripe.com/billing/subscriptions/trials) as lead events on Dub. This is useful for products with free trials since you might want to track trial activations as part of your attribution flow.
 
 To enable free trial tracking, go to your Stripe integration settings and enable the **Track Free Trials** option:
-
 
 <Frame>
   <img
@@ -415,14 +414,12 @@ To enable free trial tracking, go to your Stripe integration settings and enable
   />
 </Frame>
 
-Optionally, you can also configure the integration to track the [provisioned quantity](https://docs.stripe.com/billing/subscriptions/quantities) in the subscription as separate lead events. 
+Optionally, you can also configure the integration to track the [provisioned quantity](https://docs.stripe.com/billing/subscriptions/quantities) in the subscription as separate lead events.
 
 This is useful if you have a [lead-based reward](https://dub.co/help/article/partner-rewards#configuring-reward-types) for your [partner program](https://dub.co/partners) and want to reward partners for each unit of the subscription that their customers purchase (e.g. $50 per lead/provisioned seat).
 
 <Tip>
 To differentiate between [manually tracked lead events](/docs/conversions/leads/introduction) and free trial lead events for lead reward types, use the `Customer` `Source` [reward condition](https://dub.co/help/article/partner-rewards#adding-reward-conditions) to filter for `free trial` lead events:
-
-
 
 <Frame>
   <img
