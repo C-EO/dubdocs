@@ -236,33 +236,19 @@
             "group": "MANAGING YOUR LINKS",
             "pages": [
               {
-                "group": "Link management",
+                "group": "Links",
                 "pages": [
                   "help/article/how-to-create-link",
-                  "help/article/how-to-import-csv",
-                  "help/article/dub-links-not-working",
-                  "help/article/custom-qr-codes",
-                  "help/article/device-targeting",
                   "help/article/dub-link-builder",
-                  "help/article/geo-targeting",
-                  "help/article/how-noindex-works",
-                  "help/article/how-to-check-link-destination",
-                  "help/article/how-to-export-links",
-                  "help/article/link-cloaking",
-                  "help/article/link-comments",
-                  "help/article/password-protected-links",
-                  "help/article/how-to-use-tags",
-                  "help/article/bulk-link-actions",
-                  "help/article/how-to-create-utm-templates",
-                  "help/article/utm-builder",
-                  "help/article/link-expiration",
-                  "help/article/link-double-redirects",
-                  "help/article/parameter-passing",
                   "help/article/custom-link-previews",
+                  "help/article/utm-builder",
+                  "help/article/how-to-create-utm-templates",
+                  "help/article/bulk-link-actions",
+                  "help/article/custom-qr-codes",
+                  "help/article/how-to-use-tags",
                   "help/article/link-folders",
-                  "help/article/how-to-transfer-links",
-                  "help/article/ab-testing",
-                  "help/article/folders-rbac"
+                  "help/article/folders-rbac",
+                  "help/article/link-comments"
                 ]
               },
               {
@@ -284,7 +270,7 @@
                 ]
               },
               {
-                "group": "Configuring custom domains",
+                "group": "Custom domains",
                 "pages": [
                   "help/article/how-to-add-custom-domain",
                   "help/article/choosing-a-custom-domain",
@@ -302,11 +288,30 @@
                 ]
               },
               {
+                "group": "Advanced link features",
+                "pages": [
+                  "help/article/device-targeting",
+                  "help/article/geo-targeting",
+                  "help/article/link-cloaking",
+                  "help/article/ab-testing",
+                  "help/article/password-protected-links",
+                  "help/article/link-expiration",
+                  "help/article/parameter-passing",
+                  "help/article/how-to-transfer-links",
+                  "help/article/how-to-export-links",
+                  "help/article/how-noindex-works",
+                  "help/article/how-to-check-link-destination",
+                  "help/article/link-double-redirects",
+                  "help/article/dub-links-not-working"
+                ]
+              },
+              {
                 "group": "Migration guides",
                 "pages": [
                   "help/article/migrating-from-bitly",
                   "help/article/migrating-from-rebrandly",
-                  "help/article/migrating-from-short"
+                  "help/article/migrating-from-short",
+                  "help/article/how-to-import-csv"
                 ]
               }
             ]
