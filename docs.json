@@ -360,13 +360,13 @@
         ]
       },
       {
-        "tab": "APIs and SDKs",
+        "tab": "API Reference",
         "icon": "code",
         "groups": [
           {
             "group": " ",
             "pages": [
-              "docs/api-reference",
+              "docs/api-reference/introduction",
               "docs/api-reference/authentication",
               "docs/api-reference/rate-limits"
             ]
@@ -390,7 +390,7 @@
                 "pages": [
                   "docs/sdks/client-side/introduction",
                   {
-                    "group": "Installation Guides",
+                    "group": "Installation guides",
                     "pages": [
                       "docs/sdks/client-side/installation-guides/react",
                       "docs/sdks/client-side/installation-guides/google-tag-manager",
@@ -571,10 +571,6 @@
     {
       "source": "/docs/introduction",
       "destination": "/docs"
-    },
-    {
-      "source": "/docs/api-reference/introduction",
-      "destination": "/docs/api-reference"
     },
     {
       "source": "/docs/sdks",
