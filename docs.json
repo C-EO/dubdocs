@@ -163,7 +163,7 @@
                   "help/article/inviting-partners",
                   "help/article/program-landing-page",
                   "help/article/program-application-form",
-                  "help/article/reviewing-applications",
+                  "help/article/program-applications",
                   "docs/partners/embedded-referrals"
                 ]
               },
@@ -233,7 +233,7 @@
             ]
           },
           {
-            "group": "DUB LINKS",
+            "group": "MANAGING YOUR LINKS",
             "pages": [
               {
                 "group": "Link management",
@@ -290,12 +290,12 @@
                   "help/article/choosing-a-custom-domain",
                   "help/article/how-to-redirect-root-domain",
                   "help/article/free-dot-link-domain",
-                  "help/article/how-to-set-primary-domain",
+                  "help/article/how-to-use-dub-with-subpath",
                   "help/article/using-cloudflare-domains",
                   "help/article/troubleshooting-domains",
                   "help/article/default-dub-domains",
+                  "help/article/how-to-set-primary-domain",
                   "help/article/archiving-domains",
-                  "help/article/how-to-use-dub-with-subpath",
                   "help/article/setting-not-found-url",
                   "help/article/how-to-transfer-domains",
                   "help/article/using-proxies-on-custom-domains"
@@ -312,26 +312,31 @@
             ]
           },
           {
-            "group": "WORKSPACE GUIDES",
+            "group": "MANAGING YOUR WORKSPACE",
             "pages": [
+              "help/article/what-is-a-workspace",
               {
-                "group": "Workspace management",
+                "group": "Managing workspace members",
                 "pages": [
-                  "help/article/what-is-a-workspace",
                   "help/article/how-to-invite-teammates",
-                  "help/article/how-to-change-default-workspace",
-                  "help/article/how-to-download-invoice",
-                  "help/article/how-to-change-billing-information",
-                  "help/article/how-to-cancel-subscription",
                   "help/article/workspace-roles",
+                  "help/article/how-to-change-default-workspace"
+                ]
+              },
+              {
+                "group": "Billing and account management",
+                "pages": [
+                  "help/article/how-to-change-billing-information",
+                  "help/article/how-to-download-invoice",
+                  "help/article/how-to-cancel-subscription",
                   "help/article/how-to-delete-account"
                 ]
               },
               {
                 "group": "SAML/SSO",
                 "pages": [
-                  "help/article/okta-scim",
                   "help/article/okta-saml",
+                  "help/article/okta-scim",
                   "help/article/google-saml",
                   "help/article/azure-saml",
                   "help/article/azure-scim"
