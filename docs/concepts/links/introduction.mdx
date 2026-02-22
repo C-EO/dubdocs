@@ -9,7 +9,7 @@ Links are the bread and butter of [Dub](https://dub.co).
 Everything on Dub starts with a link. Whether you're creating:
 
 - a handful of links for your marketing campaign
-- hundreds of links for your [affiliate program](/docs/partners/quickstart)
+- hundreds of links for your [affiliate program](https://dub.co/partners)
 - thousands of links, [programmatically](/docs/api-reference/links/bulk-create), for your SMS campaign
 
 In this guide, we'll cover the link model, how to create links, and more.
@@ -18,13 +18,13 @@ In this guide, we'll cover the link model, how to create links, and more.
 
 The link model consists of the following properties:
 
-| Property    | Description                                               | Example                         |
-| ----------- | :-------------------------------------------------------- | :------------------------------ |
-| `id`        | The unique identifier of the link (prefixed with `link_`) | `link_eBKA4MT44XnI17hYLchkjUOd` |
-| `url`       | The destination URL of the link                           | `https://dub.co/home`           |
-| `shortLink` | The shortened version of the link (including https)       | `https://dub.link/claim`        |
-| `domain`    | The domain of the link                                    | `dub.link`                      |
-| `key`       | The short link slug                                       | `claim`                         |
+| Property    | Description                                               | Example                          |
+| ----------- | :-------------------------------------------------------- | :------------------------------- |
+| `id`        | The unique identifier of the link (prefixed with `link_`) | `link_1KJ1H3PZGE081A22TC6PTQYJP` |
+| `url`       | The destination URL of the link                           | `https://dub.co/home`            |
+| `shortLink` | The shortened version of the link (including https)       | `https://dub.link/claim`         |
+| `domain`    | The domain of the link                                    | `dub.link`                       |
+| `key`       | The short link slug                                       | `claim`                          |
 
 For more advanced features like [custom link previews](/help/article/custom-link-previews), [conversion tracking](/docs/conversions/quickstart), and more, see the full list of properties [here](/docs/api-reference/links/create).
 
@@ -155,7 +155,7 @@ export const dub = new Dub({
   token: process.env.DUB_API_KEY,
 });
 
-const link = await dub.links.update("link_eBKA4MT44XnI17hYLchkjUOd", {
+const link = await dub.links.update("link_1KJ1H3PZGE081A22TC6PTQYJP", {
   url: "https://www.google.uk", // new URL
 });
 ```
@@ -178,7 +178,7 @@ func main() {
     dubgo.WithSecurity(os.Getenv("DUB_API_KEY")),
   )
 
-  res, err := s.Links.Update(ctx, "link_eBKA4MT44XnI17hYLchkjUOd", &operations.UpdateLinkRequestBody{
+  res, err := s.Links.Update(ctx, "link_1KJ1H3PZGE081A22TC6PTQYJP", &operations.UpdateLinkRequestBody{
     URL: "https://www.google.uk", // new URL
   })
 
@@ -201,7 +201,7 @@ d = dub.Dub(
   token=os.environ['DUB_API_KEY'],
 )
 
-res = dub.links.update(link_id="link_eBKA4MT44XnI17hYLchkjUOd", request_body={
+res = dub.links.update(link_id="link_1KJ1H3PZGE081A22TC6PTQYJP", request_body={
   "url": "https://www.google.uk", // new URL
 })
 ```
@@ -216,7 +216,7 @@ s.config_security(
   )
 )
 
-res = s.links.update(link_id="link_eBKA4MT44XnI17hYLchkjUOd", request_body={
+res = s.links.update(link_id="link_1KJ1H3PZGE081A22TC6PTQYJP", request_body={
   "url": "https://www.google.uk", // new URL
 })
 ```
@@ -236,14 +236,14 @@ $requestBody = new Operations\UpdateLinkRequestBody(
 );
 
 $response = $sdk->links->update(
-  linkId: 'link_eBKA4MT44XnI17hYLchkjUOd',
+  linkId: 'link_1KJ1H3PZGE081A22TC6PTQYJP',
   requestBody: $requestBody
 );
 ```
 
 ```bash cURL
 curl --request PATCH \
-  --url https://api.dub.co/links/link_eBKA4MT44XnI17hYLchkjUOd \
+  --url https://api.dub.co/links/link_1KJ1H3PZGE081A22TC6PTQYJP \
   --header 'Authorization: Bearer <token>' \
   --header 'Content-Type: application/json' \
   --data '{"url": "https://www.google.uk"}'

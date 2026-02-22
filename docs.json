@@ -154,6 +154,7 @@
                   "help/article/setting-up-your-program",
                   "help/article/partner-groups",
                   "help/article/partner-rewards",
+                  "help/article/dual-sided-incentives",
                   "help/article/program-resources"
                 ]
               },
@@ -429,7 +430,7 @@
             ]
           },
           {
-            "group": "REST API",
+            "group": "DUB API",
             "pages": [
               {
                 "group": "Partners",
@@ -479,14 +480,10 @@
               {
                 "group": "Payouts",
                 "pages": ["docs/api-reference/payouts/list"]
-              }
-            ]
-          },
-          {
-            "group": "LINKS API",
-            "pages": [
+              },
               {
                 "group": "Links",
+                "tag": "Dub Links",
                 "pages": [
                   "docs/api-reference/links/create",
                   "docs/api-reference/links/update",
@@ -502,6 +499,7 @@
               },
               {
                 "group": "Domains",
+                "tag": "Dub Links",
                 "pages": [
                   "docs/api-reference/domains/create",
                   "docs/api-reference/domains/update",
@@ -512,6 +510,7 @@
               },
               {
                 "group": "Folders",
+                "tag": "Dub Links",
                 "pages": [
                   "docs/api-reference/folders/create",
                   "docs/api-reference/folders/update",
@@ -521,6 +520,7 @@
               },
               {
                 "group": "Tags",
+                "tag": "Dub Links",
                 "pages": [
                   "docs/api-reference/tags/create",
                   "docs/api-reference/tags/list",
