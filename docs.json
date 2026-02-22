@@ -142,8 +142,10 @@
                   "help/article/setting-up-your-program",
                   "help/article/partner-groups",
                   "help/article/partner-rewards",
+                  "help/article/managing-program-partners",
                   "help/article/dual-sided-incentives",
-                  "help/article/program-resources"
+                  "help/article/program-resources",
+                  "help/article/partner-link-settings"
                 ]
               },
               {
@@ -224,6 +226,7 @@
           {
             "group": "MANAGING YOUR LINKS",
             "pages": [
+              "help/article/what-is-dub",
               {
                 "group": "Links",
                 "pages": [
@@ -263,7 +266,8 @@
                   },
                   "help/article/share-analytics",
                   "help/article/dub-analytics-limits",
-                  "help/article/how-to-export-analytics"
+                  "help/article/how-to-export-analytics",
+                  "help/article/incorrect-analytics-geolocation-data"
                 ]
               },
               {
