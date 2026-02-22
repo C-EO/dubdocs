@@ -261,17 +261,20 @@
                 "pages": [
                   "help/article/dub-analytics",
                   "help/article/dub-conversions",
-                  "help/article/filter-analytics-by-trigger",
-                  "help/article/how-to-export-analytics",
-                  "help/article/incorrect-analytics-geolocation-data",
                   "help/article/real-time-events-stream",
-                  "help/article/tracking-internal-traffic",
-                  "help/article/filter-analytics-by-tags",
-                  "help/article/filter-analytics-by-utms",
-                  "help/article/dub-analytics-limits",
-                  "help/article/filter-analytics-by-folders",
+                  "help/article/customer-insights",
+                  {
+                    "group": "Filtering analytics",
+                    "pages": [
+                      "help/article/filter-analytics-by-folders",
+                      "help/article/filter-analytics-by-tags",
+                      "help/article/filter-analytics-by-utms",
+                      "help/article/filter-analytics-by-trigger"
+                    ]
+                  },
                   "help/article/share-analytics",
-                  "help/article/customer-insights"
+                  "help/article/dub-analytics-limits",
+                  "help/article/how-to-export-analytics"
                 ]
               },
               {
