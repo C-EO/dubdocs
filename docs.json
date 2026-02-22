@@ -930,6 +930,10 @@
     {
       "source": "/docs/api-reference/endpoint/update-a-tag",
       "destination": "/docs/api-reference/tags/update"
+    },
+    {
+      "source": "/help/article/what-is-dub",
+      "destination": "/help/article/dub-links"
     }
   ]
 }
