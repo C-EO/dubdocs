@@ -111,24 +111,12 @@
             "group": "DUB PARTNERS",
             "pages": [
               "docs/partners/quickstart",
-              "docs/partners/embedded-referrals",
-              "docs/partners/link-based-discounts"
+              "docs/partners/embedded-referrals"
             ]
           },
           {
             "group": "INTEGRATIONS",
-            "pages": [
-              "docs/integrations",
-              "docs/integrations/quickstart",
-              {
-                "group": "Webhooks",
-                "pages": [
-                  "docs/concepts/webhooks/introduction",
-                  "docs/concepts/webhooks/event-types",
-                  "docs/concepts/webhooks/verify-webhook-requests"
-                ]
-              }
-            ]
+            "pages": ["docs/integrations", "docs/integrations/quickstart"]
           },
           {
             "group": "OPEN SOURCE",
@@ -363,66 +351,172 @@
       {
         "tab": "API Reference",
         "icon": "code",
-        "groups": [
+        "dropdowns": [
           {
-            "group": " ",
-            "pages": [
-              "docs/api-reference/introduction",
-              "docs/api-reference/authentication",
-              "docs/api-reference/rate-limits"
-            ]
-          },
-          {
-            "group": "SDKs",
-            "pages": [
-              "docs/sdks/overview",
+            "dropdown": "Dub API",
+            "icon": "code",
+            "groups": [
               {
-                "group": "Server-side SDKs",
+                "group": "DUB API",
                 "pages": [
-                  "docs/sdks/typescript",
-                  "docs/sdks/python",
-                  "docs/sdks/ruby",
-                  "docs/sdks/php",
-                  "docs/sdks/go"
+                  "docs/api-reference/introduction",
+                  "docs/api-reference/authentication",
+                  "docs/api-reference/rate-limits"
                 ]
               },
               {
-                "group": "Client-side SDK (Web)",
+                "group": "SDKs",
                 "pages": [
-                  "docs/sdks/client-side/introduction",
+                  "docs/sdks/overview",
                   {
-                    "group": "Installation guides",
+                    "group": "Server-side SDKs",
                     "pages": [
-                      "docs/sdks/client-side/installation-guides/react",
-                      "docs/sdks/client-side/installation-guides/google-tag-manager",
-                      "docs/sdks/client-side/installation-guides/manual",
-                      "docs/sdks/client-side/installation-guides/webflow",
-                      "docs/sdks/client-side/installation-guides/wordpress",
-                      "docs/sdks/client-side/installation-guides/framer",
-                      "docs/sdks/client-side/installation-guides/shopify"
+                      "docs/sdks/typescript",
+                      "docs/sdks/python",
+                      "docs/sdks/ruby",
+                      "docs/sdks/php",
+                      "docs/sdks/go"
                     ]
                   },
                   {
-                    "group": "Features",
+                    "group": "Client-side SDK (Web)",
                     "pages": [
-                      "docs/sdks/client-side/features/click-tracking",
-                      "docs/sdks/client-side/features/conversion-tracking",
-                      "docs/sdks/client-side/features/cross-domain-tracking",
-                      "docs/sdks/client-side/features/reverse-proxy-support"
+                      "docs/sdks/client-side/introduction",
+                      {
+                        "group": "Installation guides",
+                        "pages": [
+                          "docs/sdks/client-side/installation-guides/react",
+                          "docs/sdks/client-side/installation-guides/google-tag-manager",
+                          "docs/sdks/client-side/installation-guides/manual",
+                          "docs/sdks/client-side/installation-guides/webflow",
+                          "docs/sdks/client-side/installation-guides/wordpress",
+                          "docs/sdks/client-side/installation-guides/framer",
+                          "docs/sdks/client-side/installation-guides/shopify"
+                        ]
+                      },
+                      {
+                        "group": "Features",
+                        "pages": [
+                          "docs/sdks/client-side/features/click-tracking",
+                          "docs/sdks/client-side/features/conversion-tracking",
+                          "docs/sdks/client-side/features/cross-domain-tracking",
+                          "docs/sdks/client-side/features/reverse-proxy-support"
+                        ]
+                      },
+                      "docs/sdks/client-side/variants"
                     ]
                   },
-                  "docs/sdks/client-side/variants"
+                  {
+                    "group": "Client-side SDK (Mobile)",
+                    "pages": [
+                      "docs/sdks/client-side-mobile/introduction",
+                      {
+                        "group": "Installation Guides",
+                        "pages": [
+                          "docs/sdks/client-side-mobile/installation-guides/swift",
+                          "docs/sdks/client-side-mobile/installation-guides/react-native"
+                        ]
+                      }
+                    ]
+                  }
                 ]
               },
               {
-                "group": "Client-side SDK (Mobile)",
+                "group": "REST API",
                 "pages": [
-                  "docs/sdks/client-side-mobile/introduction",
                   {
-                    "group": "Installation Guides",
+                    "group": "Partners",
                     "pages": [
-                      "docs/sdks/client-side-mobile/installation-guides/swift",
-                      "docs/sdks/client-side-mobile/installation-guides/react-native"
+                      "docs/api-reference/partners/create",
+                      "docs/api-reference/partners/list",
+                      "docs/api-reference/partners/ban",
+                      "docs/api-reference/partners/deactivate",
+                      "docs/api-reference/partners/create-link",
+                      "docs/api-reference/partners/upsert-link",
+                      "docs/api-reference/partners/retrieve-links"
+                    ]
+                  },
+                  {
+                    "group": "Analytics",
+                    "pages": [
+                      "docs/api-reference/analytics/retrieve",
+                      "docs/api-reference/events/list",
+                      "docs/api-reference/track/lead",
+                      "docs/api-reference/track/sale"
+                    ]
+                  },
+                  {
+                    "group": "Customers",
+                    "pages": [
+                      "docs/api-reference/customers/retrieve",
+                      "docs/api-reference/customers/list",
+                      "docs/api-reference/customers/update",
+                      "docs/api-reference/customers/delete"
+                    ]
+                  },
+                  {
+                    "group": "Bounties",
+                    "pages": [
+                      "docs/api-reference/bounties/list",
+                      "docs/api-reference/bounties/approve",
+                      "docs/api-reference/bounties/reject"
+                    ]
+                  },
+                  {
+                    "group": "Commissions",
+                    "pages": [
+                      "docs/api-reference/commissions/list",
+                      "docs/api-reference/commissions/update"
+                    ]
+                  },
+                  {
+                    "group": "Payouts",
+                    "pages": ["docs/api-reference/payouts/list"]
+                  },
+                  {
+                    "group": "Links",
+                    "tag": "Dub Links",
+                    "pages": [
+                      "docs/api-reference/links/create",
+                      "docs/api-reference/links/update",
+                      "docs/api-reference/links/upsert",
+                      "docs/api-reference/links/delete",
+                      "docs/api-reference/links/retrieve",
+                      "docs/api-reference/links/list",
+                      "docs/api-reference/links/count",
+                      "docs/api-reference/links/bulk-create",
+                      "docs/api-reference/links/bulk-update",
+                      "docs/api-reference/links/bulk-delete"
+                    ]
+                  },
+                  {
+                    "group": "Domains",
+                    "tag": "Dub Links",
+                    "pages": [
+                      "docs/api-reference/domains/create",
+                      "docs/api-reference/domains/update",
+                      "docs/api-reference/domains/delete",
+                      "docs/api-reference/domains/register",
+                      "docs/api-reference/domains/check-availability"
+                    ]
+                  },
+                  {
+                    "group": "Folders",
+                    "tag": "Dub Links",
+                    "pages": [
+                      "docs/api-reference/folders/create",
+                      "docs/api-reference/folders/update",
+                      "docs/api-reference/folders/delete",
+                      "docs/api-reference/folders/list"
+                    ]
+                  },
+                  {
+                    "group": "Tags",
+                    "tag": "Dub Links",
+                    "pages": [
+                      "docs/api-reference/tags/create",
+                      "docs/api-reference/tags/list",
+                      "docs/api-reference/tags/update"
                     ]
                   }
                 ]
@@ -430,101 +524,15 @@
             ]
           },
           {
-            "group": "DUB API",
-            "pages": [
+            "dropdown": "Dub Webhooks",
+            "icon": "webhook",
+            "groups": [
               {
-                "group": "Partners",
+                "group": "DUB WEBHOOKS",
                 "pages": [
-                  "docs/api-reference/partners/create",
-                  "docs/api-reference/partners/list",
-                  "docs/api-reference/partners/ban",
-                  "docs/api-reference/partners/deactivate",
-                  "docs/api-reference/partners/create-link",
-                  "docs/api-reference/partners/upsert-link",
-                  "docs/api-reference/partners/retrieve-links"
-                ]
-              },
-              {
-                "group": "Analytics",
-                "pages": [
-                  "docs/api-reference/analytics/retrieve",
-                  "docs/api-reference/events/list",
-                  "docs/api-reference/track/lead",
-                  "docs/api-reference/track/sale"
-                ]
-              },
-              {
-                "group": "Customers",
-                "pages": [
-                  "docs/api-reference/customers/retrieve",
-                  "docs/api-reference/customers/list",
-                  "docs/api-reference/customers/update",
-                  "docs/api-reference/customers/delete"
-                ]
-              },
-              {
-                "group": "Bounties",
-                "pages": [
-                  "docs/api-reference/bounties/list",
-                  "docs/api-reference/bounties/approve",
-                  "docs/api-reference/bounties/reject"
-                ]
-              },
-              {
-                "group": "Commissions",
-                "pages": [
-                  "docs/api-reference/commissions/list",
-                  "docs/api-reference/commissions/update"
-                ]
-              },
-              {
-                "group": "Payouts",
-                "pages": ["docs/api-reference/payouts/list"]
-              },
-              {
-                "group": "Links",
-                "tag": "Dub Links",
-                "pages": [
-                  "docs/api-reference/links/create",
-                  "docs/api-reference/links/update",
-                  "docs/api-reference/links/upsert",
-                  "docs/api-reference/links/delete",
-                  "docs/api-reference/links/retrieve",
-                  "docs/api-reference/links/list",
-                  "docs/api-reference/links/count",
-                  "docs/api-reference/links/bulk-create",
-                  "docs/api-reference/links/bulk-update",
-                  "docs/api-reference/links/bulk-delete"
-                ]
-              },
-              {
-                "group": "Domains",
-                "tag": "Dub Links",
-                "pages": [
-                  "docs/api-reference/domains/create",
-                  "docs/api-reference/domains/update",
-                  "docs/api-reference/domains/delete",
-                  "docs/api-reference/domains/register",
-                  "docs/api-reference/domains/check-availability"
-                ]
-              },
-              {
-                "group": "Folders",
-                "tag": "Dub Links",
-                "pages": [
-                  "docs/api-reference/folders/create",
-                  "docs/api-reference/folders/update",
-                  "docs/api-reference/folders/delete",
-                  "docs/api-reference/folders/list"
-                ]
-              },
-              {
-                "group": "Tags",
-                "tag": "Dub Links",
-                "pages": [
-                  "docs/api-reference/tags/create",
-                  "docs/api-reference/tags/list",
-                  "docs/api-reference/tags/update"
+                  "docs/webhooks/introduction",
+                  "docs/webhooks/event-types",
+                  "docs/webhooks/verify-webhook-requests"
                 ]
               }
             ]
@@ -598,7 +606,7 @@
     },
     {
       "source": "/docs/integrations/webhooks",
-      "destination": "/docs/concepts/webhooks/introduction"
+      "destination": "/docs/webhooks/introduction"
     },
     {
       "source": "/docs/integrations/zapier",
@@ -641,6 +649,18 @@
       "destination": "/docs/concepts/analytics/introduction"
     },
     {
+      "source": "/docs/concepts/webhooks/introduction",
+      "destination": "/docs/webhooks/introduction"
+    },
+    {
+      "source": "/docs/concepts/webhooks/event-types",
+      "destination": "/docs/webhooks/event-types"
+    },
+    {
+      "source": "/docs/concepts/webhooks/verify-webhook-requests",
+      "destination": "/docs/webhooks/verify-webhook-requests"
+    },
+    {
       "source": "/docs/conversions/clicks/introduction",
       "destination": "/docs/sdks/client-side/features/client-side-click-tracking"
     },
@@ -649,11 +669,15 @@
       "destination": "/docs/conversions/leads/supabase"
     },
     {
-      "source": "docs/api-reference/tokens",
+      "source": "/docs/partners/link-based-discounts",
+      "destination": "/help/article/dual-sided-incentives"
+    },
+    {
+      "source": "/docs/api-reference/tokens",
       "destination": "/docs/api-reference/authentication"
     },
     {
-      "source": "docs/api-reference/publishable-keys",
+      "source": "/docs/api-reference/publishable-keys",
       "destination": "/docs/api-reference/authentication#publishable-keys"
     },
     {
