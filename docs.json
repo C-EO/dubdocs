@@ -296,7 +296,7 @@
                 ]
               },
               {
-                "group": "More link guides",
+                "group": "Additional guides",
                 "pages": [
                   "help/article/dub-link-builder",
                   "help/article/parameter-passing",
@@ -324,20 +324,18 @@
             "pages": [
               "help/article/what-is-a-workspace",
               {
-                "group": "Managing workspace members",
+                "group": "Workspace members",
                 "pages": [
                   "help/article/how-to-invite-teammates",
-                  "help/article/workspace-roles",
-                  "help/article/how-to-change-default-workspace"
+                  "help/article/workspace-roles"
                 ]
               },
               {
-                "group": "Billing and account management",
+                "group": "Billing & subscription",
                 "pages": [
                   "help/article/how-to-change-billing-information",
                   "help/article/how-to-download-invoice",
-                  "help/article/how-to-cancel-subscription",
-                  "help/article/how-to-delete-account"
+                  "help/article/how-to-cancel-subscription"
                 ]
               },
               {
@@ -348,6 +346,13 @@
                   "help/article/google-saml",
                   "help/article/azure-saml",
                   "help/article/azure-scim"
+                ]
+              },
+              {
+                "group": "Additional guides",
+                "pages": [
+                  "help/article/how-to-change-default-workspace",
+                  "help/article/how-to-delete-account"
                 ]
               }
             ]
