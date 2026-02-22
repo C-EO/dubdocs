@@ -119,8 +119,8 @@ Depending on your setup, there are a few ways you can track sales with the Dub S
 <Note>
   When using Stripe Payment Links, lead and sale events are tracked but lead
   webhooks and [lead
-  rewards](https://dub.co/help/article/partner-rewards#configuring-reward-types)
-  will not be generated.
+  rewards](/help/article/partner-rewards#configuring-reward-types) will not be
+  generated.
 </Note>
 
 If you're using [Stripe Payment Links](https://docs.stripe.com/payment-links), simply add a `?dub_client_reference_id=1` query parameter to your Stripe Payment Link when shortening it on Dub.
@@ -343,8 +343,8 @@ const stripeSession = await stripe.checkout.sessions.create({
 
 <Note>
   When using Stripe Customers, lead and sale events are tracked but [lead
-  rewards](https://dub.co/help/article/partner-rewards#configuring-reward-types)
-  will not be generated.
+  rewards](/help/article/partner-rewards#configuring-reward-types) will not be
+  generated.
 </Note>
 
 Alternatively, if you don't use Stripe's [checkout session creation flow](#option-2%3A-using-stripe-checkout-recommended), you can also pass the user ID and the click event ID (`dub_id`) in the [Stripe customer creation flow](https://docs.stripe.com/api/customers/create).
@@ -416,10 +416,10 @@ To enable free trial tracking, go to your Stripe integration settings and enable
 
 Optionally, you can also configure the integration to track the [provisioned quantity](https://docs.stripe.com/billing/subscriptions/quantities) in the subscription as separate lead events.
 
-This is useful if you have a [lead-based reward](https://dub.co/help/article/partner-rewards#configuring-reward-types) for your [partner program](https://dub.co/partners) and want to reward partners for each unit of the subscription that their customers purchase (e.g. $50 per lead/provisioned seat).
+This is useful if you have a [lead-based reward](/help/article/partner-rewards#configuring-reward-types) for your [partner program](https://dub.co/partners) and want to reward partners for each unit of the subscription that their customers purchase (e.g. $50 per lead/provisioned seat).
 
 <Tip>
-To differentiate between [manually tracked lead events](/docs/conversions/leads/introduction) and free trial lead events for lead reward types, use the `Customer` `Source` [reward condition](https://dub.co/help/article/partner-rewards#adding-reward-conditions) to filter for `free trial` lead events:
+To differentiate between [manually tracked lead events](/docs/conversions/leads/introduction) and free trial lead events for lead reward types, use the `Customer` `Source` [reward condition](/help/article/partner-rewards#adding-reward-conditions) to filter for `free trial` lead events:
 
 <Frame>
   <img

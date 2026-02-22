@@ -27,7 +27,7 @@ Android provides the [Install Referrer API](https://developer.android.com/google
 Here is how it works in a nutshell:
 
 1. User taps a deep link on a device without your app installed
-2. Dub redirects the user to the App Store or Play Store by using [device targeting](https://dub.co/help/article/device-targeting)
+2. Dub redirects the user to the App Store or Play Store by using [device targeting](/help/article/device-targeting)
 3. User installs your app from the app store
 4. App reads the install referrer on first launch
 5. App extracts the deep link from the referrer URL and tracks the deep link open event using the [`/track/open` endpoint](/docs/api-reference/endpoint/track-open)
@@ -97,13 +97,13 @@ class InstallReferrerTracker {
     PlayInstallReferrer.getInstallReferrerInfo((installReferrerInfo, error) => {
       if (!error) {
         console.log(
-          "Install referrer = " + installReferrerInfo.installReferrer
+          "Install referrer = " + installReferrerInfo.installReferrer,
         );
 
         if (installReferrerInfo.installReferrer) {
           // Extract the deep link from the referrer URL
           const deepLink = this.extractDeepLinkFromReferrer(
-            installReferrerInfo.installReferrer
+            installReferrerInfo.installReferrer,
           );
           if (deepLink) {
             // Track the deep link open with the extracted URL
