@@ -161,9 +161,8 @@
               {
                 "group": "Sending payouts",
                 "pages": [
-                  "help/article/partner-payouts",
                   "help/article/how-to-set-up-bank-account",
-                  "docs/partners/external-payouts"
+                  "help/article/partner-payouts"
                 ]
               },
               {
