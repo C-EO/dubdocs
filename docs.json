@@ -426,7 +426,7 @@
                 ]
               },
               {
-                "group": "REST API",
+                "group": "DUB PARTNERS API",
                 "pages": [
                   {
                     "group": "Partners",
@@ -443,10 +443,10 @@
                   {
                     "group": "Analytics",
                     "pages": [
-                      "docs/api-reference/analytics/retrieve",
-                      "docs/api-reference/events/list",
                       "docs/api-reference/track/lead",
-                      "docs/api-reference/track/sale"
+                      "docs/api-reference/track/sale",
+                      "docs/api-reference/analytics/retrieve",
+                      "docs/api-reference/events/list"
                     ]
                   },
                   {
@@ -476,10 +476,14 @@
                   {
                     "group": "Payouts",
                     "pages": ["docs/api-reference/payouts/list"]
-                  },
+                  }
+                ]
+              },
+              {
+                "group": "DUB LINKS API",
+                "pages": [
                   {
                     "group": "Links",
-                    "tag": "Dub Links",
                     "pages": [
                       "docs/api-reference/links/create",
                       "docs/api-reference/links/update",
@@ -495,7 +499,6 @@
                   },
                   {
                     "group": "Domains",
-                    "tag": "Dub Links",
                     "pages": [
                       "docs/api-reference/domains/create",
                       "docs/api-reference/domains/update",
@@ -506,7 +509,6 @@
                   },
                   {
                     "group": "Folders",
-                    "tag": "Dub Links",
                     "pages": [
                       "docs/api-reference/folders/create",
                       "docs/api-reference/folders/update",
@@ -516,7 +518,6 @@
                   },
                   {
                     "group": "Tags",
-                    "tag": "Dub Links",
                     "pages": [
                       "docs/api-reference/tags/create",
                       "docs/api-reference/tags/list",
@@ -527,6 +528,22 @@
               }
             ]
           },
+          {
+            "dropdown": "Dub Partner API",
+            "icon": "chart-line",
+            "groups": [
+              {
+                "group": "DUB PARTNER API",
+                "pages": ["docs/partner-api-reference/introduction"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Webhooks",
+        "icon": "webhook",
+        "dropdowns": [
           {
             "dropdown": "Dub Webhooks",
             "icon": "webhook",
@@ -557,6 +574,16 @@
                   "docs/webhooks/events/link-deleted",
                   "docs/webhooks/events/link-clicked"
                 ]
+              }
+            ]
+          },
+          {
+            "dropdown": "Dub Postbacks",
+            "icon": "arrow-progress",
+            "groups": [
+              {
+                "group": "DUB POSTBACKS",
+                "pages": ["docs/postbacks/introduction"]
               }
             ]
           }
