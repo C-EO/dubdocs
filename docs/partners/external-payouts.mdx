@@ -113,11 +113,11 @@ You can set the tenant ID when:
 
 ### 2. Set up webhook receiver
 
-Create a webhook endpoint that listens for the `payout.confirmed` event. See our [webhook setup guide](/docs/concepts/webhooks/introduction) for detailed instructions.
+Create a webhook endpoint that listens for the `payout.confirmed` event. See our [webhook setup guide](/docs/webhooks/introduction) for detailed instructions.
 
 Your webhook endpoint should:
 
-1. Verify the [webhook signature](/docs/concepts/webhooks/verify-webhook-requests) to ensure it's from Dub
+1. Verify the [webhook signature](/docs/webhooks/verify-webhook-requests) to ensure it's from Dub
 2. Extract the payout and partner information from the payload
 3. Initiate the payout through your payment system
 4. Return a 2xx status code on success
@@ -284,7 +284,7 @@ Log all webhook events for debugging and reconciliation.
 
 ## Related resources
 
-- [Webhook setup guide](/docs/concepts/webhooks/introduction)
+- [Webhook setup guide](/docs/webhooks/introduction)
 - [Webhook event types](/docs/webhooks/event-types)
-- [Verifying webhook requests](/docs/concepts/webhooks/verify-webhook-requests)
+- [Verifying webhook requests](/docs/webhooks/verify-webhook-requests)
 - [Partners API reference](/docs/api-reference/partners/create)
