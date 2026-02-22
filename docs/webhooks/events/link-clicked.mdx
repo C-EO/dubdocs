@@ -1,0 +1,165 @@
+---
+title: link.clicked
+icon: link
+---
+
+export const ResponseBodyParameters = ({ type, children }) => (
+  <div>
+    <h2>Response Body Parameters</h2>
+    <p>
+      All webhook payloads follow a consistent top-level structure with
+      event-specific data nested within the <code>data</code> object.
+    </p>
+    <ParamField body="id" type="string">
+      The event ID.
+    </ParamField>
+    <ParamField body="event" type="string">
+      The event type that triggered the webhook (e.g., <code>{type}</code>).
+    </ParamField>
+    <ParamField body="createdAt" type="string">
+      ISO 8601 timestamp when the webhook event was created.
+    </ParamField>
+    <ParamField body="data" type="object">
+      Event-specific data containing detailed information about the event. The
+      data object for the <code>{type}</code> event contains the following
+      parameters:
+      <Expandable defaultOpen title="object parameters">
+        {children}
+      </Expandable>
+    </ParamField>
+  </div>
+);
+
+Event triggered when an end user clicks on a short link.
+
+<Tip>
+  Due to the high volume nature of these events, these events are scoped to a
+  specific link. This means that you need to specify the link when creating a webhook for this event.
+
+You can also include multiple links in the same `link.clicked` webhook – either via the dashboard or using the [`webhookIds` prop in the Links API](/docs/api-reference/links/create#body-webhook-ids-one-of-0).
+
+</Tip>
+
+<ResponseBodyParameters type="link.clicked">
+  <ParamField body="click" type="object">
+    Details about the click event.
+
+    <Expandable title="click object">
+      <ParamField body="id" type="string">
+        Unique identifier for the click.
+      </ParamField>
+      <ParamField body="timestamp" type="string">
+        ISO 8601 timestamp when the click occurred.
+      </ParamField>
+      <ParamField body="url" type="string">
+        The destination URL that was visited.
+      </ParamField>
+      <ParamField body="ip" type="string">
+        IP address of the visitor.
+      </ParamField>
+      <ParamField body="continent" type="string">
+        Continent code (e.g. <code>NA</code>).
+      </ParamField>
+      <ParamField body="country" type="string">
+        Country code (e.g. <code>US</code>).
+      </ParamField>
+      <ParamField body="city" type="string">
+        City name.
+      </ParamField>
+      <ParamField body="device" type="string">
+        Device type (e.g. <code>Desktop</code>, <code>Mobile</code>).
+      </ParamField>
+      <ParamField body="browser" type="string">
+        Browser name (e.g. <code>Chrome</code>).
+      </ParamField>
+      <ParamField body="os" type="string">
+        Operating system (e.g. <code>Mac OS</code>).
+      </ParamField>
+      <ParamField body="bot" type="boolean">
+        Whether the request was identified as a bot.
+      </ParamField>
+      <ParamField body="qr" type="boolean">
+        Whether the click came from a QR code scan.
+      </ParamField>
+      <ParamField body="referer" type="string">
+        Referrer URL or <code>(direct)</code>.
+      </ParamField>
+    </Expandable>
+
+  </ParamField>
+  <ParamField body="link" type="object">
+    The link resource that was clicked (full link object including stats such as <code>clicks</code>, <code>shortLink</code>, <code>url</code>, etc.).
+  </ParamField>
+</ResponseBodyParameters>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "evt_b9ywgxWqai2glUpCQjclB17kM",
+  "event": "link.clicked",
+  "createdAt": "2024-08-30T10:16:13.149Z",
+  "data": {
+    "click": {
+      "id": "d0UtZqE0BZuBPrJS",
+      "timestamp": "2024-08-30T10:16:12.124Z",
+      "url": "https://github.com/dubinc/dub",
+      "ip": "63.141.57.109",
+      "continent": "NA",
+      "country": "US",
+      "city": "San Francisco",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "os": "Mac OS",
+      "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+      "bot": false,
+      "qr": false,
+      "referer": "(direct)"
+    },
+    "link": {
+      "id": "cm0faqkyn0001txvfwjfeq7gl",
+      "domain": "dub.sh",
+      "key": "79ys3WA",
+      "externalId": null,
+      "url": "https://github.com/dubinc/dub",
+      "trackConversion": true,
+      "archived": false,
+      "expiresAt": null,
+      "expiredUrl": null,
+      "password": null,
+      "proxy": false,
+      "title": null,
+      "description": null,
+      "image": null,
+      "video": null,
+      "rewrite": false,
+      "doIndex": false,
+      "ios": null,
+      "android": null,
+      "geo": null,
+      "publicStats": false,
+      "comments": null,
+      "shortLink": "https://dub.sh/79ys3WA",
+      "qrCode": "https://api.dub.co/qr?url=https://dub.sh/79ys3WA?qr=1",
+      "utm_source": null,
+      "utm_medium": null,
+      "utm_campaign": null,
+      "utm_term": null,
+      "utm_content": null,
+      "userId": "cm022rkcw0000ikt14mscg9sg",
+      "workspaceId": "ws_cm022sis60003ikt1syy7kfhl",
+      "clicks": 11,
+      "lastClicked": "2024-08-30T07:45:09.000Z",
+      "leads": 6,
+      "sales": 10,
+      "saleAmount": 200000,
+      "createdAt": "2024-08-29T13:03:59.098Z",
+      "updatedAt": "2024-08-30T10:16:12.126Z",
+      "testCompletedAt": null,
+      "testStartedAt": null
+    }
+  }
+}
+```
+
+</ResponseExample>

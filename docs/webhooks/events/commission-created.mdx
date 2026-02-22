@@ -1,0 +1,169 @@
+---
+title: commission.created
+icon: money-bill
+---
+
+export const ResponseBodyParameters = ({ type, children }) => (
+  <div>
+    <h2>Response Body Parameters</h2>
+    <p>
+      All webhook payloads follow a consistent top-level structure with
+      event-specific data nested within the <code>data</code> object.
+    </p>
+    <ParamField body="id" type="string">
+      The event ID.
+    </ParamField>
+    <ParamField body="event" type="string">
+      The event type that triggered the webhook (e.g., <code>{type}</code>).
+    </ParamField>
+    <ParamField body="createdAt" type="string">
+      ISO 8601 timestamp when the webhook event was created.
+    </ParamField>
+    <ParamField body="data" type="object">
+      Event-specific data containing detailed information about the event. The
+      data object for the <code>{type}</code> event contains the following
+      parameters:
+      <Expandable defaultOpen title="object parameters">
+        {children}
+      </Expandable>
+    </ParamField>
+  </div>
+);
+
+Event triggered when a [new commission is created](/docs/api-reference/commissions/list).
+
+<Tip>
+  When enabled, this webhook is triggered when a commission is created either
+  from a tracked conversion or manually in the dashboard. 
+  
+Use the `userId` field to distinguish between manual commissions from automatic ones.
+
+</Tip>
+
+<ResponseBodyParameters type="commission.created">
+  <ParamField body="id" type="string">
+    Unique identifier for the commission.
+  </ParamField>
+  <ParamField body="type" type="string">
+    Commission type (e.g. <code>sale</code>).
+  </ParamField>
+  <ParamField body="amount" type="number">
+    Sale/order amount in cents.
+  </ParamField>
+  <ParamField body="earnings" type="number">
+    Commission earnings in cents.
+  </ParamField>
+  <ParamField body="currency" type="string">
+    Currency code (e.g. <code>usd</code>).
+  </ParamField>
+  <ParamField body="status" type="string">
+    Commission status (e.g. <code>pending</code>).
+  </ParamField>
+  <ParamField body="invoiceId" type="string | null">
+    Related invoice ID, if any.
+  </ParamField>
+  <ParamField body="description" type="string | null">
+    Optional description (e.g. for manual commissions).
+  </ParamField>
+  <ParamField body="quantity" type="number">
+    Quantity (e.g. number of items).
+  </ParamField>
+  <ParamField body="userId" type="string | null">
+    ID of the user who created the commission. Set for manual commissions; null for automatic.
+  </ParamField>
+  <ParamField body="createdAt" type="string">
+    ISO 8601 timestamp when the commission was created.
+  </ParamField>
+  <ParamField body="updatedAt" type="string">
+    ISO 8601 timestamp when the commission was last updated.
+  </ParamField>
+  <ParamField body="partner" type="object">
+    The partner that earned the commission (id, name, email, image, country, groupId, totalClicks, totalLeads, totalSales, totalSaleAmount, totalCommissions).
+  </ParamField>
+  <ParamField body="customer" type="object">
+    The customer associated with the conversion.
+
+    <Expandable title="customer object">
+      <ParamField body="id" type="string">
+        Unique identifier for the customer.
+      </ParamField>
+      <ParamField body="externalId" type="string">
+        Your external customer ID, if provided when tracking.
+      </ParamField>
+      <ParamField body="name" type="string">
+        Customer name.
+      </ParamField>
+      <ParamField body="email" type="string">
+        Customer email address.
+      </ParamField>
+      <ParamField body="avatar" type="string | null">
+        URL to the customer's avatar.
+      </ParamField>
+      <ParamField body="country" type="string">
+        Country code.
+      </ParamField>
+      <ParamField body="sales" type="number">
+        Number of sales from this customer.
+      </ParamField>
+      <ParamField body="saleAmount" type="number">
+        Total sale amount in cents.
+      </ParamField>
+      <ParamField body="createdAt" type="string">
+        ISO 8601 timestamp when the customer was first seen.
+      </ParamField>
+    </Expandable>
+
+  </ParamField>
+</ResponseBodyParameters>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "evt_64dv6vxYVgltzJBKc9ujJ1ghL",
+  "event": "commission.created",
+  "createdAt": "2025-07-16T10:48:15.468Z",
+  "data": {
+    "id": "cm_1K09DJTBCRT24P6BRD515CK29",
+    "type": "sale",
+    "amount": 50000,
+    "earnings": 10000,
+    "currency": "usd",
+    "status": "pending",
+    "invoiceId": null,
+    "description": null,
+    "quantity": 1,
+    "userId": "cludszk1h0000wmd2e0ea2b0p",
+    "createdAt": "2025-07-16T10:48:14.722Z",
+    "updatedAt": "2025-07-16T10:48:14.960Z",
+    "partner": {
+      "id": "pn_1K06X6FX2GRB31NCM2VVCGJ72",
+      "name": "Matthew Hayden",
+      "email": "matthew@example.com",
+      "image": null,
+      "payoutsEnabledAt": null,
+      "country": "US",
+      "groupId": "grp_1K6K3HD0QE7XTX5HSVR77AK5B",
+      "totalClicks": 50,
+      "totalLeads": 15,
+      "totalConversions": 10,
+      "totalSales": 10,
+      "totalSaleAmount": 100000,
+      "totalCommissions": 50000
+    },
+    "customer": {
+      "id": "cus_1K09DJDEACR47NPYC93RM43WF",
+      "externalId": "TaMD05AnuyqeI",
+      "name": "David",
+      "email": "david@example.com",
+      "avatar": null,
+      "country": "US",
+      "sales": 1,
+      "saleAmount": 50000,
+      "createdAt": "2025-07-16T10:48:01.739Z"
+    }
+  }
+}
+```
+
+</ResponseExample>

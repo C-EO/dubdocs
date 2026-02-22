@@ -534,6 +534,25 @@
                   "docs/webhooks/event-types",
                   "docs/webhooks/verify-webhook-requests"
                 ]
+              },
+              {
+                "group": "DUB PARTNERS WEBHOOKS",
+                "pages": [
+                  "docs/webhooks/events/partner-enrolled",
+                  "docs/webhooks/events/partner-application-submitted",
+                  "docs/webhooks/events/lead-created",
+                  "docs/webhooks/events/sale-created",
+                  "docs/webhooks/events/commission-created"
+                ]
+              },
+              {
+                "group": "DUB LINKS WEBHOOKS",
+                "pages": [
+                  "docs/webhooks/events/link-created",
+                  "docs/webhooks/events/link-updated",
+                  "docs/webhooks/events/link-deleted",
+                  "docs/webhooks/events/link-clicked"
+                ]
               }
             ]
           }
@@ -657,6 +676,46 @@
       "destination": "/docs/webhooks/event-types"
     },
     {
+      "source": "/docs/webhooks/event-types#link-created",
+      "destination": "/docs/webhooks/events/link-created"
+    },
+    {
+      "source": "/docs/webhooks/event-types#link-updated",
+      "destination": "/docs/webhooks/events/link-updated"
+    },
+    {
+      "source": "/docs/webhooks/event-types#link-deleted",
+      "destination": "/docs/webhooks/events/link-deleted"
+    },
+    {
+      "source": "/docs/webhooks/event-types#link-clicked",
+      "destination": "/docs/webhooks/events/link-clicked"
+    },
+    {
+      "source": "/docs/webhooks/event-types#lead-created",
+      "destination": "/docs/webhooks/events/lead-created"
+    },
+    {
+      "source": "/docs/webhooks/event-types#sale-created",
+      "destination": "/docs/webhooks/events/sale-created"
+    },
+    {
+      "source": "/docs/webhooks/event-types#partner-application-submitted",
+      "destination": "/docs/webhooks/events/partner-application-submitted"
+    },
+    {
+      "source": "/docs/webhooks/event-types#partner-enrolled",
+      "destination": "/docs/webhooks/events/partner-enrolled"
+    },
+    {
+      "source": "/docs/webhooks/event-types#commission-created",
+      "destination": "/docs/webhooks/events/commission-created"
+    },
+    {
+      "source": "/docs/webhooks/event-types#payout-confirmed",
+      "destination": "/docs/webhooks/events/payout-confirmed"
+    },
+    {
       "source": "/docs/concepts/webhooks/verify-webhook-requests",
       "destination": "/docs/webhooks/verify-webhook-requests"
     },
@@ -681,7 +740,7 @@
       "destination": "/docs/api-reference/authentication#publishable-keys"
     },
     {
-      "source": "/docs/api-reference/links/create",
+      "source": "/docs/api-reference/endpoint/create-a-link",
       "destination": "/docs/api-reference/links/create"
     },
     {

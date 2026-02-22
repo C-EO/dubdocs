@@ -1,0 +1,135 @@
+---
+title: payout.confirmed
+icon: money-bill
+---
+
+export const ResponseBodyParameters = ({ type, children }) => (
+  <div>
+    <h2>Response Body Parameters</h2>
+    <p>
+      All webhook payloads follow a consistent top-level structure with
+      event-specific data nested within the <code>data</code> object.
+    </p>
+    <ParamField body="id" type="string">
+      The event ID.
+    </ParamField>
+    <ParamField body="event" type="string">
+      The event type that triggered the webhook (e.g., <code>{type}</code>).
+    </ParamField>
+    <ParamField body="createdAt" type="string">
+      ISO 8601 timestamp when the webhook event was created.
+    </ParamField>
+    <ParamField body="data" type="object">
+      Event-specific data containing detailed information about the event. The
+      data object for the <code>{type}</code> event contains the following
+      parameters:
+      <Expandable defaultOpen title="object parameters">
+        {children}
+      </Expandable>
+    </ParamField>
+  </div>
+);
+
+Event triggered when a payout is confirmed and ready for [external processing](/docs/partners/external-payouts). Only sent for programs using external or hybrid payout modes.
+
+<Note>
+  Learn more in the [External payouts guide](/docs/partners/external-payouts).
+</Note>
+
+<ResponseBodyParameters type="payout.confirmed">
+  <ParamField body="id" type="string">
+    Unique identifier for the payout.
+  </ParamField>
+  <ParamField body="invoiceId" type="string">
+    Invoice ID for this payout.
+  </ParamField>
+  <ParamField body="amount" type="number">
+    Payout amount in cents.
+  </ParamField>
+  <ParamField body="currency" type="string">
+    Currency code (e.g. <code>USD</code>).
+  </ParamField>
+  <ParamField body="status" type="string">
+    Payout status (e.g. <code>processing</code> for external payouts).
+  </ParamField>
+  <ParamField body="description" type="string">
+    Human-readable description of the payout (e.g. <code>Dub Partners payout (Acme)</code>).
+  </ParamField>
+  <ParamField body="periodStart" type="string">
+    ISO 8601 timestamp for the start of the commission period this payout covers.
+  </ParamField>
+  <ParamField body="periodEnd" type="string">
+    ISO 8601 timestamp for the end of the commission period.
+  </ParamField>
+  <ParamField body="createdAt" type="string">
+    ISO 8601 timestamp when the payout was created.
+  </ParamField>
+  <ParamField body="paidAt" type="string | null">
+    ISO 8601 timestamp when the payout was marked as paid (null until you complete it).
+  </ParamField>
+  <ParamField body="mode" type="string">
+    Payout mode (e.g. <code>external</code> for external payouts).
+  </ParamField>
+  <ParamField body="partner" type="object">
+    The partner receiving the payout.
+
+    <Expandable title="partner object">
+      <ParamField body="id" type="string">
+        Unique identifier for the partner (your system's ID when using external payouts).
+      </ParamField>
+      <ParamField body="name" type="string">
+        Partner name.
+      </ParamField>
+      <ParamField body="email" type="string">
+        Partner email address.
+      </ParamField>
+      <ParamField body="image" type="string | null">
+        URL to the partner's profile image.
+      </ParamField>
+      <ParamField body="country" type="string">
+        Country code.
+      </ParamField>
+      <ParamField body="tenantId" type="string">
+        Your external system's identifier for this partner. Use this to match the payout to the correct record.
+      </ParamField>
+      <ParamField body="status" type="string">
+        Partner status (e.g. <code>approved</code>).
+      </ParamField>
+    </Expandable>
+
+  </ParamField>
+</ResponseBodyParameters>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "evt_b9ywgxWqai2glUpCQjclB17kM",
+  "event": "payout.confirmed",
+  "createdAt": "2025-10-22T15:50:13.661Z",
+  "data": {
+    "id": "po_1K869T6CWEH4NB78NS3QYHDJE",
+    "invoiceId": "inv_1K94KX5ZWHTWFG07NP96AY90F",
+    "amount": 5000,
+    "currency": "USD",
+    "status": "processing",
+    "description": "Dub Partners payout (Acme)",
+    "periodStart": "2025-10-22T15:49:33.343Z",
+    "periodEnd": "2025-10-31T18:29:59.999Z",
+    "createdAt": "2025-10-22T15:50:13.661Z",
+    "paidAt": null,
+    "mode": "external",
+    "partner": {
+      "id": "cm6v2l38p000zubyl5fly3i7w",
+      "name": "Matthew Hayden",
+      "email": "matthew@example.com",
+      "image": null,
+      "country": "US",
+      "tenantId": "64dc9a8c-5cf9-4446-b53b-cdc15199fafc",
+      "status": "approved"
+    }
+  }
+}
+```
+
+</ResponseExample>
