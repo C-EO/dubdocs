@@ -3,32 +3,7 @@ title: payout.confirmed
 icon: money-bill
 ---
 
-export const ResponseBodyParameters = ({ type, children }) => (
-  <div>
-    <h2>Response Body Parameters</h2>
-    <p>
-      All webhook payloads follow a consistent top-level structure with
-      event-specific data nested within the <code>data</code> object.
-    </p>
-    <ParamField body="id" type="string">
-      The event ID.
-    </ParamField>
-    <ParamField body="event" type="string">
-      The event type that triggered the webhook (e.g., <code>{type}</code>).
-    </ParamField>
-    <ParamField body="createdAt" type="string">
-      ISO 8601 timestamp when the webhook event was created.
-    </ParamField>
-    <ParamField body="data" type="object">
-      Event-specific data containing detailed information about the event. The
-      data object for the <code>{type}</code> event contains the following
-      parameters:
-      <Expandable defaultOpen title="object parameters">
-        {children}
-      </Expandable>
-    </ParamField>
-  </div>
-);
+import { WebhookResponseBodyParameters } from "/snippets/webhook-response-body-parameters.mdx";
 
 Event triggered when a payout is confirmed and ready for [external processing](/docs/partners/external-payouts). Only sent for programs using external or hybrid payout modes.
 
@@ -36,7 +11,7 @@ Event triggered when a payout is confirmed and ready for [external processing](/
   Learn more in the [External payouts guide](/docs/partners/external-payouts).
 </Note>
 
-<ResponseBodyParameters type="payout.confirmed">
+<WebhookResponseBodyParameters type="payout.confirmed">
   <ParamField body="id" type="string">
     Unique identifier for the payout.
   </ParamField>
@@ -98,7 +73,7 @@ Event triggered when a payout is confirmed and ready for [external processing](/
     </Expandable>
 
   </ParamField>
-</ResponseBodyParameters>
+</WebhookResponseBodyParameters>
 
 <ResponseExample>
 

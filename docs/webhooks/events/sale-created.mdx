@@ -3,36 +3,11 @@ title: sale.created
 icon: money-bill
 ---
 
-export const ResponseBodyParameters = ({ type, children }) => (
-  <div>
-    <h2>Response Body Parameters</h2>
-    <p>
-      All webhook payloads follow a consistent top-level structure with
-      event-specific data nested within the <code>data</code> object.
-    </p>
-    <ParamField body="id" type="string">
-      The event ID.
-    </ParamField>
-    <ParamField body="event" type="string">
-      The event type that triggered the webhook (e.g., <code>{type}</code>).
-    </ParamField>
-    <ParamField body="createdAt" type="string">
-      ISO 8601 timestamp when the webhook event was created.
-    </ParamField>
-    <ParamField body="data" type="object">
-      Event-specific data containing detailed information about the event. The
-      data object for the <code>{type}</code> event contains the following
-      parameters:
-      <Expandable defaultOpen title="object parameters">
-        {children}
-      </Expandable>
-    </ParamField>
-  </div>
-);
+import { WebhookResponseBodyParameters } from "/snippets/webhook-response-body-parameters.mdx";
 
 Event triggered when a [new sale is tracked](/docs/api-reference/track/sale).
 
-<ResponseBodyParameters type="sale.created">
+<WebhookResponseBodyParameters type="sale.created">
   <ParamField body="eventName" type="string">
     Name of the tracked event (e.g. <code>Purchased</code>).
   </ParamField>
@@ -70,7 +45,7 @@ Event triggered when a [new sale is tracked](/docs/api-reference/track/sale).
   <ParamField body="metadata" type="object | null">
     Optional metadata associated with the sale event.
   </ParamField>
-</ResponseBodyParameters>
+</WebhookResponseBodyParameters>
 
 <ResponseExample>
 
