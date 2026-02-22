@@ -76,11 +76,12 @@ Dub uses a simple first-party cookie and server-side event tracking to track con
 
 When a user clicks on a conversion-enabled link, Dub generates a unique `dub_id` query parameter and stores it as a first-party cookie on your domain (e.g. `.dub.co`).
 
-<img
-  src="https://assets.dub.co/help/conversion-click-event.png"
-  alt="A diagram showing how click events are tracked in the conversion funnel"
-  className="rounded-lg border border-gray-100"
-/>
+<Frame>
+  <img
+    src="https://assets.dub.co/help/conversion-click-event.png"
+    alt="A diagram showing how click events are tracked in the conversion funnel"
+  />
+</Frame>
 
 This allows Dub to attribute any subsequent conversion events to the original click – and by extension, **the link that was clicked on**.
 
@@ -98,11 +99,12 @@ This package will handle the detection of the `dub_id` query parameter and stori
 
 Then, when a conversion event occurs (e.g. a user signs up for an account), you can check for the `dub_id` cookie and attribute the conversion to the original click.
 
-<img
-  src="https://assets.dub.co/help/conversion-lead-event.png"
-  alt="A diagram showing how lead events are tracked in the conversion funnel"
-  className="rounded-lg border border-gray-100"
-/>
+<Frame>
+  <img
+    src="https://assets.dub.co/help/conversion-lead-event.png"
+    alt="A diagram showing how lead events are tracked in the conversion funnel"
+  />
+</Frame>
 
 For example, if you're using a Next.js app with NextAuth for authentication, here's how you can [send lead conversion events for new user signups](/docs/conversions/leads/next-auth).
 
@@ -123,11 +125,12 @@ The lead event will serve as the source of truth for the customer's identity and
 
 The final step in the conversion funnel is to track sale events and attribute them to the original link click. This can be done in 3 ways:
 
-<img
-  src="https://assets.dub.co/help/conversion-sale-event.png"
-  alt="A diagram showing how sale events are tracked in the conversion funnel"
-  className="rounded-lg border border-gray-100"
-/>
+<Frame>
+  <img
+    src="https://assets.dub.co/help/conversion-sale-event.png"
+    alt="A diagram showing how sale events are tracked in the conversion funnel"
+  />
+</Frame>
 
 **Option 1: Stripe integration (recommended)**
 
@@ -186,27 +189,30 @@ All your tracked conversions will show up on your [Analytics dashboard](/help/ar
 
 - **Time-series**: A [time-series view](/help/article/dub-analytics#1-time-series-analytics-chart) of the number clicks, leads and sales.
 
-<img
-  src="https://assets.dub.co/help/conversions-timeseries-analytics.png"
-  alt="Time-series line chart"
-  className="rounded-lg border border-gray-100"
-/>
+<Frame>
+  <img
+    src="https://assets.dub.co/help/conversions-timeseries-analytics.png"
+    alt="Time-series line chart"
+  />
+</Frame>
 
 - **Funnel chart**: A funnel chart view visualizing the conversion & dropoff rates across the different steps in the conversion funnel (clicks → leads → sales).
 
-<img
-  src="https://assets.dub.co/help/conversions-funnel-chart.png"
-  alt="Funnel chart view showing the conversion & dropoff rates from clicks → leads → sales"
-  className="rounded-lg border border-gray-100"
-/>
+<Frame>
+  <img
+    src="https://assets.dub.co/help/conversions-funnel-chart.png"
+    alt="Funnel chart view showing the conversion & dropoff rates from clicks → leads → sales"
+  />
+</Frame>
 
 - **Real-time events stream**: A [real-time events stream](/help/article/real-time-events-stream) of every single conversion event that occurs across all your links in your workspace.
 
-<img
-  src="https://assets.dub.co/help/conversions-events-stream-dashboard.png"
-  alt="The Events Stream dashboard on Dub"
-  className="rounded-lg border border-gray-100"
-/>
+<Frame>
+  <img
+    src="https://assets.dub.co/help/conversions-events-stream-dashboard.png"
+    alt="The Events Stream dashboard on Dub"
+  />
+</Frame>
 
 ## What can I build with Dub?
 
@@ -218,11 +224,12 @@ With [Dub Partners](https://dub.co/partners) (built on top of Dub), you can trac
 
 For instance, here's a screenshot of our very own Dub referral program – powered by Dub – that [lives within the Dub dashboard](https://app.dub.co/referrals):
 
-<img
-  src="https://assets.dub.co/help/dub-referrals-demo.png"
-  alt="A demo of the Dub Referrals dashboard"
-  className="rounded-lg border border-gray-100"
-/>
+<Frame>
+  <img
+    src="https://assets.dub.co/help/dub-referrals-demo.png"
+    alt="A demo of the Dub Referrals dashboard"
+  />
+</Frame>
 
 With Dub's [real-time webhooks feature](/docs/webhooks/introduction), you can also build custom [dual-sided incentive structures](/help/article/dual-sided-incentives) – e.g. rewarding the referrer an additional 100 credits when a new user signs up with their link.
 

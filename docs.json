@@ -961,6 +961,75 @@
     {
       "source": "/help/article/what-is-dub",
       "destination": "/help/article/dub-links"
+    },
+    {
+      "source": "/help/category/api",
+      "destination": "/docs/api-reference/introduction"
+    },
+    {
+      "source": "/help/category/conversions",
+      "destination": "/help/category/analytics",
+      "permanent": false
+    },
+    {
+      "source": "/help/article/dub-api",
+      "destination": "/docs/api-reference/introduction"
+    },
+    {
+      "source": "/help/article/self-host",
+      "destination": "/docs/self-hosting"
+    },
+    {
+      "source": "/help/article/pro-plan",
+      "destination": "/pricing"
+    },
+    {
+      "source": "/help/article/business-plan",
+      "destination": "/pricing"
+    },
+    {
+      "source": "/help/article/public-stats-pages",
+      "destination": "/help/article/share-analytics"
+    },
+    {
+      "source": "/help/article/what-is-a-project",
+      "destination": "/help/article/what-is-a-workspace"
+    },
+    {
+      "source": "/help/article/custom-social-media-cards",
+      "destination": "/help/article/custom-link-previews"
+    },
+    {
+      "source": "/help/article/what-is-dubrequired",
+      "destination": "/help/article/what-is-dub"
+    },
+    {
+      "source": "/help/article-/how-to-set-primary-domain",
+      "destination": "/help/article/how-to-set-primary-domain"
+    },
+    {
+      "source": "/help/article/partner-commissions-clawbacks",
+      "destination": "/help/article/partner-commissions"
+    },
+    {
+      "source": "/help/article/program-branding",
+      "destination": "/help/article/program-resources"
+    },
+    {
+      "source": "/help/article/program-communication",
+      "destination": "/help/article/program-resources"
+    },
+    {
+      "source": "/help/article/partner-profile-sites",
+      "destination": "/help/article/partner-profile"
+    },
+    {
+      "source": "/help/article/why-are-dub-links-blacklisted",
+      "destination": "/help/article/dub-links-not-working"
+    },
+    {
+      "source": "/help/article/custom-domain-deep-links",
+      "destination": "/docs/concepts/deep-links/quickstart"
     }
   ]
 }
