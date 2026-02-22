@@ -3,9 +3,9 @@
   "theme": "aspen",
   "name": "Dub",
   "colors": {
-    "primary": "#eb5611",
-    "light": "#eb5611",
-    "dark": "#eb5611"
+    "primary": "#155dfc",
+    "light": "#155dfc",
+    "dark": "#155dfc"
   },
   "favicon": "/logos/favicon.png",
   "contextual": {
@@ -523,9 +523,6 @@
   },
   "api": {
     "openapi": "https://spec.speakeasy.com/dub/dub/dub-with-code-samples"
-  },
-  "background": {
-    "image": "/images/background.png"
   },
   "navbar": {
     "links": [

@@ -29,7 +29,7 @@ export const VideoPlayer = ({
               href={youtubeHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 items-center gap-2 rounded-md px-3 text-xs text-white transition-colors hover:bg-white/10"
+              className="rounded-md px-3 py-1.5 text-xs font-medium text-neutral-600 bg-neutral-100 transition-colors hover:bg-neutral-200/75"
             >
               Watch on YouTube
             </a>
@@ -46,14 +46,23 @@ export const VideoPlayer = ({
       className={`not-prose group relative mx-auto block w-full max-w-screen-md cursor-pointer overflow-hidden rounded-lg bg-neutral-100 ${className}`}
       onClick={() => setPlaying(true)}
     >
-      <img src={thumbnail} alt={title} className="h-full w-full object-cover cursor-pointer" />
+      <img
+        src={thumbnail}
+        alt={title}
+        className="h-full w-full object-cover cursor-pointer"
+      />
       <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/90 to-transparent sm:h-32" />
       <div className="absolute bottom-8 flex w-full items-center justify-between px-8">
         <p className="max-w-xs text-left font-display text-lg font-bold leading-tight text-white xs:text-xl">
           {title}
         </p>
         <div className="rounded-full bg-white p-3 shadow-lg transition-all duration-300 group-hover:scale-110 group-active:scale-95">
-          <img src="/images/video-player/play.svg" alt="Play" className="h-4 w-4" aria-hidden />
+          <img
+            src="/images/video-player/play.svg"
+            alt="Play"
+            className="h-4 w-4"
+            aria-hidden
+          />
         </div>
       </div>
     </button>
