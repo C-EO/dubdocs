@@ -50,10 +50,10 @@ When a commission is recorded on Dub, it goes through the following statuses:
 
 If needed, you can also update the status for a given commission accordingly:
 
-- `Refunded`: If the sale for the commission was refunded. This is usually automatically detected via our [Stripe integration](https://dub.co/integrations/stripe), or can also be manually set via the dashboard or the [API](https://dub.co/docs/api-reference/endpoint/update-a-commission).
-- `Fraud`: If a commission event was found to be fraudulent, you can mark them as "Fraud" via the dashboard or the [API](https://dub.co/docs/api-reference/endpoint/update-a-commission). **This action cannot be undone.**
-- `Canceled`: If a commission event was canceled/voided (e.g. in cases of self-referrals where commissions are not eligible for payout), you can mark them as "Canceled" via the dashboard or the [API](https://dub.co/docs/api-reference/endpoint/update-a-commission). **This action cannot be undone.**
-- `Duplicate`: If a commission event was found to be a duplicate, you can mark them as "Duplicate" via the dashboard or the [API](https://dub.co/docs/api-reference/endpoint/update-a-commission). **This action cannot be undone.**
+- `Refunded`: If the sale for the commission was refunded. This is usually automatically detected via our [Stripe integration](https://dub.co/integrations/stripe), or can also be manually set via the dashboard or the [API](/docs/api-reference/endpoint/update-a-commission).
+- `Fraud`: If a commission event was found to be fraudulent, you can mark them as "Fraud" via the dashboard or the [API](/docs/api-reference/endpoint/update-a-commission). **This action cannot be undone.**
+- `Canceled`: If a commission event was canceled/voided (e.g. in cases of self-referrals where commissions are not eligible for payout), you can mark them as "Canceled" via the dashboard or the [API](/docs/api-reference/endpoint/update-a-commission). **This action cannot be undone.**
+- `Duplicate`: If a commission event was found to be a duplicate, you can mark them as "Duplicate" via the dashboard or the [API](/docs/api-reference/endpoint/update-a-commission). **This action cannot be undone.**
 
 ## Creating manual commissions
 
@@ -156,7 +156,7 @@ Once the customer is created, you can then associate any commissions to them, an
 
 #### Importing customers from Stripe
 
-If you've already [connected to Stripe](https://dub.co/docs/conversions/sales/stripe#stripe), you can import your customer by clicking on **Import from Stripe**. This will allow you to search existing Stripe customers by their email, and click to import their details into Dub.
+If you've already [connected to Stripe](/docs/conversions/sales/stripe#stripe), you can import your customer by clicking on **Import from Stripe**. This will allow you to search existing Stripe customers by their email, and click to import their details into Dub.
 
 <Tip>
   If a customer with the same Stripe Customer ID already exists in Dub, you
