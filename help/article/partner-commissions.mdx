@@ -8,8 +8,10 @@ sidebarTitle: "Managing commissions"
   This feature is only available for [Business plans and
   above](https://dub.co/pricing).
 </Tip>
-## Where to find your program commissions? When viewing your Partner Program
-navigation, click on the **Commissions** page, under the **Insights** group:
+
+## Where to find your program commissions?
+
+When viewing your Partner Program navigation, click on the **Commissions** page, under the **Insights** group:
 
 <img
   src="https://assets.dub.co/cms/commission-dashboard-1.png"
@@ -24,14 +26,17 @@ This opens up the commissions table view, where you can see a list of your histo
   alt="Commissions page within your dashboard"
   className="rounded-lg border border-gray-100"
 />
-| Column       | Data                  | | ---------- | ---------------------- |
-| Date       | Commission date | | Customer        | The customer associated
-with the lead or sale   | | Partner   | Your partner | | Type   | The commission
-type (custom, click, lead, or sale) | | Amount   | The sale amount, or single
-count for custom, click, or lead rewards | | Commission | The amount the partner
-will receive | | Status | Current status of the commission. [Learn more about
-statuses](/help/article/partner-commissions#commission-statuses). | | Additional
-actions | Actions to mark the commission as duplicate, fraud, or canceled |
+
+| Column             | Data                                                                |
+| ------------------ | ------------------------------------------------------------------- |
+| Date               | Commission date                                                     |
+| Customer           | The customer associated with the lead or sale                       |
+| Partner            | Your partner                                                        |
+| Type               | The commission type (custom, click, lead, or sale)                  |
+| Amount             | The sale amount, or single count for custom, click, or lead rewards |
+| Commission         | The amount the partner will receive                                 |
+| Status             | Current status of the commission. Learn more about statuses.        |
+| Additional actions | Actions to mark the commission as duplicate, fraud, or canceled     |
 
 ## Commission statuses
 
@@ -110,21 +115,16 @@ Manual sale commissions are recurring and based on your [reward settings](/help/
   alt="Create sale commission"
   className="rounded-lg border border-gray-100"
 />
-### | Input | Description | Required | | --- | --- | --- | | Referral link | The
-referral link that the sale is attributed to | ✅ | | Customer | The customer
-associated with the sale. [Read more about adding a customer
-](/help/article/partner-commissions#creating-a-new-customer) | ✅ | | Event
-source | Create a new sale event, or import from Stripe | ✅ | | Sale date | The
-date of the sale. If no date is selected, it will auto-fill with the current
-date and time | ❌ | | Sale amount | The amount of the sale in USD. | Required
-if not [reusing existing events](#reusing-existing-conversion-events) | |
-Invoice ID | The invoice ID of the sale. Can be used to [fetch the commission
-later via the
-API](https://dub.co/docs/api-reference/endpoint/retrieve-a-list-of-commissions#parameter-invoice-id)
-| ❌ | | Product ID | The product ID of the sale. Can be used to [fetch the
-commission later via the
-API](https://dub.co/docs/api-reference/endpoint/retrieve-a-list-of-commissions#parameter-invoice-id)
-| ❌ |
+
+| Input         | Description                                                                                    | Required                                |
+| ------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Referral link | The referral link that the sale is attributed to                                               | ✅                                      |
+| Customer      | The customer associated with the sale. Read more about adding a customer                       | ✅                                      |
+| Event source  | Create a new sale event, or import from Stripe                                                 | ✅                                      |
+| Sale date     | The date of the sale. If no date is selected, it will auto-fill with the current date and time | ❌                                      |
+| Sale amount   | The amount of the sale in USD.                                                                 | Required if not reusing existing events |
+| Invoice ID    | The invoice ID of the sale. Can be used to fetch the commission later via the API              | ❌                                      |
+| Product ID    | The product ID of the sale. Can be used to fetch the commission later via the API              | ❌                                      |
 
 ### Creating a new customer
 
@@ -202,15 +202,7 @@ Fields required to create a clawback:
 
 - **Partner**: The partner receiving the clawback
 - **Amount**: The clawback amount
-- **Clawback reason:**
-  - Order canceled
-  - Fraud
-  - Terms violation
-  - Tracking error
-  - Payment failed
-  - Ineligible partner
-  - Duplicate commission
-  - Other
+- **Clawback reason**: _Order canceled, Fraud, Terms violation, Tracking error, Payment failed, Ineligible partner, Duplicate commission, Other_
 
 After the clawback is created, you'll see a negative commission in your table view:
 
