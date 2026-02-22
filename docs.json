@@ -239,16 +239,21 @@
                 "group": "Links",
                 "pages": [
                   "help/article/how-to-create-link",
-                  "help/article/dub-link-builder",
-                  "help/article/custom-link-previews",
                   "help/article/utm-builder",
                   "help/article/how-to-create-utm-templates",
-                  "help/article/bulk-link-actions",
                   "help/article/custom-qr-codes",
+                  "help/article/custom-link-previews",
+                  "help/article/device-targeting",
+                  "help/article/geo-targeting",
+                  "help/article/link-cloaking",
+                  "help/article/ab-testing",
+                  "help/article/password-protected-links",
+                  "help/article/link-expiration",
+                  "help/article/link-comments",
+                  "help/article/bulk-link-actions",
                   "help/article/how-to-use-tags",
                   "help/article/link-folders",
-                  "help/article/folders-rbac",
-                  "help/article/link-comments"
+                  "help/article/folders-rbac"
                 ]
               },
               {
@@ -288,14 +293,9 @@
                 ]
               },
               {
-                "group": "Advanced link features",
+                "group": "More link guides",
                 "pages": [
-                  "help/article/device-targeting",
-                  "help/article/geo-targeting",
-                  "help/article/link-cloaking",
-                  "help/article/ab-testing",
-                  "help/article/password-protected-links",
-                  "help/article/link-expiration",
+                  "help/article/dub-link-builder",
                   "help/article/parameter-passing",
                   "help/article/how-to-transfer-links",
                   "help/article/how-to-export-links",
