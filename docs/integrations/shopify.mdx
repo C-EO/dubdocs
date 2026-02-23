@@ -1,18 +1,18 @@
 ---
 title: "Shopify"
-sidebarTitle: "Shopify (Payments)"
 "og:title": "How to track sale conversion events with Shopify and Dub"
 description: "Learn how to track sale conversion events with Shopify and Dub"
 ---
 
+import EnableConversionTracking from "/snippets/enable-conversion-tracking.mdx";
 import ViewConversions from "/snippets/view-conversions.mdx";
 
-<Note>
-  Conversion tracking requires a [Business plan](https://dub.co/pricing)
-  subscription or higher.
-</Note>
+<Tip>
+  This feature is only available on [Business plans and
+  above](https://dub.co/pricing/partners).
+</Tip>
 
-When it comes to [conversion tracking](/docs/conversions/quickstart), a `sale` event happens when a user purchases a product from your Shopify store.
+Dub's best-in-class [Shopify integration](https://dub.co/integrations/shopify) listens to orders from Shopify and tracks them as sales on Dub.
 
 <Frame>
   <img
@@ -37,13 +37,7 @@ In this guide, we will be focusing on tracking sale events from Shopify by lever
 
 ## Step 1: Enable conversion tracking for your links
 
-First, you'll need to enable conversion tracking for your Dub links to be able to start tracking conversions.
-
-There are a few ways to do this:
-
-1. [On a workspace-level](/docs/conversions/quickstart#option-1-on-a-workspace-level)
-2. [On a link-level](/docs/conversions/quickstart#option-2-on-a-link-level)
-3. [Via the API](/docs/conversions/quickstart#option-3-via-the-api)
+<EnableConversionTracking />
 
 ## Step 2: Install the Dub Shopify app
 
@@ -75,7 +69,7 @@ You'll be redirected back to your Shopify store after this step and you'll see a
   />
 </Frame>
 
-With the Shopify app, you can also create [conversion-enabled links](/docs/conversions//quickstart#step-1%3A-enable-conversion-tracking-for-your-links) directly from your Shopify store:
+With the Shopify app, you can also create [conversion-enabled links](/docs/conversions//quickstart#step-1-enable-conversion-tracking-for-your-links) directly from your Shopify store:
 
 <Frame>
   <img

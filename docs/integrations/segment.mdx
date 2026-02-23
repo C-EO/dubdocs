@@ -1,22 +1,27 @@
 ---
 title: "Segment"
-sidebarTitle: "Segment (Analytics)"
 "og:title": "How to track sale conversion events with Segment and Dub"
 description: "Learn how to track sale conversion events with Segment and Dub"
 ---
 
 import ConversionTrackingPrerequisites from "/snippets/conversion-tracking-prerequisites.mdx";
-import SalesIntro from "/snippets/sales-intro.mdx";
-import ViewConversions from "/snippets/view-conversions.mdx";
+import LeadAttributes from "/snippets/lead-attributes.mdx";
 import SaleAttributes from "/snippets/sale-attributes.mdx";
+import ViewConversions from "/snippets/view-conversions.mdx";
 
-<SalesIntro />
+<Tip>
+  This feature is only available on [Business plans and
+  above](https://dub.co/pricing/partners).
+</Tip>
 
-In this guide, we will be focusing on tracking sales conversion events for a SaaS application that uses Segment to track conversions.
+Dub's [Segment integration](https://dub.co/integrations/segment) provides a bi-directional sync between your Segment workspace and Dub. There are 2 parts to the integration:
+
+- [Dub (Actions) Destination](https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-dub) – Tracking conversion events on Dub directly from Segment
+- [Dub Source](https://www.twilio.com/docs/segment/connections/sources/catalog/cloud-apps/dub) – Sending customer events from Dub to Segment
+
+In this guide, we will be focusing on using the [Dub (Actions) Destination](https://www.twilio.com/docs/segment/connections/destinations/catalog/actions-dub) to track conversion events directly from Segment.
 
 <ConversionTrackingPrerequisites />
-
-If you’ve already set up the Dub (Actions) destination, you can skip the first two steps and jump straight to the Add Mapping section.
 
 ## Configure Segment Action
 
@@ -46,7 +51,7 @@ Next, configure [Segment Dub (Actions)](https://app.segment.com/goto-my-workspac
     In the Dub (Actions) destination settings, fill out the following fields:
 
     - **Name:** Enter a name to help you identify this destination in Segment.
-    - **API Key:** Enter your Dub API key. You can find this in the [Dub Dashboard](https://app.dub.co/settings/tokens).
+    - **API Key:** Enter your [Dub API key](/docs/api-reference/authentication#api-keys). You can find this in the [Dub Dashboard](https://app.dub.co/settings/tokens).
     - **Enable Destination:** Toggle this on to allow Segment to send data to Dub.
 
     Once completed, click **Save Changes**.
@@ -64,9 +69,12 @@ Next, configure [Segment Dub (Actions)](https://app.segment.com/goto-my-workspac
   
   <Step title="Add Mapping">
 
-    Next, you’ll choose the **Track a sale** action from the list of available actions.
+    Next, depending on the event you want to track, choose the corresponding action from the list of available actions:
 
-    By default, this action is configured to send sale data to Dub when the **Event Name** is **Order Completed**.
+    | Event to track | Default event name | Example |
+    | --- | --- | --- |
+    | Lead | Sign Up | A user signs up for an account |
+    | Sale | Order Completed | A user purchases a product |
 
     <Frame>
       <img
@@ -94,13 +102,42 @@ Next, configure [Segment Dub (Actions)](https://app.segment.com/goto-my-workspac
 
   </Step>
 
-  <Step title="Send sale events to Dub">
+  <Step title="Send conversion events to Dub">
 
-    On the server side, you’ll use the `@segment/analytics-node` SDK to send sale events to Segment.
+    On the server side, you’ll use the `@segment/analytics-node` SDK to send conversion events to Segment.
 
-    Make sure to include relevant properties such as `userId`, `payment_processor`, `order_id`, `currency`, and `revenue` in the payload.
+    Make sure to include relevant properties in the payload:
 
-    ```tsx
+  <CodeGroup>
+
+    ```tsx Track a lead
+    import { Analytics } from "@segment/analytics-node";
+
+    const segment = new Analytics({
+      writeKey: "<YOUR_SEGMENT_WRITE_KEY>",
+    });
+
+    const cookieStore = await cookies();
+    const clickId = cookieStore.get("dub_id")?.value;
+
+    segment.track({
+      userId: id,
+      event: "Sign Up",
+      context: {
+        traits: {
+          name,
+          email,
+          avatar,
+          clickId,
+        },
+      },
+      integrations: {
+        All: true,
+      },
+    });
+    ```
+
+    ```tsx Track a sale
     import { Analytics } from "@segment/analytics-node";
 
     const segment = new Analytics({
@@ -122,17 +159,36 @@ Next, configure [Segment Dub (Actions)](https://app.segment.com/goto-my-workspac
     });
     ```
 
-    Once the event is tracked, Segment will forward the sale data to Dub based on the mappings you’ve configured.
+  </CodeGroup>
+
+    Once the event is tracked, Segment will forward the conversion data to Dub based on the mappings you’ve configured.
 
   </Step>
 
 </Steps>
 
-<SaleAttributes />
+## Supported attributes
 
-## Example App
+<Tabs>
+  <Tab title="Lead event">
 
-To learn more about how to track sales with Segment, check out the following example app:
+    <LeadAttributes />
+
+  </Tab>
+  <Tab title="Sale event">
+
+    <SaleAttributes />
+
+  </Tab>
+</Tabs>
+
+## View conversion results
+
+And that's it – you're all set! You can now sit back, relax, and watch your conversion revenue grow. We provide 3 different views to help you understand your conversions:
+
+<ViewConversions />
+
+## Example apps
 
 <Card
   title="Segment + Next.js App Router Example"
@@ -141,9 +197,3 @@ To learn more about how to track sales with Segment, check out the following exa
 >
   Next.js app using Segment to track sales.
 </Card>
-
-## View conversion results
-
-And that's it – you're all set! You can now sit back, relax, and watch your conversion revenue grow. We provide 3 different views to help you understand your conversions:
-
-<ViewConversions />

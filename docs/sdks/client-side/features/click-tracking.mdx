@@ -60,6 +60,15 @@ Next, install the Dub [client-side SDK](/docs/sdks/client-side/introduction) and
 
 <CodeGroup>
 
+```javascript HTML
+// include this script tag in your HTML Head tag
+<script
+  src="https://www.dubcdn.com/analytics/script.js"
+  data-domains='{"refer": "go.example.com"}'
+  defer
+></script>
+```
+
 ```typescript React/Next.js
 // install the package (e.g. npm install @dub/analytics)
 import { Analytics as DubAnalytics } from "@dub/analytics/react";
@@ -76,15 +85,6 @@ export default function App() {
     </Layout>
   );
 }
-```
-
-```javascript Other Frameworks
-// include this script tag in your HTML Head tag
-<script
-  src="https://www.dubcdn.com/analytics/script.js"
-  data-domains='{"refer": "go.example.com"}'
-  defer
-></script>
 ```
 
 </CodeGroup>
@@ -151,6 +151,23 @@ Here's how you can use the `trackClick()` function in your application:
 
 <CodeGroup>
 
+```javascript HTML
+document.addEventListener("DOMContentLoaded", function () {
+  // Extract the key from the URL path (e.g., /john -> john)
+  const pathSegments = window.location.pathname.split("/");
+  const key = pathSegments[1];
+
+  if (key) {
+    dubAnalytics.trackClick({
+      domain: "getacme.link",
+      key,
+    });
+  }
+});
+
+// This will track clicks for URLs like cal.com/john
+```
+
 ```typescript React/Next.js
 import { useAnalytics } from "@dub/analytics/react";
 import { useRouter } from "next/router";
@@ -173,23 +190,6 @@ function BookingPage() {
 
   return <></>;
 }
-```
-
-```javascript Other Frameworks
-document.addEventListener("DOMContentLoaded", function () {
-  // Extract the key from the URL path (e.g., /john -> john)
-  const pathSegments = window.location.pathname.split("/");
-  const key = pathSegments[1];
-
-  if (key) {
-    dubAnalytics.trackClick({
-      domain: "getacme.link",
-      key,
-    });
-  }
-});
-
-// This will track clicks for URLs like cal.com/john
 ```
 
 </CodeGroup>

@@ -1,6 +1,6 @@
 ---
 title: Script Variants
-description: Learn more about the different variants of the @dub/analytics script.
+description: Learn more about the different variants of the Dub Analytics script.
 ---
 
 Inspired by [Plausible](https://plausible.io/), our script is split into multiple variants to help you optimize your script for different use cases.
@@ -36,12 +36,12 @@ Here's how you can use the base variant:
 
 <CodeGroup>
 
-```typescript React
-<DubAnalytics />
+```html HTML
+<script src="https://www.dubcdn.com/analytics/script.js"></script>
 ```
 
-```html Other
-<script src="https://www.dubcdn.com/analytics/script.js"></script>
+```typescript React/Next.js
+<DubAnalytics />
 ```
 
 </CodeGroup>
@@ -58,17 +58,17 @@ Here's how you can use the site visit variant:
 
 <CodeGroup>
 
-```typescript React
-// the DubAnalytics component automatically detects the `domainsConfig.site` prop
-// and applies the site-visit script variant for you
-<DubAnalytics domainsConfig={{ site: "site.dub.co" }} />
-```
-
-```html Other
+```html HTML
 <script
   src="https://www.dubcdn.com/analytics/script.site-visit.js"
   data-domains="{'site': 'site.dub.co'}"
 ></script>
+```
+
+```typescript React/Next.js
+// the DubAnalytics component automatically detects the `domainsConfig.site` prop
+// and applies the site-visit script variant for you
+<DubAnalytics domainsConfig={{ site: "site.dub.co" }} />
 ```
 
 </CodeGroup>
@@ -83,17 +83,17 @@ Here's how you can use the outbound domains variant:
 
 <CodeGroup>
 
-```typescript React
-// the DubAnalytics component automatically detects the `domainsConfig.outbound` prop
-// and applies the outbound-domains script variant for you
-<DubAnalytics domainsConfig={{ outbound: ["example.com", "example.sh"] }} />
-```
-
-```html Other
+```html HTML
 <script
   src="https://www.dubcdn.com/analytics/script.outbound-domains.js"
   data-domains="{'outbound': ['example.com', 'example.sh']}"
 ></script>
+```
+
+```typescript React/Next.js
+// the DubAnalytics component automatically detects the `domainsConfig.outbound` prop
+// and applies the outbound-domains script variant for you
+<DubAnalytics domainsConfig={{ outbound: ["example.com", "example.sh"] }} />
 ```
 
 </CodeGroup>
@@ -106,7 +106,14 @@ Here's how you can use the combined variant:
 
 <CodeGroup>
 
-```typescript React
+```html HTML
+<script
+  src="https://www.dubcdn.com/analytics/script.site-visit.outbound-domains.js"
+  data-domains="{'site': 'site.dub.co', 'outbound': ['example.com', 'example.sh']}"
+></script>
+```
+
+```typescript React/Next.js
 // the DubAnalytics component automatically detects the `domainsConfig` prop
 // and applies the combined script variant for you
 <DubAnalytics
@@ -115,13 +122,6 @@ Here's how you can use the combined variant:
     outbound: ["example.com", "example.sh"],
   }}
 />
-```
-
-```html Other
-<script
-  src="https://www.dubcdn.com/analytics/script.site-visit.outbound-domains.js"
-  data-domains="{'site': 'site.dub.co', 'outbound': ['example.com', 'example.sh']}"
-></script>
 ```
 
 </CodeGroup>

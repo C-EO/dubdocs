@@ -1,31 +1,35 @@
 ---
 title: "Google Tag Manager"
-sidebarTitle: GTM (Analytics)
-"og:title": "How to track lead conversion events with Google Tag Manager and Dub"
-description: "Learn how to track lead conversion events with Google Tag Manager and Dub"
+"og:title": "How to track sales conversion events with Google Tag Manager and Dub"
+description: "Learn how to track sales conversion events with Google Tag Manager and Dub"
 og:image: https://assets.dub.co/cms/gtm-integration.jpeg
 ---
 
-import LeadsIntro from "/snippets/leads-intro.mdx";
 import EnableConversionTracking from "/snippets/enable-conversion-tracking.mdx";
-import LeadAttributes from "/snippets/lead-attributes.mdx";
-import LeadsOutro from "/snippets/leads-outro.mdx";
+import SalesAttributes from "/snippets/sale-attributes.mdx";
+import ViewConversions from "/snippets/view-conversions.mdx";
 
-<LeadsIntro />
+<Tip>
+  This feature is only available on [Business plans and
+  above](https://dub.co/pricing/partners).
+</Tip>
 
-In this guide, we will be focusing on tracking new user sign-ups for a SaaS application that uses Google Tag Manager to manage client-side tracking scripts.
+Dub's [Google Tag Manager integration](https://dub.co/integrations/google-tag-manager) allows you to track conversion events directly from Google Tag Manager.
 
 ## Prerequisites
 
 <EnableConversionTracking />
 
-## Set up Dub Analytics in Google Tag Manager
+## Install Dub via Google Tag Manager
 
-To track lead conversion events with Google Tag Manager, you'll need to install the Dub analytics script and configure lead tracking tags.
+There are 2 steps to install the Dub Analytics script via Google Tag Manager:
 
-### Step 1: Add Dub Analytics Script to GTM
+1. [Add Dub Analytics script to GTM](#step-1-add-dub-analytics-script-to-gtm)
+2. [Create User-Defined Variable for dub_id Cookie](#step-2-create-user-defined-variable-for-dub_id-cookie)
 
-First, you'll need to add the Dub analytics script to your website using Google Tag Manager.
+### Step 1: Add Dub Analytics script to GTM
+
+First, you'll need to add the Dub Analytics script to your website using Google Tag Manager.
 
 In your GTM workspace, navigate to the **Tags** section and click **New** to create a new tag.
 
@@ -78,11 +82,11 @@ Select **Custom HTML** as the tag type and add the following code:
 
 Configure the tag to fire on **All Pages** by setting the trigger to **All Pages - Page View**.
 
-Name this tag "Dub Analytics Script" and save it.
+Name this tag "Dub Analytics script" and save it.
 
 ### Step 2: Create User-Defined Variable for dub_id Cookie
 
-To read the `dub_id` cookie that Dub Analytics sets, you'll need to create a User-Defined Variable in Google Tag Manager.
+To read the `dub_id` cookie that Dub Analytics script sets, you'll need to create a User-Defined Variable in Google Tag Manager.
 
 In your GTM workspace, navigate to the **Variables** section and click **New** to create a new variable.
 
@@ -109,14 +113,14 @@ Click **Save** to create the variable.
   when tracking conversion events.
 </Note>
 
-### Step 3: Tracking lead events
+## Tracking lead events
 
 There are two ways to track lead events with Google Tag Manager:
 
-- [Thank You Page Tracking (Recommended)](#option-1%3A-thank-you-page-tracking-recommended)
-- [Form Submission Tracking](#option-2%3A-form-submission-tracking)
+- [Thank You Page Tracking (Recommended)](#option-1-thank-you-page-tracking-recommended)
+- [Form Submission Tracking](#option-2-form-submission-tracking)
 
-#### Option 1: Thank You Page Tracking (Recommended)
+### Option 1: Thank You Page Tracking (Recommended)
 
 This method tracks leads when users land on a thank-you or success page after completing a form. This approach is more reliable as it's less likely to be blocked by ad blockers and provides better data accuracy.
 
@@ -164,7 +168,7 @@ Configure this tag to fire on specific pages by creating a **Page View** trigger
 
 Name this tag "Dub Lead Tracking - Thank You Page" and save it.
 
-#### Option 2: Form Submission Tracking
+### Option 2: Form Submission Tracking
 
 This method tracks leads immediately when users submit forms on your website. Note that this approach may be less reliable due to ad blockers and timing issues.
 
@@ -215,6 +219,108 @@ Name this tag "Dub Lead Tracking - Form Submission" and save it.
 
 <LeadAttributes />
 
+## Tracking sales events
+
+There are two ways to track sales events with Google Tag Manager:
+
+- [Order Confirmation Page Tracking (Recommended)](#option-1-order-confirmation-page-tracking-recommended)
+- [Checkout Form Submission Tracking](#option-2-checkout-form-submission-tracking)
+
+### Option 1: Order Confirmation Page Tracking (Recommended)
+
+This method tracks sales when users land on an order confirmation or success page after completing a purchase. This approach is more reliable as it's less likely to be blocked by ad blockers and provides better data accuracy.
+
+Create a **Custom HTML** tag with the following code:
+
+```html
+<script>
+  (function () {
+    // Get query parameters from URL
+    var params = new URLSearchParams(window.location.search);
+    var customerId = params.get("customer_id");
+    var amount = params.get("amount");
+    var invoiceId = params.get("invoice_id");
+
+    // Only track if customer ID and amount are present
+    if (customerId && amount) {
+      // Track the sale event
+      dubAnalytics.trackSale({
+        eventName: "Purchase",
+        customerExternalId: customerId,
+        amount: parseInt(amount), // Amount in cents
+        invoiceId: invoiceId || undefined,
+        currency: "usd", // Customize as needed
+        paymentProcessor: "stripe", // Customize as needed
+      });
+    }
+  })();
+</script>
+```
+
+Configure this tag to fire on specific pages by creating a **Page View** trigger with conditions:
+
+- Trigger Type: **Page View**
+- This trigger fires on: **Some Page Views**
+- Add conditions like:
+  - **Page URL** contains `/order-confirmation`
+  - Or **Page Path** equals `/checkout/success`
+  - Or whatever URL pattern matches your order confirmation pages
+
+Name this tag "Dub Sales Tracking - Order Confirmation" and save it.
+
+### Option 2: Checkout Form Submission Tracking
+
+This method tracks sales immediately when users complete checkout forms on your website. Note that this approach may be less reliable due to ad blockers and timing issues.
+
+Create a **Custom HTML** tag with the following code:
+
+```html
+<script>
+  (function () {
+    // Get checkout data - customize these selectors based on your form
+    var customerId = document.getElementById("customer_id")
+      ? document.getElementById("customer_id").value
+      : "";
+    var amount = document.getElementById("amount")
+      ? document.getElementById("amount").value
+      : "";
+    var invoiceId = document.getElementById("invoice_id")
+      ? document.getElementById("invoice_id").value
+      : "";
+
+    // Only track if customer ID and amount are present
+    if (customerId && amount) {
+      // Track the sale event
+      dubAnalytics.trackSale({
+        eventName: "Purchase",
+        customerExternalId: customerId,
+        amount: parseInt(amount), // Amount in cents
+        invoiceId: invoiceId || undefined,
+        currency: "usd", // Customize as needed
+        paymentProcessor: "stripe", // Customize as needed
+      });
+    }
+  })();
+</script>
+```
+
+<Note>
+  **Important**: You'll need to customize the DOM selectors
+  (`getElementById('customer_id')`, `getElementById('amount')`, etc.) to match
+  your actual checkout form field IDs or use different methods to capture the
+  form data based on your website's structure.
+</Note>
+
+Configure this tag to fire on **Form Submission** by creating a new trigger:
+
+- Trigger Type: **Form Submission**
+- This trigger fires on: **Some Forms** (or **All Forms** if you want to track all form submissions)
+- Add conditions to specify which forms should trigger sales tracking (e.g., checkout forms)
+
+Name this tag "Dub Sales Tracking - Checkout Form" and save it.
+
+<SalesAttributes />
+
 ## Testing your setup
 
 To test your GTM setup, you can use the **Preview** mode in Google Tag Manager:
@@ -222,35 +328,41 @@ To test your GTM setup, you can use the **Preview** mode in Google Tag Manager:
 1. **Enable Preview Mode**: In your GTM workspace, click the **Preview** button in the top right corner
 2. **Enter your website URL** and click **Connect**
 3. **Test your chosen tracking method**:
-   - **For Option 1 (Thank You Page)**: Navigate to your thank-you page with query parameters (e.g., `?email=test@example.com&name=Test User`)
-   - **For Option 2 (Form Submission)**: Navigate to a page with a form and submit a test form
+   - **For Option 1 (Order Confirmation)**: Navigate to your order confirmation page with query parameters (e.g., `?customer_id=123&amount=1000&invoice_id=inv_456`)
+   - **For Option 2 (Form Submission)**: Navigate to a checkout page and complete a test purchase form
 4. **Check the GTM debugger** to see if your tags are firing correctly
 
-### Verify lead tracking
+### Verify conversion tracking
 
-You can also verify that leads are being tracked by:
+You can also verify that conversion events are being tracked by:
 
 1. **Checking your browser's developer console** for any JavaScript errors
 2. **Using the Network tab** to see if requests are being sent to Dub's analytics endpoint
-3. **Viewing your Dub dashboard** to confirm that lead events are appearing in your analytics
+3. **Viewing your Dub dashboard** to confirm that sale events are appearing in your analytics
 
 ### Common troubleshooting tips
 
 - **Tag not firing**: Check that your triggers are configured correctly and that the conditions match your page structure
+- **Form data not captured** (Option 2): Verify that your DOM selectors match your actual checkout form field IDs or names
+- **Query parameters missing** (Option 1): Ensure your checkout process redirects to the confirmation page with the required query parameters
+- **Amount formatting**: Ensure amounts are in cents (e.g., $10.00 = 1000 cents)
+- **Multiple events**: Make sure your tags aren't firing multiple times by checking trigger conditions
+- **Duplicate tracking**: Verify you've only implemented one tracking method (Option 1 OR Option 2, not both)
 - **Missing publishable key**: Ensure you've replaced the placeholder with your actual publishable key
-- **Query parameters missing** (Option 1): Ensure your form redirects to the thank-you page with the required query parameters
-- **Form data not captured** (Option 2): Verify that your DOM selectors match your actual form field IDs or names
 
 <Warning>
 **Client-Side Tracking Limitations**:
-
 - **Ad blockers** – Users with ad blockers may prevent tracking scripts from loading
-- **JavaScript disabled** – Events won't be tracked if users have JavaScript disabled
+- **JavaScript disabled** – Events won't be tracked if users have JavaScript disabled  
 - **Network issues** – Failed network requests won't retry automatically
 - **Privacy concerns** – Some users may block client-side tracking for privacy reasons
 
-For more accurate conversion tracking, consider using [server-side conversion tracking](/docs/conversions/leads/introduction)
+For more accurate conversion tracking, consider using [server-side conversion tracking](/docs/conversions/sales/introduction)
 
 </Warning>
 
-<LeadsOutro />
+## View conversion results
+
+And that's it – you're all set! You can now sit back, relax, and watch your conversion revenue grow. We provide 3 different views to help you understand your conversions:
+
+<ViewConversions />

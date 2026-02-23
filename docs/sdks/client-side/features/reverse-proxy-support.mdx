@@ -43,6 +43,16 @@ Once you've set up your reverse proxy, don't forget to update the `apiHost` para
 
 <CodeGroup>
 
+```javascript HTML
+// include this script tag in your HTML Head tag
+<script
+  src="https://www.dubcdn.com/analytics/script.js"
+  data-api-host="/_proxy/dub"
+  data-domains='{"refer": "go.example.com"}'
+  defer
+></script>
+```
+
 ```typescript React/Next.js
 import { Analytics as DubAnalytics } from "@dub/analytics/react";
 
@@ -59,16 +69,6 @@ export default function App() {
     </Layout>
   );
 }
-```
-
-```javascript Other Frameworks
-// include this script tag in your HTML Head tag
-<script
-  src="https://www.dubcdn.com/analytics/script.js"
-  data-api-host="/_proxy/dub"
-  data-domains='{"refer": "go.example.com"}'
-  defer
-></script>
 ```
 
 </CodeGroup>
@@ -113,6 +113,14 @@ Once you've set up your reverse proxy, don't forget to update the `scriptProps.s
 
 <CodeGroup>
 
+```javascript HTML
+// include this script tag in your HTML Head tag
+<script
+  src="/_proxy/dub/script.js" // pointing to your reverse proxy
+  defer
+></script>
+```
+
 ```typescript React/Next.js
 import { Analytics as DubAnalytics } from "@dub/analytics/react";
 
@@ -128,14 +136,6 @@ export default function App() {
     </Layout>
   );
 }
-```
-
-```javascript Other Frameworks
-// include this script tag in your HTML Head tag
-<script
-  src="/_proxy/dub/script.js" // pointing to your reverse proxy
-  defer
-></script>
 ```
 
 </CodeGroup>

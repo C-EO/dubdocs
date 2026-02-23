@@ -1,6 +1,5 @@
 ---
 title: "Supabase"
-sidebarTitle: "Supabase (Auth)"
 "og:title": "How to track lead conversion events with Supabase and Dub"
 description: "Learn how to track lead conversion events with Supabase and Dub"
 ---
@@ -63,7 +62,7 @@ export async function GET(request: Request) {
             customerName: user.user_metadata.name,
             customerEmail: user.email,
             customerAvatar: user.user_metadata.avatar_url,
-          })
+          }),
         );
         // delete the clickId cookie
         cookies().delete("dub_id");
@@ -85,7 +84,7 @@ import { dub } from "@/lib/dub";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   const { code, next = "/" } = req.query;
   const origin = `${req.headers["x-forwarded-proto"]}://${req.headers.host}`;
@@ -93,7 +92,7 @@ export default async function handler(
   if (typeof code === "string") {
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!
+      process.env.SUPABASE_SERVICE_ROLE_KEY!,
     );
 
     const { data, error } = await supabase.auth.exchangeCodeForSession(code);
@@ -122,7 +121,7 @@ export default async function handler(
         // delete the clickId cookie
         res.setHeader(
           "Set-Cookie",
-          `dub_id=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT`
+          `dub_id=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT`,
         );
       }
 

@@ -25,6 +25,23 @@ Here is a quick example of how you can display a discount banner using the `useA
 
 <CodeGroup>
 
+```javascript HTML
+// Display a banner that says: _"John referred you to Acme and gave you 25% off"_
+dubAnalytics("ready", function () {
+  if (DubAnalytics.partner && DubAnalytics.discount) {
+    const banner = document.createElement("div");
+
+    banner.innerHTML = `
+      <div class="flex items-center gap-2">
+        <img src="${DubAnalytics.partner.image}" alt="${DubAnalytics.partner.name}" class="size-6 rounded-full" />
+        <p>${DubAnalytics.partner.name} referred you to Acme and gave you ${DubAnalytics.discount.amount} ${DubAnalytics.discount.type} off</p>
+      </div>
+    `;
+    document.body.appendChild(banner);
+  }
+});
+```
+
 ```typescript React/Next.js
 // Display a banner that says: _"John referred you to Acme and gave you 25% off"_
 import { useAnalytics } from "@dub/analytics/react";
@@ -50,23 +67,6 @@ function DiscountBanner() {
     </div>
   );
 }
-```
-
-```javascript Other Frameworks
-// Display a banner that says: _"John referred you to Acme and gave you 25% off"_
-dubAnalytics("ready", function () {
-  if (DubAnalytics.partner && DubAnalytics.discount) {
-    const banner = document.createElement("div");
-
-    banner.innerHTML = `
-      <div class="flex items-center gap-2">
-        <img src="${DubAnalytics.partner.image}" alt="${DubAnalytics.partner.name}" class="size-6 rounded-full" />
-        <p>${DubAnalytics.partner.name} referred you to Acme and gave you ${DubAnalytics.discount.amount} ${DubAnalytics.discount.type} off</p>
-      </div>
-    `;
-    document.body.appendChild(banner);
-  }
-});
 ```
 
 </CodeGroup>

@@ -26,15 +26,59 @@
         "icon": "books",
         "groups": [
           {
-            "group": " ",
-            "pages": ["docs"]
+            "group": "GETTING STARTED",
+            "pages": [
+              "docs",
+              "docs/concepts/attribution",
+              {
+                "group": "Web installation",
+                "expanded": true,
+                "pages": [
+                  "docs/quickstart/server",
+                  "docs/conversions/sales/client-side"
+                ]
+              },
+              {
+                "group": "Mobile installation",
+                "pages": [
+                  "docs/sdks/client-side-mobile/installation-guides/swift",
+                  "docs/sdks/client-side-mobile/installation-guides/react-native"
+                ]
+              },
+              {
+                "group": "Third-party integrations",
+                "expanded": true,
+                "pages": [
+                  "docs/integrations/stripe",
+                  "docs/integrations/google-tag-manager",
+                  "docs/integrations/shopify",
+                  "docs/integrations/hubspot",
+                  "docs/integrations/segment"
+                ]
+              }
+            ]
           },
           {
-            "group": "LINKS",
+            "group": "CONCEPTS",
             "pages": [
-              "docs/concepts/links/introduction",
-              "docs/concepts/links/bulk-operations",
-              "docs/concepts/links/organization",
+              {
+                "group": "Conversion tracking",
+                "pages": [
+                  "docs/conversions/leads/deferred",
+                  "docs/conversions/sales/direct",
+                  {
+                    "group": "Auth framework guides",
+                    "pages": [
+                      "docs/conversions/leads/clerk",
+                      "docs/conversions/leads/better-auth",
+                      "docs/conversions/leads/auth0",
+                      "docs/conversions/leads/supabase",
+                      "docs/conversions/leads/next-auth",
+                      "docs/conversions/leads/appwrite"
+                    ]
+                  }
+                ]
+              },
               {
                 "group": "Deep links",
                 "pages": [
@@ -43,75 +87,31 @@
                   "docs/concepts/deep-links/attribution",
                   "docs/concepts/deep-links/migrating-from-firebase"
                 ]
-              }
-            ]
-          },
-          {
-            "group": "ANALYTICS",
-            "pages": [
-              "docs/concepts/analytics/introduction",
+              },
               {
-                "group": "Filtering and aggregation",
+                "group": "Links API",
                 "pages": [
-                  "docs/concepts/analytics/location",
-                  "docs/concepts/analytics/device",
-                  "docs/concepts/analytics/referrers",
-                  "docs/concepts/analytics/utm",
-                  "docs/concepts/analytics/tags"
-                ]
-              }
-            ]
-          },
-          {
-            "group": "CONVERSION TRACKING",
-            "pages": [
-              "docs/conversions/quickstart",
-              {
-                "group": "Tracking lead events",
-                "pages": [
-                  "docs/conversions/leads/introduction",
-                  "docs/conversions/leads/client-side",
-                  "docs/conversions/leads/deferred",
-                  {
-                    "group": "Third-party integrations",
-                    "pages": [
-                      "docs/conversions/leads/hubspot",
-                      "docs/conversions/leads/segment",
-                      "docs/conversions/leads/google-tag-manager",
-                      "docs/conversions/leads/clerk",
-                      "docs/conversions/leads/better-auth",
-                      "docs/conversions/leads/next-auth",
-                      "docs/conversions/leads/supabase",
-                      "docs/conversions/leads/auth0",
-                      "docs/conversions/leads/appwrite"
-                    ]
-                  }
+                  "docs/concepts/links/introduction",
+                  "docs/concepts/links/bulk-operations",
+                  "docs/concepts/links/organization"
                 ]
               },
               {
-                "group": "Tracking sale events",
+                "group": "Analytics API",
                 "pages": [
-                  "docs/conversions/sales/introduction",
-                  "docs/conversions/sales/client-side",
-                  "docs/conversions/sales/direct",
+                  "docs/concepts/analytics/introduction",
                   {
-                    "group": "Third-party integrations",
+                    "group": "Filtering and aggregation",
                     "pages": [
-                      "docs/conversions/sales/stripe",
-                      "docs/conversions/sales/shopify",
-                      "docs/conversions/sales/segment",
-                      "docs/conversions/sales/google-tag-manager"
+                      "docs/concepts/analytics/location",
+                      "docs/concepts/analytics/device",
+                      "docs/concepts/analytics/referrers",
+                      "docs/concepts/analytics/utm",
+                      "docs/concepts/analytics/tags"
                     ]
                   }
                 ]
               }
-            ]
-          },
-          {
-            "group": "DUB PARTNERS",
-            "pages": [
-              "docs/partners/quickstart",
-              "docs/partners/embedded-referrals"
             ]
           },
           {
@@ -630,6 +630,10 @@
       "destination": "/docs"
     },
     {
+      "source": "/docs/examples",
+      "destination": "https://github.com/dubinc/examples"
+    },
+    {
       "source": "/docs/sdks",
       "destination": "/docs/sdks/overview"
     },
@@ -664,18 +668,6 @@
     {
       "source": "/docs/integrations/make",
       "destination": "https://dub.co/integrations/make"
-    },
-    {
-      "source": "/docs/integrations/stripe",
-      "destination": "https://dub.co/integrations/stripe"
-    },
-    {
-      "source": "/docs/integrations/shopify",
-      "destination": "https://dub.co/integrations/shopify"
-    },
-    {
-      "source": "/docs/integrations/segment",
-      "destination": "https://dub.co/integrations/segment"
     },
     {
       "source": "/docs/integrations/wordpress",
@@ -754,8 +746,44 @@
       "destination": "/docs/sdks/client-side/features/client-side-click-tracking"
     },
     {
+      "source": "/docs/conversions/leads/introduction",
+      "destination": "/docs/quickstart/server"
+    },
+    {
       "source": "/docs/conversions/leads/supabase-auth",
       "destination": "/docs/conversions/leads/supabase"
+    },
+    {
+      "source": "/docs/conversions/sales/introduction",
+      "destination": "/docs/quickstart/server"
+    },
+    {
+      "source": "/docs/conversions/sales/stripe",
+      "destination": "/docs/integrations/stripe"
+    },
+    {
+      "source": "/docs/conversions/sales/shopify",
+      "destination": "/docs/integrations/shopify"
+    },
+    {
+      "source": "/docs/conversions/leads/segment",
+      "destination": "/docs/integrations/segment"
+    },
+    {
+      "source": "/docs/conversions/sales/segment",
+      "destination": "/docs/integrations/segment"
+    },
+    {
+      "source": "/docs/conversions/leads/hubspot",
+      "destination": "/docs/integrations/hubspot"
+    },
+    {
+      "source": "/docs/conversions/quickstart",
+      "destination": "/docs/quickstart/server"
+    },
+    {
+      "source": "/docs/partners/quickstart",
+      "destination": "/docs/quickstart/server"
     },
     {
       "source": "/docs/partners/link-based-discounts",
