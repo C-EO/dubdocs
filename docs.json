@@ -991,6 +991,46 @@
       "destination": "/docs/api-reference/tags/update"
     },
     {
+      "source": "/help/category/overview",
+      "destination": "/help"
+    },
+    {
+      "source": "/help/category/getting-started",
+      "destination": "/help/article/setting-up-your-program"
+    },
+    {
+      "source": "/help/category/link-management",
+      "destination": "/help/article/dub-links"
+    },
+    {
+      "source": "/help/category/analytics",
+      "destination": "/help/article/dub-analytics"
+    },
+    {
+      "source": "/help/category/partners",
+      "destination": "/help/article/dub-partners"
+    },
+    {
+      "source": "/help/category/programs",
+      "destination": "/help/article/partner-profile"
+    },
+    {
+      "source": "/help/category/custom-domains",
+      "destination": "/help/article/how-to-add-custom-domain"
+    },
+    {
+      "source": "/help/category/workspaces",
+      "destination": "/help/article/what-is-a-workspace"
+    },
+    {
+      "source": "/help/category/migrating",
+      "destination": "/help/article/migrating-from-rewardful"
+    },
+    {
+      "source": "/help/category/saml-sso",
+      "destination": "/help/article/okta-saml"
+    },
+    {
       "source": "/help/article/what-is-dub",
       "destination": "/help/article/dub-links"
     },
