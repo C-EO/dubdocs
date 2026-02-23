@@ -1,0 +1,158 @@
+---
+title: "Nuxt"
+description: "Learn how to integrate Dub with Nuxt."
+---
+
+import Prerequisites from "/snippets/sdk-prerequisites.mdx";
+import InstallTypescript from "/snippets/sdk-install-ts.mdx";
+
+<Prerequisites />
+
+## 2. Install and initialize the Dub TypeScript SDK
+
+<InstallTypescript />
+
+## 3. Create link
+
+Let's create a short link using the [Dub TypeScript SDK](/docs/sdks/typescript).
+
+```typescript server/api/links.post.ts
+export default defineEventHandler(async () => {
+  try {
+    const result = await dub.links.create({
+      url: "https://www.google.com",
+    });
+
+    return result;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+});
+```
+
+Optionally, you can also pass an `externalId` field which is a unique identifier for the link in your own database to associate it with the link in Dub's system.
+
+```typescript server/api/links.post.ts
+export default defineEventHandler(async () => {
+  try {
+    const result = await dub.links.create({
+      url: "https://www.google.com",
+      externalId: "12345",
+    });
+
+    return result;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+});
+```
+
+This will let you easily [update the link](#5-update-link) or [retrieve analytics](#6-retrieve-analytics-for-link) for it later on using the `externalId` instead of the Dub `linkId`.
+
+## 4. Upsert link
+
+Dub TypeScript SDK provides a method to upsert a link – where an existing link is updated if it exists, or a new link is created if it doesn't. so you don't have to worry about checking if the link already exists.
+
+```typescript server/api/links.put.ts
+export default defineEventHandler(async () => {
+  try {
+    const result = await dub.links.upsert({
+      url: "https://www.google.com",
+    });
+
+    return result;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+});
+```
+
+This way, you won't have to worry about checking if the link already exists when you're creating it.
+
+## 5. Update link
+
+Let's update an existing link using the Dub TypeScript SDK.
+
+You can do that in two ways:
+
+- Using the link's `linkId` in Dub's system.
+- Using the link's `externalId` in your own database (prefixed with `ext_`).
+
+```typescript server/api/links.patch.ts
+export default defineEventHandler(async () => {
+  try {
+    // Update a link by its linkId
+    const { shortLink } = await dub.links.update(
+      "link_rWOKByP0bRMrstK8e4HPjprJ",
+      {
+        url: "https://www.google.uk", // new URL
+      }
+    );
+
+    // Update a link by its externalId
+    const { shortLink } = await dub.links.update("ext_12345", {
+      url: "https://www.google.uk", // new URL
+    });
+
+    return { shortLink };
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+});
+```
+
+## 6. Retrieve analytics for link
+
+Dub allows you to retrieve analytics for a link using the Dub TypeScript SDK.
+
+```typescript server/api/analytics.get.ts
+import { ClicksTimeseries } from "dub/models/components";
+
+export default defineEventHandler(async () => {
+  try {
+    // Retrieve the timeseries analytics for the last 7 days for a link
+    const response = await dub.analytics.retrieve({
+      linkId: "clv3o9p9q000au1h0mc7r6l63",
+      interval: "7d",
+      groupBy: "timeseries",
+    });
+
+    const timeseries = response as ClicksTimeseries[];
+
+    return timeseries;
+  } catch (error) {
+    console.error(error);
+    return error;
+  }
+});
+```
+
+Similarly, you can retrieve analytics for a link using the `externalId` field.
+
+```typescript server/api/analytics.get.ts
+// Retrieve the timeseries analytics for the last 7 days for a link
+const response = await dub.analytics.retrieve({
+  externalId: "ext_12345",
+  interval: "7d",
+  groupBy: "timeseries",
+});
+
+const timeseries = response as ClicksTimeseries[];
+```
+
+## 7. Examples
+
+<CardGroup cols={2}>
+  <Card
+    title="Nuxt.js Example"
+    icon="github"
+    href="https://github.com/dubinc/examples/tree/main/typescript/nuxt"
+    color="#333333"
+  >
+    See the full example on GitHub.
+  </Card>
+</CardGroup>

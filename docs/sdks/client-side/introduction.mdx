@@ -1,0 +1,62 @@
+---
+title: Introduction
+description: Learn more about the Dub Analytics script and how to install it.
+---
+
+import DubClientInstall from "/snippets/dub-client-install.mdx";
+import DubAnalyticsParams from "/snippets/dub-analytics-params.mdx";
+
+Dub Analytics (`@dub/analytics`) is a lightweight (~1kb), [open-source](https://github.com/dubinc/analytics) client-side script for [tracking conversion events](/help/article/dub-conversions) with Dub.
+
+The script handles the detection of the `dub_id` query parameter and storing it as a first-party cookie, which will be used to attribute subsequent conversion events to the original link.
+
+<Frame>
+  <img
+    src="https://assets.dub.co/help/conversion-click-event.png"
+    alt="A diagram showing how click events are tracked in the conversion funnel"
+  />
+</Frame>
+
+If you're using Dub Partners, this script also lets you [track clicks on the client-side](/docs/sdks/client-side/features/click-tracking) using query parameters (e.g. `?via=john`). This gives you the flexibility to track clicks directly on your website or app, without needing to rely on link redirects.
+
+## Installation guides
+
+<DubClientInstall />
+
+## Features
+
+The Dub Analytics script comes with the following features:
+
+- [Conversion-tracking](/docs/sdks/client-side/features/conversion-tracking)
+- [Client-side click-tracking](/docs/sdks/client-side/features/click-tracking)
+- [Cross-domain tracking](/docs/sdks/client-side/features/cross-domain-tracking)
+- [Reverse-proxy support](/docs/sdks/client-side/features/reverse-proxy-support)
+
+## Properties
+
+You can pass the following props to the Dub Analytics script to customize its behavior:
+
+<DubAnalyticsParams />
+
+## Open-source examples
+
+Here are some open-source code examples that you can reference:
+
+<CardGroup cols={2}>
+  <Card
+    title="Dub Analytics with Client-side Click Tracking + Reverse Proxy"
+    icon="github"
+    href="https://github.com/dubinc/analytics/tree/main/apps/nextjs-reverse-proxy"
+    color="#333333"
+  >
+    See the full example on GitHub.
+  </Card>
+  <Card
+    title="Dub Analytics with Geolocation"
+    icon="github"
+    href="https://github.com/dubinc/analytics/tree/main/apps/nextjs-geolocation-script"
+    color="#333333"
+  >
+    See the full example on GitHub.
+  </Card>
+</CardGroup>

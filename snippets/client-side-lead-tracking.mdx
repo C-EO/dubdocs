@@ -8,35 +8,7 @@ If you redirect users to a thank-you page after a successful action, you can tra
 
 <CodeGroup>
 
-```typescript React
-import { useAnalytics } from "@dub/analytics/react";
-import { useEffect } from "react";
-
-export function ThankYouPage() {
-  const { trackLead } = useAnalytics();
-
-  useEffect(() => {
-    // Get query parameters from URL
-    const params = new URLSearchParams(window.location.search);
-    const email = params.get("email");
-    const name = params.get("name");
-
-    if (email) {
-      // Track the lead event
-      trackLead({
-        eventName: "Sign Up",
-        customerExternalId: email, // can also be customer email
-        customerName: name || undefined,
-        customerEmail: email,
-      });
-    }
-  }, [trackLead]);
-
-  return <div>Thank you for signing up!</div>;
-}
-```
-
-```html HTML / Other Frameworks
+```html HTML
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -67,6 +39,34 @@ export function ThankYouPage() {
 </html>
 ```
 
+```typescript React/Next.js
+import { useAnalytics } from "@dub/analytics/react";
+import { useEffect } from "react";
+
+export function ThankYouPage() {
+  const { trackLead } = useAnalytics();
+
+  useEffect(() => {
+    // Get query parameters from URL
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get("email");
+    const name = params.get("name");
+
+    if (email) {
+      // Track the lead event
+      trackLead({
+        eventName: "Sign Up",
+        customerExternalId: email, // can also be customer email
+        customerName: name || undefined,
+        customerEmail: email,
+      });
+    }
+  }, [trackLead]);
+
+  return <div>Thank you for signing up!</div>;
+}
+```
+
 </CodeGroup>
 
 ### Track leads from form submissions
@@ -75,7 +75,44 @@ You can also track leads directly when users submit a form on your website.
 
 <CodeGroup>
 
-```typescript React
+```html HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <form id="signupForm">
+      <input type="text" id="name" required />
+      <input type="email" id="email" required />
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+
+          // Track the lead event
+          dubAnalytics.trackLead({
+            eventName: "Sign Up",
+            customerExternalId: email,
+            customerName: name,
+            customerEmail: email,
+          });
+        });
+    </script>
+  </body>
+</html>
+```
+
+```typescript React/Next.js
 import { useAnalytics } from "@dub/analytics/react";
 import { useState } from "react";
 
@@ -113,43 +150,6 @@ export function SignUpForm() {
     </form>
   );
 }
-```
-
-```html HTML / Other Frameworks
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
-  </head>
-  <body>
-    <form id="signupForm">
-      <input type="text" id="name" required />
-      <input type="email" id="email" required />
-      <button type="submit">Sign Up</button>
-    </form>
-
-    <script>
-      document
-        .getElementById("signupForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-
-          // Track the lead event
-          dubAnalytics.trackLead({
-            eventName: "Sign Up",
-            customerExternalId: email,
-            customerName: name,
-            customerEmail: email,
-          });
-        });
-    </script>
-  </body>
-</html>
 ```
 
 </CodeGroup>

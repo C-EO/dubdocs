@@ -1,0 +1,132 @@
+---
+title: "Introduction"
+"og:title": "Dub Integrations: Connect Dub to tools and services"
+description: "Integrate Dub with your favorite tools and services."
+---
+
+Integrations allow you to extend the capabilities of Dub and seamlessly connect with third-party platforms and services. By leveraging these integrations, you can enhance your workflows, automate tasks, connect with your favorite tools, and more.
+
+## Official integrations
+
+These are the integrations that are officially supported and actively maintained by Dub.
+
+<CardGroup cols={2}>
+  <Card
+    title="Zapier"
+    href="https://dub.co/integrations/zapier"
+    icon={
+      <img
+        src="https://dubassets.com/integrations/clzlmz336000fjeqynwhfv8vo_S4yz4ak"
+        alt="Zapier logo"
+      />
+    }
+  >
+    Integrate Dub with Zapier
+  </Card>
+  <Card
+    title="Make.com"
+    href="https://dub.co/integrations/make"
+    icon={
+      <img
+        src="https://dubassets.com/integrations/clzlmyxup0001jeqyaka3dvdd_GSp2tii"
+        alt="Make.com logo"
+      />
+    }
+  >
+    Integrate Dub with Make.com
+  </Card>
+  <Card
+    title="Stripe"
+    href="https://dub.co/integrations/stripe"
+    icon={
+      <img
+        src="https://dubassets.com/integrations/clzra1ya60001wnj4a89zcg9h_jtyaGa7"
+        alt="Stripe logo"
+      />
+    }
+  >
+    Integrate Dub with Stripe
+  </Card>
+  <Card
+    title="Shopify"
+    href="https://dub.co/integrations/shopify"
+    icon={
+      <img
+        src="https://dubassets.com/integrations/int_iWOtrZgmcyU6XDwKr4AYYqLN_jUmF77W"
+        alt="Shopify logo"
+      />
+    }
+  >
+    Integrate Dub with Shopify
+  </Card>
+  <Card
+    title="Segment"
+    href="https://dub.co/integrations/segment"
+    icon={
+      <img
+        src="https://dubassets.com/integrations/int_zGnSElTzimbz20OWnXerPoKv_Noy3Xhk"
+        alt="Segment logo"
+      />
+    }
+  >
+    Integrate Dub with Segment
+  </Card>
+  <Card
+    title="Wordpress"
+    href="https://dub.co/integrations/wordpress"
+    icon={
+      <img
+        src="https://dubassets.com/integrations/clzrjifgn0004tyvlu72oxcc2_GrLz146"
+        alt="Wordpress logo"
+      />
+    }
+  >
+    Integrate Dub with Wordpress
+  </Card>
+  <Card
+    title="Raycast"
+    href="https://dub.co/integrations/raycast"
+    icon={
+      <img
+        src="https://dubassets.com/integrations/clzlmyzlx0005jeqy95pjrwbz_Yg767eU"
+        alt="Raycast logo"
+      />
+    }
+  >
+    Integrate Dub with Raycast
+  </Card>
+  <Card
+    title="Slack"
+    href="https://dub.co/integrations/slack"
+    icon={
+      <img
+        src="https://dubassets.com/integrations/clzu59rx9000110bm5fnlzwuj_Y93aiyc"
+        alt="Slack logo"
+      />
+    }
+  >
+    Integrate Dub with Slack
+  </Card>
+</CardGroup>
+
+## Building your own integrations
+
+You can build your own integrations with Dub's link infrastructure using our [API](/docs/api-reference/introduction).
+
+1. Read the documentation on how to [create links](/docs/api-reference/links/create) or [track sale conversions](/docs/api-reference/track/sale).
+2. Learn how to [integrate Dub into your application](/docs/integrations/quickstart).
+3. [Reach out to us](https://dub.co/contact/support) to feature your integration in the integrations marketplace.
+
+## Integration webhooks
+
+Dub also supports webhooks for integrations. You can learn more about them in the [webhooks](/docs/webhooks/introduction) documentation.
+
+Here's a list of the webhooks that Dub supports:
+
+- [`link.created`](/docs/webhooks/events/link-created) – when a new link is created
+- [`link.updated`](/docs/webhooks/events/link-updated) – when a link is updated
+- [`link.deleted`](/docs/webhooks/events/link-deleted) – when a link is deleted
+- [`link.clicked`](/docs/webhooks/events/link-clicked) – when a link is clicked
+- [`lead.created`](/docs/webhooks/events/lead-created) – when a new lead is created
+- [`sale.created`](/docs/webhooks/events/sale-created) – when a new sale is created
+- [`partner.enrolled`](/docs/webhooks/events/partner-enrolled) – when a new partner is enrolled in your program
