@@ -1,0 +1,115 @@
+---
+title: commission.created
+icon: money-bill
+---
+
+import { WebhookResponseBodyParameters } from "/snippets/webhook-response-body-parameters.mdx";
+
+Event triggered when a [new commission is created](/docs/api-reference/commissions/list) for you.
+
+<WebhookResponseBodyParameters type="commission.created">
+  <ParamField body="id" type="string">
+    Unique identifier for the commission.
+  </ParamField>
+  <ParamField body="type" type="string">
+    Commission type (e.g. <code>sale</code>).
+  </ParamField>
+  <ParamField body="amount" type="number">
+    Sale/order amount in cents.
+  </ParamField>
+  <ParamField body="earnings" type="number">
+    Commission earnings in cents.
+  </ParamField>
+  <ParamField body="currency" type="string">
+    Currency code (e.g. <code>usd</code>).
+  </ParamField>
+  <ParamField body="status" type="string">
+    Commission status (e.g. <code>pending</code>).
+  </ParamField>
+  <ParamField body="description" type="string | null">
+    Optional description (e.g. for manual commissions).
+  </ParamField>
+  <ParamField body="quantity" type="number">
+    Quantity (e.g. number of items).
+  </ParamField>
+  <ParamField body="createdAt" type="string">
+    ISO 8601 timestamp when the commission was created.
+  </ParamField>
+  <ParamField body="link" type="object">
+    The referral link the commission is associated with.
+
+    <Expandable title="link object">
+      <ParamField body="id" type="string">
+        Unique identifier for the link.
+      </ParamField>
+      <ParamField body="shortLink" type="string">
+        The short link URL.
+      </ParamField>
+      <ParamField body="domain" type="string">
+        Domain of the short link.
+      </ParamField>
+      <ParamField body="key" type="string">
+        Unique key of the short link.
+      </ParamField>
+    </Expandable>
+
+  </ParamField>
+  <ParamField body="customer" type="object">
+    The customer associated with the conversion.
+
+    <Expandable title="customer object">
+      <ParamField body="id" type="string">
+        Unique identifier for the customer.
+      </ParamField>
+      <ParamField body="country" type="string">
+        Country code.
+      </ParamField>
+      <ParamField body="createdAt" type="string">
+        ISO 8601 timestamp when the customer was first seen.
+      </ParamField>
+      <ParamField body="firstSaleAt" type="string | null">
+        ISO 8601 timestamp of the customer's first sale, if any.
+      </ParamField>
+      <ParamField body="subscriptionCanceledAt" type="string | null">
+        ISO 8601 timestamp when the subscription was canceled, if any.
+      </ParamField>
+    </Expandable>
+
+  </ParamField>
+</WebhookResponseBodyParameters>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "evt_64dv6vxYVgltzJBKc9ujJ1ghL",
+  "event": "commission.created",
+  "createdAt": "2025-07-16T10:48:15.468Z",
+  "data": {
+    "id": "cm_1K09DJTBCRT24P6BRD515CK29",
+    "type": "sale",
+    "amount": 50000,
+    "earnings": 10000,
+    "currency": "usd",
+    "status": "pending",
+    "description": null,
+    "quantity": 1,
+    "createdAt": "2025-07-16T10:48:14.722Z",
+    "link": {
+      "id": "cm0lcuvtz000xcutmqw4a7wi3",
+      "shortLink": "https://dub.sh/track-test",
+      "domain": "dub.sh",
+      "key": "track-test"
+    },
+    "customer": {
+      "id": "cus_1K09DJDEACR47NPYC93RM43WF",
+      "country": "US",
+      "createdAt": "2025-07-16T10:48:01.739Z",
+      "firstSaleAt": "2025-07-18T10:48:01.739Z",
+      "subscriptionCanceledAt": null
+    }
+  }
+}
+```
+
+</ResponseExample>

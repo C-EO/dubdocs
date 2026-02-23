@@ -579,7 +579,19 @@
             "groups": [
               {
                 "group": "DUB POSTBACKS",
-                "pages": ["docs/postbacks/introduction"]
+                "pages": [
+                  "docs/postbacks/introduction",
+                  "docs/postbacks/event-types",
+                  "docs/postbacks/verify-postback-requests"
+                ]
+              },
+              {
+                "group": "DUB POSTBACK EVENTS",
+                "pages": [
+                  "docs/postbacks/events/lead-created",
+                  "docs/postbacks/events/sale-created",
+                  "docs/postbacks/events/commission-created"
+                ]
               }
             ]
           }

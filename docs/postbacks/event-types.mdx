@@ -1,0 +1,31 @@
+---
+title: Event types
+og:title: "Dub Postbacks – Event types"
+description: "List of supported postback event types and their payloads"
+---
+
+Postbacks send real-time notifications when events happen in your Dub partner account. All postback payloads follow this structure:
+
+```json postback-payload.json
+{
+  "id": "evt_KleiO4HBwZFbO1vZLWIPZ2AtX",
+  "event": "lead.created",
+  "createdAt": "2024-08-26T16:41:52.346Z",
+  "data": {}
+}
+```
+
+- **id** – Unique event ID
+- **event** – Event type (e.g. `lead.created`)
+- **createdAt** – ISO 8601 timestamp when the event was created
+- **data** – Event-specific payload
+
+## Postback events
+
+Postbacks only fire for events tied to **your referral links**. Here are the postback events that are available:
+
+| Event Type                                                        | Description                                                                                                           |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| [`lead.created`](/docs/postbacks/events/lead-created)             | Occurs when a **new lead is tracked** via your referral link.                                                         |
+| [`sale.created`](/docs/postbacks/events/sale-created)             | Occurs when a **new sale is tracked** via your referral link.                                                         |
+| [`commission.created`](/docs/postbacks/events/commission-created) | Occurs when a **new commission is generated** for you — from a tracked conversion or created manually by the program. |

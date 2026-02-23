@@ -1,0 +1,148 @@
+---
+title: lead.created
+icon: users
+---
+
+import { WebhookResponseBodyParameters } from "/snippets/webhook-response-body-parameters.mdx";
+
+Event triggered when a [new lead is tracked](/docs/api-reference/track/lead) via your referral link.
+
+<WebhookResponseBodyParameters type="lead.created">
+  <ParamField body="eventName" type="string">
+    Name of the tracked event (e.g. <code>Signup</code>).
+  </ParamField>
+  <ParamField body="click" type="object">
+    The click event that led to the lead.
+
+    <Expandable title="click object">
+      <ParamField body="id" type="string">
+        Unique identifier for the click.
+      </ParamField>
+      <ParamField body="timestamp" type="string">
+        ISO 8601 timestamp when the click occurred.
+      </ParamField>
+      <ParamField body="url" type="string">
+        Destination URL of the click.
+      </ParamField>
+      <ParamField body="country" type="string">
+        Country code.
+      </ParamField>
+      <ParamField body="city" type="string">
+        City name.
+      </ParamField>
+      <ParamField body="region" type="string">
+        Region or datacenter identifier.
+      </ParamField>
+      <ParamField body="continent" type="string">
+        Continent code.
+      </ParamField>
+      <ParamField body="device" type="string">
+        Device type (e.g. <code>Desktop</code>).
+      </ParamField>
+      <ParamField body="browser" type="string">
+        Browser name.
+      </ParamField>
+      <ParamField body="os" type="string">
+        Operating system.
+      </ParamField>
+      <ParamField body="referer" type="string">
+        Referrer source.
+      </ParamField>
+      <ParamField body="refererUrl" type="string">
+        Referrer URL.
+      </ParamField>
+      <ParamField body="qr" type="boolean">
+        Whether the click came from a QR code.
+      </ParamField>
+      <ParamField body="ip" type="string">
+        IP address of the click.
+      </ParamField>
+    </Expandable>
+
+  </ParamField>
+  <ParamField body="link" type="object">
+    The referral link the lead is associated with.
+
+    <Expandable title="link object">
+      <ParamField body="id" type="string">
+        Unique identifier for the link.
+      </ParamField>
+      <ParamField body="shortLink" type="string">
+        The short link URL.
+      </ParamField>
+      <ParamField body="domain" type="string">
+        Domain of the short link.
+      </ParamField>
+      <ParamField body="key" type="string">
+        Unique key of the short link.
+      </ParamField>
+    </Expandable>
+
+  </ParamField>
+  <ParamField body="customer" type="object">
+    The customer that signed up.
+
+    <Expandable title="customer object">
+      <ParamField body="id" type="string">
+        Unique identifier for the customer.
+      </ParamField>
+      <ParamField body="country" type="string">
+        Country code.
+      </ParamField>
+      <ParamField body="createdAt" type="string">
+        ISO 8601 timestamp when the customer was first seen.
+      </ParamField>
+      <ParamField body="firstSaleAt" type="string | null">
+        ISO 8601 timestamp of the customer's first sale, if any.
+      </ParamField>
+      <ParamField body="subscriptionCanceledAt" type="string | null">
+        ISO 8601 timestamp when the subscription was canceled, if any.
+      </ParamField>
+    </Expandable>
+
+  </ParamField>
+</WebhookResponseBodyParameters>
+
+<ResponseExample>
+
+```json Response
+{
+  "id": "evt_P343bmyae40ALQYr5HT4vRXRd",
+  "event": "lead.created",
+  "createdAt": "2025-07-16T10:48:02.000Z",
+  "data": {
+    "eventName": "Signup",
+    "click": {
+      "id": "GWGrkftJdYlZD2mq",
+      "timestamp": "2025-02-03T09:35:57.926Z",
+      "url": "https://github.com/dubinc/dub",
+      "country": "US",
+      "city": "San Jose",
+      "region": "sfo1",
+      "continent": "NA",
+      "device": "Desktop",
+      "browser": "Chrome",
+      "os": "Mac OS",
+      "referer": "(direct)",
+      "refererUrl": "(direct)",
+      "qr": false,
+      "ip": "198.51.100.42"
+    },
+    "link": {
+      "id": "cm0lcuvtz000xcutmqw4a7wi3",
+      "shortLink": "https://dub.sh/track-test",
+      "domain": "dub.sh",
+      "key": "track-test"
+    },
+    "customer": {
+      "id": "cus_1K09DJDEACR47NPYC93RM43WF",
+      "country": "US",
+      "createdAt": "2025-07-16T10:48:01.739Z",
+      "firstSaleAt": "2025-07-18T10:48:01.739Z",
+      "subscriptionCanceledAt": null
+    }
+  }
+}
+```
+
+</ResponseExample>
