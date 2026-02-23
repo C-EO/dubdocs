@@ -33,10 +33,7 @@
               {
                 "group": "Web installation",
                 "expanded": true,
-                "pages": [
-                  "docs/quickstart/server",
-                  "docs/conversions/sales/client-side"
-                ]
+                "pages": ["docs/quickstart/server", "docs/quickstart/client"]
               },
               {
                 "group": "Mobile installation",
@@ -750,12 +747,20 @@
       "destination": "/docs/quickstart/server"
     },
     {
+      "source": "/docs/conversions/leads/client-side",
+      "destination": "/docs/quickstart/client"
+    },
+    {
       "source": "/docs/conversions/leads/supabase-auth",
       "destination": "/docs/conversions/leads/supabase"
     },
     {
       "source": "/docs/conversions/sales/introduction",
       "destination": "/docs/quickstart/server"
+    },
+    {
+      "source": "/docs/conversions/sales/client-side",
+      "destination": "/docs/quickstart/client"
     },
     {
       "source": "/docs/conversions/sales/stripe",

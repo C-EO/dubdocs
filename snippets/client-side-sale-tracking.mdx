@@ -8,42 +8,7 @@ If you redirect users to a confirmation page after a successful purchase, you ca
 
 <CodeGroup>
 
-```typescript React
-import { useAnalytics } from "@dub/analytics/react";
-import { useEffect } from "react";
-
-export function OrderConfirmationPage() {
-  const { trackSale } = useAnalytics();
-
-  useEffect(() => {
-    // Get query parameters from URL
-    const params = new URLSearchParams(window.location.search);
-    const customerId = params.get("customer_id");
-    const amount = params.get("amount");
-    const invoiceId = params.get("invoice_id");
-
-    if (customerId && amount) {
-      // Track the sale event
-      trackSale({
-        eventName: "Purchase",
-        customerExternalId: customerId, // can also be customer email
-        amount: parseInt(amount), // Amount in cents
-        invoiceId: invoiceId || undefined,
-
-        // Additional props for direct sale tracking (without prior lead event):
-        // clickId: "cm3w...", // Read from dub_id cookie
-        // customerName: "John Doe",
-        // customerEmail: "john@example.com",
-        // customerAvatar: "https://example.com/avatar.jpg",
-      });
-    }
-  }, [trackSale]);
-
-  return <div>Thank you for your purchase!</div>;
-}
-```
-
-```html HTML / Other Frameworks
+```html HTML
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -84,6 +49,41 @@ export function OrderConfirmationPage() {
 </html>
 ```
 
+```typescript React/Next.js
+import { useAnalytics } from "@dub/analytics/react";
+import { useEffect } from "react";
+
+export function OrderConfirmationPage() {
+  const { trackSale } = useAnalytics();
+
+  useEffect(() => {
+    // Get query parameters from URL
+    const params = new URLSearchParams(window.location.search);
+    const customerId = params.get("customer_id");
+    const amount = params.get("amount");
+    const invoiceId = params.get("invoice_id");
+
+    if (customerId && amount) {
+      // Track the sale event
+      trackSale({
+        eventName: "Purchase",
+        customerExternalId: customerId, // can also be customer email
+        amount: parseInt(amount), // Amount in cents
+        invoiceId: invoiceId || undefined,
+
+        // Additional props for direct sale tracking (without prior lead event):
+        // clickId: "cm3w...", // Read from dub_id cookie
+        // customerName: "John Doe",
+        // customerEmail: "john@example.com",
+        // customerAvatar: "https://example.com/avatar.jpg",
+      });
+    }
+  }, [trackSale]);
+
+  return <div>Thank you for your purchase!</div>;
+}
+```
+
 </CodeGroup>
 
 ### Track sales from form submissions
@@ -92,41 +92,7 @@ You can also track sales directly when users complete a checkout form on your we
 
 <CodeGroup>
 
-```typescript React
-import { useAnalytics } from "@dub/analytics/react";
-import { useState } from "react";
-
-export function CheckoutForm() {
-  const { trackSale } = useAnalytics();
-  // …
-}
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Track the sale event
-    trackSale({
-      eventName: "Purchase",
-      customerExternalId: "cus_RBfbD57H", // can also be customer email
-      amount: 5000, // $50.00
-      invoiceId: "in_1MtHbELkdIwH",
-
-      // For direct sale tracking (without prior lead event):
-      // clickId: "cm3w...", // Read from dub_id cookie
-      // customerName: "John Doe",
-      // customerEmail: "john@example.com",
-      // customerAvatar: "https://example.com/avatar.jpg",
-    });
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      ...
-    </form>
-  );
-}
-```
-
-```html HTML / Other Frameworks
+```html HTML
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -166,6 +132,40 @@ export function CheckoutForm() {
     </script>
   </body>
 </html>
+```
+
+```typescript React/Next.js
+import { useAnalytics } from "@dub/analytics/react";
+import { useState } from "react";
+
+export function CheckoutForm() {
+  const { trackSale } = useAnalytics();
+  // …
+}
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Track the sale event
+    trackSale({
+      eventName: "Purchase",
+      customerExternalId: "cus_RBfbD57H", // can also be customer email
+      amount: 5000, // $50.00
+      invoiceId: "in_1MtHbELkdIwH",
+
+      // For direct sale tracking (without prior lead event):
+      // clickId: "cm3w...", // Read from dub_id cookie
+      // customerName: "John Doe",
+      // customerEmail: "john@example.com",
+      // customerAvatar: "https://example.com/avatar.jpg",
+    });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      ...
+    </form>
+  );
+}
 ```
 
 </CodeGroup>
