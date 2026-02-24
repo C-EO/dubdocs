@@ -13,7 +13,7 @@ export const VideoPlayer = ({
   if (playing) {
     return (
       <div
-        className={`not-prose relative mx-auto w-full max-w-screen-md overflow-hidden rounded-lg bg-black ${className}`}
+        className={`not-prose relative mx-auto w-full max-w-screen-md overflow-hidden rounded-lg ${className}`}
         style={{ aspectRatio }}
       >
         <video
@@ -57,12 +57,9 @@ export const VideoPlayer = ({
           {title}
         </p>
         <div className="rounded-full bg-white p-3 shadow-lg transition-all duration-300 group-hover:scale-110 group-active:scale-95">
-          <img
-            src="/images/video-player/play.svg"
-            alt="Play"
-            className="h-4 w-4"
-            aria-hidden
-          />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7L8 5z" />
+          </svg>
         </div>
       </div>
     </button>
