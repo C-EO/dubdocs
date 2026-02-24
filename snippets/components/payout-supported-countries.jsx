@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const SupportedCountries = () => {
+export const PayoutSupportedCountries = () => {
   const [countries, setCountries] = useState([]);
   const [expanded, setExpanded] = useState(false);
   const showCount = 21;
