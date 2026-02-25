@@ -161,8 +161,8 @@ During the creation of your rewards, the reward preview will populate with the s
 
 Here are a few reward examples with their conditions to give you some starting ideas.
 
-<Steps>
-<Step title="Geo-specific">
+### Geo-specific
+
 When your partners have conversions from specific countries, reward them with a higher percentage.
 
 <Frame>
@@ -176,8 +176,8 @@ When your partners have conversions from specific countries, reward them with a 
 
 If `Customer` `Country` `is one of` `Canada, United States, Mexico`
 
-</Step>
-<Step title="Product spotlight">
+### Product spotlight
+
 Tailor your reward amount by product. In this example, we're rewarding more when the sale is for the Gold Plan.
 
 <Frame>
@@ -207,9 +207,8 @@ prop](/docs/api-reference/endpoint/track-sale#body-metadata-one-of-0)
 
 </Info>
 
-</Step>
+### Partner performance tiers
 
-<Step title="Partner performance tiers">
 For creating tiered rewards based on performance. In this example, our base reward is the smallest, and each condition is larger, starting at 50% and growing to 60% based on how many conversions the partner has.
 
 <Frame>
@@ -219,17 +218,22 @@ For creating tiered rewards based on performance. In this example, our base rewa
   />
 </Frame>
 
-**Condition #1**
+**Condition #1:**
 
-If `Partner` `Total conversions` `is greater than or equal to` `100`
+If `Partner` `Total conversions` `is greater than or equal to` `1`
 
 **Condition #2**
 
-If `Partner` `Total conversions` `is greater than or equal to` `200`
+If `Partner` `Total revenue` `is greater than or equal to` `$10,000`
 
-</Step>
+<Tip>
+  Want to move partners to a different partner group based on their performance
+  instead? [Learn more about group move
+  rules](/help/article/partner-groups#group-move-rules).
+</Tip>
 
-<Step title="Sale reward tiers">
+### Sale reward tiers
+
 For creating tiered rewards based on customer sales. In this example, we're giving our partners a higher reward if the sale amount is over a specific dollar amount.
 
 <Frame>
@@ -243,9 +247,8 @@ For creating tiered rewards based on customer sales. In this example, we're givi
 
 If `Sale` `Amount` `is greater than or equal to` `$100`
 
-</Step>
+### Staggered reward tiers
 
-<Step title="Staggered reward tiers">
 When you want to offer a different reward amount after the customer's subscription meets a specific time period.
 
 <Frame>
@@ -270,9 +273,6 @@ Then pay a `Percentage` of `25%` per sale `for 12 months`
   the partner’s commission changes from 25% to 10% for all future payouts from
   that customer.
 </Info>
-
-</Step>
-</Steps>
 
 ## Updating a partner group's reward configuration
 
