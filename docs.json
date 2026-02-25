@@ -63,6 +63,7 @@
                 "pages": [
                   "docs/conversions/leads/deferred",
                   "docs/conversions/sales/direct",
+                  "docs/conversions/sales/refunds",
                   {
                     "group": "Auth framework guides",
                     "pages": [
