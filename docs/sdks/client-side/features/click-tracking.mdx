@@ -153,9 +153,9 @@ Here's how you can use the `trackClick()` function in your application:
 
 ```javascript HTML
 document.addEventListener("DOMContentLoaded", function () {
-  // Extract the key from the URL path (e.g., /john -> john)
+  // Extract the key from the URL path (e.g., /share/dash_6NSA6vNm017MZwfzt8SubNSZ -> dash_6NSA6vNm017MZwfzt8SubNSZ)
   const pathSegments = window.location.pathname.split("/");
-  const key = pathSegments[1];
+  const key = pathSegments[2]; // e.g. dash_6NSA6vNm017MZwfzt8SubNSZ
 
   if (key) {
     dubAnalytics.trackClick({
