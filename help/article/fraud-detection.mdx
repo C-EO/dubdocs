@@ -177,7 +177,7 @@ When enabled, it will flag all partner traffic that has been generated from seve
 - Reddit
 - TikTok
 
-#### Google campaign whitelist
+#### Google campaign IDs whitelist
 
 Add your internal Google Campaign IDs here to prevent your own Google Ads traffic from being flagged as fraudulent and associated with a partner.
 
@@ -187,6 +187,12 @@ Add your internal Google Campaign IDs here to prevent your own Google Ads traffi
     alt="Google campaign whitelist"
   />
 </Frame>
+
+<Tip>
+  **Why this matters for Dynamic Search Ads (DSA):** If you run DSA campaigns, Google crawls your site and automatically selects landing pages to serve as ads. Sometimes Google indexes pages that already contain affiliate tracking parameters (e.g., `?via=affiliate`) from affiliate links being shared around the web. 
+
+When these pages are served as ads, the affiliate parameter carries through – making it appear that an affiliate is running unauthorized paid ads when it's actually your own campaign. Whitelisting your Google Campaign IDs ensures this internal traffic is correctly attributed to you and not flagged as partner fraud.
+</Tip>
 
 
 ### Referral source
