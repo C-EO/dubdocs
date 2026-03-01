@@ -90,11 +90,14 @@ export async function leadCreated(data: LeadCreatedEvent["data"]) {
   if (!customer?.stripeCustomerId) return;
 
   // Get the customer's active subscription (e.g. for metered usage / free months)
-  const [subscription] = await stripe.subscriptions.list({
+  // Get the customer's active subscription (e.g. for metered usage / free months)
+  const subscriptions = await stripe.subscriptions.list({
     customer: customer.stripeCustomerId,
     status: "active",
     limit: 1,
-  }).data;
+  });
+
+  const [subscription] = subscriptions.data;
 
   if (!subscription?.items.data[0]) return;
 
